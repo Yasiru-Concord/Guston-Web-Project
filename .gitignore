@@ -1,4 +1,4 @@
-wp-includes/**/dist/
+
 .ddev
 *.sql
 .vscode
@@ -8,4 +8,3 @@ wp-config.php
 *.sql.gz
 *.ddev
 database.sql
-wp-includes/**/dist
