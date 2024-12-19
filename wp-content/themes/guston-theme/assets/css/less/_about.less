@@ -1,0 +1,308 @@
+section.about-vision {
+
+    .container,
+    .row {
+        --bs-gutter-x: 0rem;
+        --bs-gutter-y: 0rem;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media @mobileTab {
+            height: auto;
+        }
+    }
+
+    .content-wrapper {
+        background-color: #eee;
+        padding: 80px;
+        height: 100%;
+
+        @media @mobileTab {
+            width: 100%;
+            text-align: center;
+            padding: 50px 30px;
+        }
+    }
+}
+
+section.about-features {
+    padding: @default-margin 0;
+    background-color: @theme-bg-light;
+
+    .content-wrapper {
+        max-width: 900px;
+        margin: 0px auto 50px;
+        text-align: center;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        @media @mobile {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        @media @tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .item {
+            background-color: #FFF;
+            padding: 30px 15px;
+            border-radius: 10px;
+            color: @secondary-color;
+            text-align: center;
+
+            img {
+                width: 80px;
+                height: 80px;
+                object-fit: contain;
+                margin-bottom: 15px;
+            }
+
+            h5 {
+                font-size: 16px;
+                font-weight: 700;
+                color: @primary-color;
+            }
+        }
+    }
+}
+
+section.about-timeline-title {
+    .content-wrapper {
+        max-width: 900px;
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    &+section.about-timeline {
+        margin-top: 40px;
+    }
+}
+
+section.about-timeline {
+    background-color: @secondary-color;
+    color: #FFF;
+    padding: @default-margin 0;
+
+    .images {
+        width: 60%;
+        opacity: .3;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 1;
+
+        @media @mobileTab {
+            width: 100%;
+            opacity: .1;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 40%;
+        width: 30%;
+        height: 100%;
+        background: @secondary-color;
+        background: linear-gradient(90deg, fade(@secondary-color, 0%) 0%, @secondary-color 100%);
+        top: 0;
+        z-index: 2;
+
+        @media @mobileTab {
+            content: unset;
+        }
+    }
+
+    .container,
+    .row {
+        --bs-gutter-x: 3rem;
+        --bs-gutter-y: 2rem;
+    }
+
+    .container {
+        position: relative;
+        z-index: 5;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 80%;
+
+        @media @mobileTab {
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: 800;
+            font-size: 4rem;
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        width: 56%;
+        margin-left: auto;
+
+        @media @mobileTab {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .timeline-side {
+            width: 120px;
+            flex-shrink: 0;
+
+            @media @mobileTab {
+                width: auto;
+            }
+        }
+
+        .timeline-pagination {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+
+            @media @mobileTab {
+                display: grid;
+                gap: 30px;
+            }
+
+            @media @mobile {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media @tablet {
+                grid-template-columns: repeat(9, 1fr);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                width: 2px;
+                height: ~'calc(100% - 30px)';
+                right: 4px;
+                top: 15px;
+                background-color: #fff;
+                opacity: .08;
+
+                @media @mobileTab {
+                    content: unset;
+                }
+            }
+
+            .swiper-pagination-bullet {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-direction: row-reverse;
+                font-size: 20px;
+                font-weight: 300;
+                cursor: pointer;
+                opacity: .5;
+
+                @media @mobileTab {
+                    flex-direction: column-reverse;
+                }
+
+                span {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #FFF;
+                    display: inline-block;
+                }
+
+                &.swiper-pagination-bullet-active {
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    line-height: 1;
+                    opacity: 1;
+
+                    span {
+                        background-color: @primary-color;
+
+                        @media @mobileTab {
+                            margin-top: 3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .timeline {
+            width: calc(~'100% - 200px');
+            margin-left: 0;
+
+            @media @mobileTab {
+                width: 100%;
+            }
+
+            .swiper {
+                height: 100%;
+            }
+
+            .item {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                @media @mobileTab {
+                    text-align: center;
+                }
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 15px;
+                    flex-shrink: 0;
+
+                    @media @mobileTab {
+                        margin: 0px auto 15px;
+                        flex-shrink: 0;
+                    }
+                }
+
+                h5 {
+                    font-weight: 900;
+                    color: #FFF;
+                    opacity: .3;
+                    font-size: 4rem;
+                    margin-bottom: 15px;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

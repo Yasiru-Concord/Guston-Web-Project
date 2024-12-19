@@ -1,0 +1,9 @@
+# dependencies
+vendor
+assets/css/master.css
+assets/css/master.min.css
+assets/js/custom.min.js
+
+# docker
+db
+

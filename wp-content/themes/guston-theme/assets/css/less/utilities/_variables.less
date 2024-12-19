@@ -1,0 +1,40 @@
+@primary-color: #2FABD2;
+@secondary-color: #041D2C;
+
+@theme-dark-gray: #151b1e;
+@theme-medium-gray: #585858;
+
+@theme-green: #8ac304;
+
+@theme-bg-light: #F1F1F1;
+@bg-color: @primary-color;
+
+@font-color: @secondary-color;
+@font-primary: 'Inter', sans-serif;
+@font-secondary: @font-primary;
+@font-bebas: "Bebas Neue", sans-serif;
+
+@btn-color: @primary-color;
+
+@default-margin: 80px;
+
+@theme-radius: 0px;
+
+@sub-page-banner-height: 300px;
+
+@mobile-device-width: 767px;
+@mobile-tab-device-width: 1024px;
+@tablet-device-width: 1024px;
+
+@mobile: ~'screen and (max-width: @{mobile-device-width})';
+@mobileTab: ~'screen and (max-width: @{mobile-tab-device-width})';
+@tablet: ~'screen and (min-width: 768px) and (max-width: @{tablet-device-width})';
+@ipadLandscape: ~ 'screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1)';
+@destop1280: ~'screen and (min-width: 1280px) and (max-width: 1366px)';
+@desktop: ~'screen and (min-width: 1025px)';
+
+.fontawesome(@content: '') {
+    content: @content;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}

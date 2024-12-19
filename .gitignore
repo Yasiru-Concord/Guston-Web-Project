@@ -1,0 +1,11 @@
+wp-includes/**/dist/
+.ddev
+*.sql
+.vscode
+wp-config.php
+
+.idea
+*.sql.gz
+*.ddev
+database.sql
+wp-includes/**/dist

@@ -1,0 +1,221 @@
+section.careers {
+
+    .container,
+    .row {
+        --bs-gutter-x: 3rem;
+        --bs-gutter-y: 3rem;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        border: solid 1px #eee;
+        padding: 20px;
+        height: 100%;
+
+        div {
+            width: 100%;
+        }
+
+        h2 {
+            font-weight: 800;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+        }
+    }
+
+    .career-inquiry-modal {
+
+        @media @tablet {
+            --bs-modal-width: 80%;
+        }
+
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 1.5rem;
+            align-items: center;
+        }
+
+        .left {
+            height: 100%;
+
+            @media @mobileTab {
+                .content-wrapper {
+                    padding: 20px 20px 0;
+
+                    ul,
+                    ol {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            img {
+                border-radius: 5px;
+                width: 100%;
+                min-height: 100%;
+                display: block;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .forminator-custom-form {
+        .job-title {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}
+
+section.awards-section {
+
+    .container,
+    .row {
+        --bs-gutter-x: 3rem;
+        --bs-gutter-y: 3rem;
+    }
+
+    .item {
+        border: solid 1px @theme-bg-light;
+        padding: 10px;
+        height: 100%;
+
+        img {
+            display: block;
+        }
+
+        h3 {
+            font-weight: 700;
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+}
+
+section.csr-certificates {
+    margin-top: 0;
+    padding: @default-margin 0;
+    text-align: center;
+    background-color: @theme-bg-light;
+
+    .content-wrapper {
+        &.top {
+            margin-bottom: 50px;
+        }
+
+        &.bottom {
+            margin-top: 50px;
+        }
+    }
+
+    .certificates {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        .certificate {
+            width: calc(~'(100% - 80px) / 5');
+            padding: 30px;
+            background-color: #FFF;
+
+            @media @tablet {
+                width: calc(~'(100% - 40px) / 3');
+            }
+
+            @media @mobile {
+                width: calc(~'(100% - 20px) / 1');
+            }
+
+            .image {
+                position: relative;
+                padding-top: 70%;
+                margin-bottom: 30px;
+
+                @media @mobile {
+                    padding-top: 50%;
+                }
+
+                .full-image {
+                    object-fit: contain;
+                }
+            }
+
+            h3 {
+                color: @primary-color;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: @theme-medium-gray;
+            }
+        }
+    }
+}
+
+section.csr-listing {
+
+    .container,
+    .row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 2rem;
+    }
+
+    .item {
+        position: relative;
+        padding-top: 120%;
+        margin-bottom: 15px;
+        overflow: hidden;
+
+        .content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 50px;
+            z-index: 2;
+
+            @media @mobileTab {
+                padding: 30px;
+            }
+
+            &::before {
+                @gradient-color: @secondary-color;
+                content: '';
+                .absolute-full-size();
+                height: 200%;
+                background: @gradient-color;
+                background: linear-gradient(180deg, fade(@gradient-color, 0%) 0%, @gradient-color 80%);
+                z-index: -1;
+                bottom: 0;
+                top: auto;
+            }
+
+            h3 {
+                font-weight: 800;
+                color: #FFF;
+            }
+
+            .theme-btn {
+                margin-top: 20px;
+                padding: 10px 30px;
+            }
+        }
+
+        .full-link {
+            z-index: 10;
+        }
+
+        &:hover {
+            .theme-btn {
+                background-color: @primary-color;
+                color: #FFF;
+            }
+        }
+    }
+}
