@@ -11,7 +11,6 @@
         </div>
     </section>
 <?php endif; ?>
-
 <?php if (have_rows('factories')) : ?>
     <?php
     $factoryID = 1;

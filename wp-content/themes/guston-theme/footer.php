@@ -62,7 +62,7 @@
 
         <div class="copyrights">
             <p class="copyrights-text"><?php echo str_replace('[year]', date('Y'), get_field('copyrights_text', 'option')); ?></p>
-            <p class="maya-wrapper"><a href="https://mayahive.com/" target="_blank">Crafted By <span>Maya</span><span>Hive</span></a></p>
+            <!-- <p class="maya-wrapper"><a href="https://mayahive.com/" target="_blank">Crafted By <span>Maya</span><span>Hive</span></a></p> -->
         </div>
 
     </div>

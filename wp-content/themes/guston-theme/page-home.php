@@ -169,14 +169,36 @@ $bannerImage = get_field('banner_image');
                         <div class="swiper-wrapper">
                             <?php while (have_rows('factories')) : the_row(); ?>
                                 <div class="swiper-slide">
-                                    <div class="item">
-                                        <?php if (get_sub_field('top_content')) : ?>
-                                            <div class="content-wrapper top"><?php the_sub_field('top_content'); ?></div>
-                                        <?php endif; ?>
-                                        <?php if (get_sub_field('bottom_content')) : ?>
-                                            <div class="content-wrapper bottom"><?php the_sub_field('bottom_content'); ?></div>
-                                        <?php endif; ?>
-                                    </div>
+                                <div class="item">
+    <?php if (get_sub_field('top_content')) : ?>
+        <div class="content-wrapper top">
+            <img class="country_map" src="<?php the_sub_field('countryImg'); ?>" alt="Country Map">
+        </div>
+    <?php endif; ?>
+
+    <div class="content-wrapper info-graphics">
+        <?php if (have_rows('factory_content')) : ?>
+            <ul class="slides info-ul">
+                <?php while (have_rows('factory_content')) : the_row(); ?>
+                    <?php 
+                        $image = get_sub_field('icon'); 
+                        $stats = get_sub_field('stats'); 
+                        $title = get_sub_field('title');
+                        $stat = get_sub_field('stat');
+                    ?>
+                    <li class="hover-container">
+                        <?php if ($stat) : ?>
+                            <span><?php echo acf_esc_html($stat); ?></span>
+                        <?php endif; ?>
+                        <img src="<?php echo esc_url($image); ?>" alt="Factory Icon">
+                        <p><?php echo acf_esc_html($title); ?></p>
+                    </li>
+                <?php endwhile; ?>
+            </ul>
+        <?php endif; ?>
+    </div>
+</div>
+
                                 </div>
                             <?php endwhile; ?>
                         </div>

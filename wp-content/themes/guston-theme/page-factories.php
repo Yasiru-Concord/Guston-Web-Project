@@ -2,7 +2,6 @@
 <?php get_header(); ?>
 
 <?php get_template_part('templates/sub-page', 'banner'); ?>
-
 <?php if (have_rows('factories')) : ?>
     <section class="factories">
         <div class="container">

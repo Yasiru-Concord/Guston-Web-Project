@@ -100,17 +100,17 @@ section.banner-section {
         object-fit: cover;
     }
 
-    // &::before {
-    //     @gradient-color: #c9c9c8;
-    //     content: '';
-    //     .absolute-full-size();
-    //     height: 50%;
-    //     background: @gradient-color;
-    //     background: linear-gradient(0deg, fade(@gradient-color, 0%) 0%, @gradient-color 100%);
-    //     z-index: 2;
-    //     opacity: 1;
-    //     pointer-events: none;
-    // }
+    &::before {
+        @gradient-color: #c7cad7;
+        content: '';
+        .absolute-full-size();
+        height: 14%;
+        background: @gradient-color;
+        background: linear-gradient(180deg, fade(@gradient-color, 0%) 0%, @gradient-color 100%);
+        z-index: 2;
+        opacity: 0.8;
+        pointer-events: none;
+    }
 
     .container {
         position: relative;
@@ -479,12 +479,12 @@ section.home-factories {
 
         .title {
             position: relative;
-            width: 50%;
+            width: 40%;
             background-color: @secondary-color;
             padding: 30px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            // justify-content: flex-end;
 
             .full-image {
                 opacity: .2;
@@ -501,9 +501,12 @@ section.home-factories {
                 margin-top: 30px;
 
                 .swiper-wrapper {
+                    flex-shrink: 3;
                     gap: 10px;
                     flex-wrap: wrap;
-
+                    display: flex;
+                    flex-direction: row;
+                    height: unset;
                     .swiper-slide {
                         width: auto !important;
                         .transitions();
@@ -531,7 +534,7 @@ section.home-factories {
         }
 
         .content {
-            width: 50%;
+            width: 60%;
 
             .swiper-slide {
                 height: auto;
@@ -541,19 +544,129 @@ section.home-factories {
                 width: 100%;
                 height: 100%;
                 background-color: @theme-bg-light;
-                padding: 30px;
-
+                padding: 20px;
+            
                 .content-wrapper {
                     &.top {
-                        margin-bottom: 30px;
+                        max-width: 100%; /* Ensures the container never exceeds the parent width */
+                        overflow: hidden;
                     }
-
+            
                     &.bottom {
                         background-color: #FFF;
-                        padding: 20px;
+                    }
+            
+                    ul {
+                        margin: 0;
+                    }
+            
+                    .info-ul {
+                        list-style-type: none;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                    }
+            
+                    .country_map {
+                        width: 100%; /* Makes the image responsive */
+                        height: auto; /* Maintains the aspect ratio */
+                        display: block;
+                    }
+                }
+            
+                .top:hover {
+                    background-color: red;
+                }
+            
+                .info-graphics {
+                    display: none;
+                }
+            
+                .top:hover + .info-graphics {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    flex-shrink: 1;
+            
+                    img {
+                        height: 60px;
+                        width: 50px;
+                    }
+            
+                    .hover-container {
+                        margin: 10px;
+                        border: 3px dashed #2FABD2;
+                        padding: 5px;
+                        height: 90px;
+                        width: 140px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+            
+                        span {
+                            position: absolute;
+                            display: block;
+                            left: -9px;
+                            top: -13px;
+                            font-size: 40px;
+                            color: #2FABD2;
+                            font-weight: 300;
+                            height: 58px;
+                            background-color: #F1F1F1;
+                            width: 25px;
+                        }
+                    }
+            
+                    @media @mobileTab {
+                        img {
+                            height: 40px;
+                            width: 30px;
+                        }
+            
+                        .hover-container {
+                            margin: 10px;
+                            border: 1px dashed #2FABD2;
+                            padding: 5px;
+                            height: 60px;
+                            width: 80px;
+            
+                            span {
+                                font-size: 20px;
+                                height: 30px;
+                                width: 20px;
+                            }
+                        }
+                    }
+            
+                    .hover-container:hover {
+                        background-color: #2FABD2;
+                        padding: 8px;
+                        text-align: center;
+            
+                        span {
+                            display: none;
+                        }
+            
+                        img {
+                            display: none;
+                        }
+            
+                        p {
+                            display: block;
+                            margin: 0;
+                            color: white;
+                            font-size: 12px;
+                        }
+                    }
+            
+                    .hover-container p {
+                        display: none;
                     }
                 }
             }
+            
         }
 
         @media @mobileTab {
