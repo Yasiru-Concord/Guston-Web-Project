@@ -475,6 +475,7 @@ section.home-commitment {
 
 section.home-factories {
     height: 100%;
+
     .inner {
         display: flex;
 
@@ -508,6 +509,7 @@ section.home-factories {
                     display: flex;
                     flex-direction: row;
                     height: unset;
+
                     .swiper-slide {
                         width: auto !important;
                         .transitions();
@@ -530,19 +532,22 @@ section.home-factories {
                             }
                         }
                     }
-                  
+
                 }
-                @media @mobileTab { /* Adjust styles for smaller screens */
+
+                @media @mobileTab {
+
+                    /* Adjust styles for smaller screens */
                     .swiper-wrapper {
-                         justify-content: center;
-                         flex-shrink: 3;
-                         gap: 10px;
-                         flex-wrap: wrap;
-                         display: flex;
-                         flex-direction: row;
-                         height: unset;
-                     }
+                        justify-content: center;
+                        flex-shrink: 3;
+                        gap: 10px;
+                        flex-wrap: wrap;
+                        display: flex;
+                        flex-direction: row;
+                        height: unset;
                     }
+                }
             }
         }
 
@@ -550,190 +555,221 @@ section.home-factories {
             width: 50%;
             display: flex;
             justify-content: flex-end;
-                align-items: center;
-                background-color: white;
-                // background-color: #092f3a;
-                        // height: 100%;
-                        // width: 100%;
-                        .swiper {
-                            width: 100%;
-                            height: 100%;
-                            // margin-top: 30px;
-            
-                          
-                        }
+            align-items: center;
+            background-color: white;
+
+            // background-color: #092f3a;
+            // height: 100%;
+            // width: 100%;
+            .swiper {
+                width: 100%;
+                height: 100%;
+                // margin-top: 30px;
+
+
+            }
+
             .swiper-slide {
                 height: auto;
             }
-           
+
             .item {
                 height: 100%;
-                position: relative; /* Ensures context for positioning */
-                .content-wrapper {
-                        height: 100%;
-                        width: 100%;
+                position: relative;
+            }
 
+            .content-wrapper {
+                height: 100%;
+                width: 100%;
+            }
 
-                    &.top_fact {
-                        cursor: pointer;
-                        height: 100%;
-                        width: 100%;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            background-color: white;
-                        }
-                     
-                      
-                    }
-            
-                    &.info-graphics {
-                        display: none; /* Hidden initially */
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background-color: white;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                        z-index: 10;
-                        width: 100%;
-                        padding: 10px;
-                        flex-direction: row;
-                        justify-content: space-evenly;
-                    }
+            .content-wrapper.top_fact {
+                cursor: pointer;
+                height: 100%;
+                width: 100%;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                /* Smooth transition for showing/hiding */
+            }
+
+            .content-wrapper.top_fact img {
+                width: 100%;
+                height: 100%;
+                background-color: white;
+            }
+
+            .content-wrapper.top_fact {
+                cursor: pointer;
+                height: 100%;
+                width: 100%;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            /* Initially hidden on mobile */
+            .content-wrapper.info-graphics {
+                opacity: 0;
+                /* Hidden initially */
+                // transform: translateY(-20px); /* Move up slightly */
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                /* Smooth transition */
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: white;
+                // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 10;
+                width: 100%;
+                // padding: 10px;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            /* Show info-graphics */
+            .content-wrapper.info-graphics.active {
+                opacity: 1;
+                /* Show element */
+                transform: translateY(0);
+                /* Reset transform */
+            }
+
+            .info-ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hover-container {
+                margin: 8px;
+                border: 3px solid #2FABD2;
+                padding: 5px;
+                height: 90px;
+                width: 140px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                background: linear-gradient(to bottom right, #ffffff 50%, #f0f0f0 50%);
+                transition: background-color 0.3s ease;
+                /* Smooth background transition */
+            }
+
+            .hover-container span {
+                position: absolute;
+                display: block;
+                left: -9px;
+                top: -13px;
+                font-size: 40px;
+                color: #2FABD2;
+                font-weight: 300;
+                height: 58px;
+                background-color: white;
+            }
+
+            .hover-container img {
+                height: 60px;
+                width: 60px;
+            }
+
+            .hover-container p {
+                margin: 0;
+                font-size: 12px;
+                text-align: center;
+                display: none;
+                /* Initially hidden */
+            }
+
+            .hover-container:hover {
+                background-color: #2FABD2;
+                color: #2FABD2;
+            }
+
+            .hover-container:hover p {
+                display: block;
+                /* Show text on hover */
+                color: #2FABD2;
+            }
+
+            .hover-container:hover img {
+                display: none;
+                /* Hide image on hover */
+            }
+
+            .hover-container:hover span {
+                display: none;
+                /* Hide span on hover */
+            }
+
+            /* Media Queries for Responsive Design */
+            @media (max-width: 768px) {
+                .content-wrapper.info-graphics {
+                    height: 400px;
+                    /* Set a fixed height for scrolling */
                 }
-            
-                /* Show `.info-graphics` when hovering on `.top` */
-                // .content-wrapper.top:hover + .content-wrapper.info-graphics {
-                //     display: contents flex; /* Makes `.info-graphics` visible */
-                //     flex-direction: row; /* Adjust layout */
-                //     justify-content: center; /* Centers content */
-                // }
-                // .content-wrapper.top:hover {
-                //     display: none;
-                // }
-                /* Styling for the list inside `.info-graphics` */
+
                 .info-ul {
-                    list-style-type: none;
-                    margin: 0;
-                    padding: 0;
                     display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-            
-                    .hover-container {
-                        margin: 8px;
-                        border: 3px solid #2FABD2;
-                        padding: 5px;
-                        height: 90px;
-                        width: 140px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        position: relative;
-                        background: linear-gradient(to bottom right, #ffffff 50%, #f0f0f0 50%);
-
-            
-                        span {
-                            position: absolute;
-                            display: block;
-                            left: -9px;
-                            top: -13px;
-                            font-size: 40px;
-                            color: #2FABD2;
-                            font-weight: 300;
-                            height: 58px;
-                            background-color: white;
-                            width: 25px;
-                    }
-            
-                        img {
-                            height: 60px;
-                            width: 60px;
-                        }
-            
-                        p {
-                            margin: 0;
-                            font-size: 12px;
-                            text-align: center;
-                            display: none; /* Initially hidden */
-                        }
-            
-                        &:hover {
-                            background-color: #2FABD2;
-                            color: #2FABD2;
-                            p {
-                                display: block; /* Show text on hover */
-                                color: #2FABD2;
-                            }
-                            img {
-                                display: none; /* Hide image on hover */
-                            }
-                            span {
-                                display: none; /* Hide span on hover */
-                            }
-                        }
-                    }
+                    flex-direction: column;
+                    /* Stack items vertically */
+                    align-items: center;
+                    /* Center items */
+                    height: 240px;
+                    /* Adjust height */
+                    padding: 10px;
+                    overflow-y: auto;
+                    /* Allow vertical scrolling */
                 }
-            
-                @media @mobileTab { /* Adjust styles for smaller screens */
-                 
 
-                        .info-ul {
-                            list-style-type: none;
-                            margin: 0;
-                            padding: 0;
-                            display: flex;
-                            justify-content: center;
-                            flex-wrap: wrap;
-                            display: flex; /* Enable flexbox */
-                            flex-direction: row; /* Arrange items in rows */
-                            flex-wrap: wrap; /* Allow wrapping of items */
-                            height: 100vh; /* Take up full height of the viewport */
-                            padding: 10px;
-                            overflow-y: auto;
-                        }
-                        .content-wrapper
-                        &.info-graphics {
-                            display: flex; /* Enable flexbox */
-                            flex-direction: row; /* Arrange items in rows */
-                            flex-wrap: wrap; /* Allow wrapping of items */
-                            height: 100vh; /* Take up full height of the viewport */
-                            overflow-y: auto;
-                            position: relative; /* Ensure proper positioning */
-                            background-color: chartreuse;
-                        }
-                    
-                    
-                
-                    .info-ul .hover-container {
-                        height: 100px;
-                        width: 110px;
-                        margin: 5px;
-            
-                        img {
-                            height: 60px;
-                            width: 60px;
-                        }
-            
-                        span {
-                            font-size: 16px;
-                            padding: 3px;
-                            height: 28px;
-                            background-color: white;
-                            width: 15px;
-                        }
-                        p {
-                            font-size: 10px;
-                            margin: 0;
-                            padding: 0;
-                            line-height: 14px;
-                        }
+                .content-wrapper.info-graphics.active {
+                    opacity: 1;
+                    /* Show content when class 'active' is added */
+                    transform: translateY(0);
+                    /* Reset transform */
+                    position: relative;
+                    /* Ensure proper positioning */
+                    background-color: white;
+                    /* Set background color */
+                    display: flex;
+                    /* Show content when class 'active' is added */
+                    flex-direction: column;
+                    /* Arrange items in a column */
+                    height: auto;
+                    /* Adjust height for mobile */
+                    overflow-y: auto;
+                    /* Allow scrolling */
+
+                }
+
+                .info-ul .hover-container {
+                    height: 100px;
+                    width: 110px;
+                    margin: 5px;
+
+                    img {
+                        height: 60px;
+                        width: 60px;
+                    }
+
+                    span {
+                        font-size: 16px;
+                        padding: 3px;
+                        height: 28px;
+                        background-color: white;
+                        width: 15px;
+                    }
+
+                    p {
+                        font-size: 10px;
+                        margin: 0;
+                        padding: 0;
+                        line-height: 14px;
                     }
                 }
             }
-            
-            
-            
+
+
+
         }
 
         @media @mobileTab {
@@ -748,7 +784,7 @@ section.home-factories {
             //     .item {
             //         // padding: 20px;
             //         background-color: red;
-              
+
 
             //     }
             // }
