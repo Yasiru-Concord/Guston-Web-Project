@@ -7,99 +7,103 @@ $bannerType = get_field('banner_type');
 $bannerImage = get_field('banner_image');
 ?>
 <script>
-// document.addEventListener('DOMContentLoaded', () => {
-//     document.querySelectorAll('.content-wrapper.top_fact').forEach(item => {
-//         item.addEventListener('mouseenter', event => {
-//             console.log('ddddddd')
-//             const infoGraphics = item.nextElementSibling; // Selects the associated info-graphics
-//             infoGraphics.classList.add('active'); // Add the active class
-//             item.style.opacity = '0'; // Fade out top_fact
-//             item.style.transform = 'translateY(-20px)'; // Move up
-//         });
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     document.querySelectorAll('.content-wrapper.top_fact').forEach(item => {
+    //         item.addEventListener('mouseenter', event => {
+    //             console.log('ddddddd')
+    //             const infoGraphics = item.nextElementSibling; // Selects the associated info-graphics
+    //             infoGraphics.classList.add('active'); // Add the active class
+    //             item.style.opacity = '0'; // Fade out top_fact
+    //             item.style.transform = 'translateY(-20px)'; // Move up
+    //         });
 
-//         item.addEventListener('mouseleave', event => {
-//             console.log('eeeee')
-//             const infoGraphics = item.nextElementSibling; // Selects the associated info-graphics
-//             infoGraphics.classList.remove('active'); // Remove the active class
-//             item.style.opacity = '1'; // Fade in top_fact
-//             item.style.transform = 'translateY(0)'; // Reset position
-//         });
-//     });
+    //         item.addEventListener('mouseleave', event => {
+    //             console.log('eeeee')
+    //             const infoGraphics = item.nextElementSibling; // Selects the associated info-graphics
+    //             infoGraphics.classList.remove('active'); // Remove the active class
+    //             item.style.opacity = '1'; // Fade in top_fact
+    //             item.style.transform = 'translateY(0)'; // Reset position
+    //         });
+    //     });
 
-//     // Optional: Close the info-graphics when mouse leaves it
-//     document.querySelectorAll('.content-wrapper.info-graphics').forEach(infoGraphics => {
-//         infoGraphics.addEventListener('mouseleave', () => {
-//             console.log('ffffff')
-//             infoGraphics.classList.remove('active'); // Remove active class
-//             const topFact = infoGraphics.previousElementSibling;
-//             topFact.style.opacity = '1'; // Fade in top_fact
-//             topFact.style.transform = 'translateY(0)'; // Reset position
-//         });
-//     });
-// });
+    //     // Optional: Close the info-graphics when mouse leaves it
+    //     document.querySelectorAll('.content-wrapper.info-graphics').forEach(infoGraphics => {
+    //         infoGraphics.addEventListener('mouseleave', () => {
+    //             console.log('ffffff')
+    //             infoGraphics.classList.remove('active'); // Remove active class
+    //             const topFact = infoGraphics.previousElementSibling;
+    //             topFact.style.opacity = '1'; // Fade in top_fact
+    //             topFact.style.transform = 'translateY(0)'; // Reset position
+    //         });
+    //     });
+    // });
 
-//    document.addEventListener('DOMContentLoaded', function () {
-//     // Get all top_fact elements
-//     const topElements = document.querySelectorAll('.top_fact');
+    //    document.addEventListener('DOMContentLoaded', function () {
+    //     // Get all top_fact elements
+    //     const topElements = document.querySelectorAll('.top_fact');
 
-//     topElements.forEach((topElement) => {
-//         // Get the unique ID of the current topElement
-//         const uniqueId = topElement.getAttribute('data-id');
+    //     topElements.forEach((topElement) => {
+    //         // Get the unique ID of the current topElement
+    //         const uniqueId = topElement.getAttribute('data-id');
 
-//         // Find the corresponding info-graphics element based on the unique ID
-//         const infoGraphics = document.querySelector(`#info_graphics_${uniqueId}`);
+    //         // Find the corresponding info-graphics element based on the unique ID
+    //         const infoGraphics = document.querySelector(`#info_graphics_${uniqueId}`);
 
-//         // Ensure both elements exist
-//         if (topElement && infoGraphics) {
-//             // Show info-graphics when hovering over the top_fact
-//             topElement.addEventListener('mouseenter', function () {
-                
-//                 infoGraphics.style.display = 'flex'; // Show the info-graphics
-//                 topElement.style.display = 'none'; // Hide the topElement
-//             });
+    //         // Ensure both elements exist
+    //         if (topElement && infoGraphics) {
+    //             // Show info-graphics when hovering over the top_fact
+    //             topElement.addEventListener('mouseenter', function () {
 
-//             // Hide info-graphics and show topElement when mouse leaves the info-graphics
-//             infoGraphics.addEventListener('mouseleave', function () {
-//                 infoGraphics.style.display = 'none'; // Hide the info-graphics
-//                 topElement.style.display = 'block'; // Show the topElement
-//             });
-//         }
-//     });
-// });
-document.addEventListener('DOMContentLoaded', function () {
-    // Get all top_fact elements
-    const topElements = document.querySelectorAll('.top_fact');
+    //                 infoGraphics.style.display = 'flex'; // Show the info-graphics
+    //                 topElement.style.display = 'none'; // Hide the topElement
+    //             });
 
-    topElements.forEach((topElement) => {
-        // Get the unique ID of the current topElement
-        const uniqueId = topElement.getAttribute('data-id');
+    //             // Hide info-graphics and show topElement when mouse leaves the info-graphics
+    //             infoGraphics.addEventListener('mouseleave', function () {
+    //                 infoGraphics.style.display = 'none'; // Hide the info-graphics
+    //                 topElement.style.display = 'block'; // Show the topElement
+    //             });
+    //         }
+    //     });
+    // });
+    document.addEventListener('DOMContentLoaded', function() {
+        const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
 
-        // Find the corresponding info-graphics element based on the unique ID
-        const infoGraphics = document.querySelector(`#info_graphics_${uniqueId}`);
+if (isDesktop) {
+        // Get all top_fact elements
+        const topElements = document.querySelectorAll('.top_fact');
 
-        // Ensure both elements exist
-        if (topElement && infoGraphics) {
-            // Initialize the info-graphics to be hidden
-            infoGraphics.style.opacity = '0'; // Set initial opacity
-            infoGraphics.style.transition = 'opacity 0.3s ease'; // Transition effect
-            infoGraphics.style.pointerEvents = 'none'; // Prevent interaction when hidden
+        topElements.forEach((topElement) => {
+            // Get the unique ID of the current topElement
+            const uniqueId = topElement.getAttribute('data-id');
 
-            // Show info-graphics when hovering over the top_fact
-            topElement.addEventListener('mouseenter', function () {
-                infoGraphics.style.opacity = '1'; // Fade in the info-graphics
-                infoGraphics.style.pointerEvents = 'auto'; // Allow interaction
-                topElement.style.opacity = '0'; // Fade out the topElement
-            });
+            // Find the corresponding info-graphics element based on the unique ID
+            const infoGraphics = document.querySelector(`#info_graphics_${uniqueId}`);
 
-            // Hide info-graphics and show topElement when mouse leaves the info-graphics
-            infoGraphics.addEventListener('mouseleave', function () {
-                infoGraphics.style.opacity = '0'; // Fade out the info-graphics
-                infoGraphics.style.pointerEvents = 'none'; // Prevent interaction
-                topElement.style.opacity = '1'; // Fade in the topElement
-            });
-        }
+            // Ensure both elements exist
+            if (topElement && infoGraphics) {
+                // Initialize the info-graphics to be hidden
+                infoGraphics.style.opacity = '0'; // Set initial opacity
+                infoGraphics.style.transition = 'opacity 0.3s ease'; // Transition effect
+                infoGraphics.style.pointerEvents = 'none'; // Prevent interaction when hidden
+
+                // Show info-graphics when hovering over the top_fact
+                topElement.addEventListener('mouseenter', function() {
+                    infoGraphics.style.opacity = '1'; // Fade in the info-graphics
+                    infoGraphics.style.pointerEvents = 'auto'; // Allow interaction
+                    topElement.style.opacity = '0'; // Fade out the topElement
+                });
+
+                // Hide info-graphics and show topElement when mouse leaves the info-graphics
+                infoGraphics.addEventListener('mouseleave', function() {
+                    infoGraphics.style.opacity = '0'; // Fade out the info-graphics
+                    infoGraphics.style.pointerEvents = 'none'; // Prevent interaction
+                    topElement.style.opacity = '1'; // Fade in the topElement
+                });
+            }
+        });
+    }
     });
-});
 </script>
 <section class="banner-section <?php echo ($bannerType == 1) ? 'default' : 'slider'; ?>">
     <?php if ($bannerType == 1) : // Default Banner
@@ -234,14 +238,12 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </section>
 <?php endif; ?>
-
 <?php if (have_rows('factories')) : ?>
     <section class="home-factories">
         <div class="container">
             <div class="inner">
-                <div class="title">
-                    <?php getImage(get_field('factories_image'), 'full-image'); ?>
-                    <div class="content-wrapper"><?php the_field('factories_title'); ?></div>
+            <div class="title-wrapper"><?php the_field('factories_title'); ?></div>
+                <div class="left">
                     <div class="swiper" id="homeFactoriesNavSwiper">
                         <div class="swiper-wrapper">
                             <?php while (have_rows('factories')) : the_row();
@@ -259,52 +261,56 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </div>
                 </div>
-                <div class="content">
-                    <div class="swiper" id="homeFactoriesSwiper">
-                        <div class="swiper-wrapper">
-                            <?php while (have_rows('factories')) : the_row(); ?>
-                                <?php $uniqueId = uniqid(); // Generate a unique ID for each factory 
-                                ?>
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <?php if (get_sub_field('top_content')) : ?>
-                                            <div class="content-wrapper top_fact" data-id="<?php echo $uniqueId; ?>" id="factory_top_map_<?php echo $uniqueId; ?>">
-                                                <img src="<?php the_sub_field('countryImg'); ?>" alt="Country Map">
-                                            </div>
-                                        <?php endif; ?>
 
-                                        <div class="content-wrapper info-graphics" data-id="<?php echo $uniqueId; ?>" id="info_graphics_<?php echo $uniqueId; ?>">
-                                            <?php if (have_rows('factory_content')) : ?>
-                                                <ul class="slides info-ul">
-                                                    <?php while (have_rows('factory_content')) : the_row(); ?>
-                                                        <?php
-                                                        $image = get_sub_field('icon');
-                                                        $stats = get_sub_field('stats');
-                                                        $title = get_sub_field('title');
-                                                        $stat = get_sub_field('stat');
-                                                        ?>
-                                                        <li class="hover-container">
-                                                            <?php if ($stat) : ?>
-                                                                <span><?php echo acf_esc_html($stat); ?></span>
-                                                            <?php endif; ?>
-                                                            <img src="<?php echo esc_url($image); ?>" alt="Factory Icon">
-                                                            <p><?php echo acf_esc_html($title); ?></p>
-                                                        </li>
-                                                    <?php endwhile; ?>
-                                                </ul>
+                <div class="right">
+                <div class="title-wrapper"><?php the_field('factories_title'); ?></div>
+                <div class="swiper" id="homeFactoriesSwiper">
+                            <div class="swiper-wrapper">
+                                <?php while (have_rows('factories')) : the_row(); ?>
+                                    <?php $uniqueId = uniqid(); // Generate a unique ID for each factory 
+                                    ?>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+
+                                            <?php if (get_sub_field('top_content')) : ?>
+                                                <div class="content-wrapper top_fact" data-id="<?php echo $uniqueId; ?>" id="factory_top_map_<?php echo $uniqueId; ?>">
+                                                <img src="<?php the_sub_field('countryImg'); ?>" alt="Country Map">
+                                                </div>
                                             <?php endif; ?>
+
+                                            <div class="content-wrapper info-graphics" data-id="<?php echo $uniqueId; ?>" id="info_graphics_<?php echo $uniqueId; ?>">
+                                                <?php if (have_rows('factory_content')) : ?>
+                                                    <ul class="slides info-ul">
+                                                        <?php while (have_rows('factory_content')) : the_row(); ?>
+                                                            <?php
+                                                            $image = get_sub_field('icon');
+                                                            $stats = get_sub_field('stats');
+                                                            $title = get_sub_field('title');
+                                                            $stat = get_sub_field('stat');
+                                                            ?>
+                                                            <li class="hover-container">
+                                                                <?php if ($stat) : ?>
+                                                                    <span><?php echo acf_esc_html($stat); ?></span>
+                                                                <?php endif; ?>
+                                                                <img src="<?php echo esc_url($image); ?>" alt="Factory Icon">
+                                                                <p><?php echo acf_esc_html($title); ?></p>
+                                                            </li>
+                                                        <?php endwhile; ?>
+                                                    </ul>
+                                                <?php endif; ?>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php endwhile; ?>
+                                <?php endwhile; ?>
+                            </div>
                         </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </section>
 <?php endif; ?>
+
+
 
 <?php
 /*
