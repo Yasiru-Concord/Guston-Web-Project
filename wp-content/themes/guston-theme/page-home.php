@@ -241,8 +241,9 @@ if (isDesktop) {
 <?php if (have_rows('factories')) : ?>
     <section class="home-factories">
         <div class="container">
+        <div class="title-wrapper"><?php the_field('factories_title'); ?></div>
             <div class="inner">
-            <div class="title-wrapper"><?php the_field('factories_title'); ?></div>
+            <!-- <div class="title-wrapper"><?php the_field('factories_title'); ?></div> -->
                 <div class="left">
                     <div class="swiper" id="homeFactoriesNavSwiper">
                         <div class="swiper-wrapper">
@@ -263,7 +264,7 @@ if (isDesktop) {
                 </div>
 
                 <div class="right">
-                <div class="title-wrapper"><?php the_field('factories_title'); ?></div>
+                <!-- <div class="title-wrapper"><?php the_field('factories_title'); ?></div> -->
                 <div class="swiper" id="homeFactoriesSwiper">
                             <div class="swiper-wrapper">
                                 <?php while (have_rows('factories')) : the_row(); ?>
