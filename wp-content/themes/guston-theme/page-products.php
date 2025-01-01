@@ -22,8 +22,10 @@
             <div class="top">
                 <?php getImage(get_sub_field('collection_image'), 'full-image'); ?>
                 <div class="container">
+              
                     <div class="content">
                         <?php if (get_sub_field('collection_content')) : ?>
+                          
                             <div class="content-wrapper collection">
                                 <?php the_sub_field('collection_content'); ?>
                             </div>
