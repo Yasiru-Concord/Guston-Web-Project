@@ -2,15 +2,79 @@
 <?php get_header(); ?>
 
 <?php get_template_part('templates/sub-page', 'banner'); ?>
+<script>
+    const countDown = () => {
+        const startYear = 1937;
 
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+
+        // Calculate the total years
+        const totalYears = currentYear - startYear;
+
+        // Convert years into months, days, hours, and minutes
+        const totalMonths = totalYears * 12;
+        const totalDays = totalYears * 365.25; // Accounting for leap years
+        const totalHours = totalDays * 24;
+        const totalMinutes = totalHours * 60;
+
+        document.querySelector('.year').textContent = totalYears;
+        document.querySelector('.month').textContent = totalMonths;
+        document.querySelector('.day').textContent = totalDays;
+        document.querySelector('.hour').textContent = totalHours;
+        document.querySelector('.minute').textContent = totalMinutes;
+    };
+
+    setInterval(countDown, 1000);
+</script>
 <?php if (get_field('vision_content')) : ?>
     <section class="about-vision">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-lg-6">
+                <div class="col-sm-12 col-lg-9 d-flex justify-content-center align-items-center">
                     <?php getImage(get_field('vision_image')); ?>
+                    <div class="elapsed-container">
+                        <div class="col-sm-12 col-lg-6 title-container">
+                            <h1>A Legacy of Excellence</h1>
+                        </div>
+                        <div class="col-sm-12 col-lg-6 countdown-container">
+                            <div class="countdown">
+                                <div class="count">
+                                    <div class="title">
+                                        <h2 class="year"></h2>
+                                        <p>years</p>
+                                    </div>
+                                </div>
+                                <div class="count">
+                                    <div class="title">
+                                        <h2 class="month"></h2>
+                                        <p>months</p>
+                                    </div>
+                                </div>
+                                <div class="count">
+                                    <div class="title">
+                                        <h2 class="day"></h2>
+                                        <p>days</p>
+                                    </div>
+                                </div>
+                                <div class="count">
+                                    <div class="title">
+                                        <h2 class="hour"></h2>
+                                        <p>hours</p>
+                                    </div>
+                                </div>
+                                <div class="count">
+                                    <div class="title">
+                                        <h2 class="minute"></h2>
+                                        <p>minutes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-12 col-lg-6">
+                <div class="col-sm-12 col-lg-3">
+                    <?php getImage(get_field('vision_image')); ?>
                     <div class="content-wrapper"><?php the_field('vision_content'); ?></div>
                 </div>
             </div>
