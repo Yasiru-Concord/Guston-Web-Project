@@ -29,15 +29,17 @@
 </script>
 <?php if (get_field('vision_content')) : ?>
     <section class="about-vision">
+    <?php getImage(get_field('vision_image')); ?>
         <div class="container">
+            
             <div class="row">
                 <div class="col-sm-12 col-lg-9 d-flex justify-content-center align-items-center">
-                    <?php getImage(get_field('vision_image')); ?>
+                  
                     <div class="elapsed-container">
-                        <div class="col-sm-12 col-lg-6 title-container">
+                        <div class="col-sm-12 col-lg-12 title-container">
                             <h1>A Legacy of Excellence</h1>
                         </div>
-                        <div class="col-sm-12 col-lg-6 countdown-container">
+                        <div class="col-sm-12 col-lg-12 countdown-container">
                             <div class="countdown">
                                 <div class="count">
                                     <div class="title">
@@ -57,13 +59,13 @@
                                         <p>days</p>
                                     </div>
                                 </div>
-                                <div class="count">
+                                <div class="count" id="hour-container">
                                     <div class="title">
                                         <h2 class="hour"></h2>
                                         <p>hours</p>
                                     </div>
                                 </div>
-                                <div class="count">
+                                <div class="count" id="minute-container">
                                     <div class="title">
                                         <h2 class="minute"></h2>
                                         <p>minutes</p>
@@ -73,8 +75,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-3">
-                    <?php getImage(get_field('vision_image')); ?>
+                <div class="col-sm-12 col-lg-3 vision-container">
+                    <!-- <?php getImage(get_field('vision_image')); ?> -->
                     <div class="content-wrapper"><?php the_field('vision_content'); ?></div>
                 </div>
             </div>

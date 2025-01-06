@@ -1,5 +1,4 @@
 section.about-vision {
-
     .container {
         --bs-gutter-x: 0rem;
         --bs-gutter-y: 0rem;
@@ -8,6 +7,7 @@ section.about-vision {
         flex-wrap: wrap;
         padding: 20px;
         background: hsla(236, 89%, 7%, 0.094);
+        height: 60vh;
     }
 
     .row {
@@ -17,11 +17,20 @@ section.about-vision {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 20px 0 20px 0;
+        align-items: center;
+        height: 100%;
+
+        @media @mobile {
+            padding: 0;
+        }
     }
 
     .elapsed-container {
         display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
 
+        // height: 100%;
         @media @mobileTab {
             flex-direction: column;
             align-items: center;
@@ -30,16 +39,23 @@ section.about-vision {
         .title-container {
             display: flex;
             align-items: center;
-
-            @media @mobileTab {
-                margin-bottom: 20px;
-            }
+            z-index: 5;
+            margin: 10px 0 30px 0;
 
             h1 {
-                font-size: 1.5rem;
+                font-size: 2.5rem;
                 text-transform: uppercase;
                 letter-spacing: 3px;
                 color: hsla(236, 89%, 7%, 0.582);
+            }
+
+            @media @mobile {
+                margin-bottom: 20px;
+
+                h1 {
+                    font-size: 2rem;
+                    text-align: center;
+                }
             }
         }
     }
@@ -47,20 +63,32 @@ section.about-vision {
 
 
     .countdown {
+        display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
 
+        @media @mobile {
+            #hour-container {
+                display: none;
+            }
+            #minute-container {
+                display: none;
+            }
+        }
     }
 
     .count {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        max-width: 300px;
+        width: 120px;
+
+        @media @mobile {
+            width: 100px;
+        }
     }
 
     .countdown .title {
@@ -70,12 +98,50 @@ section.about-vision {
         box-shadow: 0 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 1.3rem;
         width: 100%;
-        height: 70px;
+        height: 120px;
         color: rgb(165, 206, 238);
-        padding: 0 8px 0 20px;
+        padding: 15px;
         display: flex;
         align-items: center;
         gap: 10px;
+        flex-direction: column;
+
+        .year {
+            font-size: 4.3rem;
+        }
+
+        .month {
+            font-size: 2.8rem;
+        }
+
+        .hour {
+            font-size: 1.5rem;
+        }
+
+        .minute {
+            font-size: 1rem;
+        }
+
+        @media @mobile {
+            height: 90px;
+            padding: 5px;
+
+            .year {
+                font-size: 2.5rem;
+            }
+
+            .month {
+                font-size: 1.7rem;
+            }
+
+            .hour {
+                font-size: 1.2rem;
+            }
+
+            .minute {
+                font-size: 16px;
+            }
+        }
     }
 
     .countdown .title::after {
@@ -83,7 +149,7 @@ section.about-vision {
         position: absolute;
         top: 50%;
         left: 0;
-        height: 1px;
+        // height: 50%;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.3);
     }
@@ -137,27 +203,52 @@ section.about-vision {
 
     img {
         display: block;
-        width: 50%;
+        width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: fill;
         position: absolute;
 
-        @media @mobileTab {
-            height: auto;
-        }
+        // @media @mobileTab {
+        //     height: auto;
+        // }
+    }
+
+    .vision-container {
+        z-index: 5;
     }
 
     .content-wrapper {
         color: hsla(236, 89%, 7%, 0.582);
-        padding: 80px 40px 40px 40px;
-        height: 100%;
-        // background-color: white;
-        background: hsla(236, 89%, 7%, 0.094);
+        // padding: 80px 40px 40px 40px;
+        height: 216px;
 
-        @media @mobileTab {
+        // background-color: white;
+        // background: hsla(236, 89%, 7%, 0.094);
+        z-index: 5;
+
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: hsla(236, 89%, 7%, 0.582);
+            font-weight: normal;
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+        }
+
+        @media @mobile {
             width: 100%;
             text-align: center;
-            padding: 50px 30px;
+            padding: 20px;
+            h1 {
+                font-size: 2.2rem;
+                color: hsla(236, 89%, 7%, 0.6);
+                margin-bottom: 10px;
+
+            }
         }
     }
 }
