@@ -64,6 +64,11 @@
                 <?php getImage(get_field('strategy_image'), 'full-image'); ?>
                 <div class="content-wrapper title-content">
                     <?php the_field('strategy_content'); ?>
+                    <?php
+                    $strategy_bottom_image = get_field('strategy_bottom_image');
+                    ?>
+                    <img class="bottom-image" src="<?php echo esc_url($strategy_bottom_image); ?>" alt="Stratergy certs" />
+
                     <?php if ($link = get_field('about_link')) : ?>
                         <a href="<?php echo $link['url']; ?>" class="theme-btn" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
                     <?php endif; ?>
@@ -335,7 +340,7 @@
 
             <div class="row">
                 <?php while (have_rows('reports')) : the_row(); ?>
-                    <div class="col-sm-12 col-lg-5">
+                    <div class="col-sm-12 col-lg-6">
                         <div class="feature">
                             <?php getImage(get_sub_field('icon'), '', get_sub_field('title')); ?>
                             <h4><?php the_sub_field('title'); ?></h4>
