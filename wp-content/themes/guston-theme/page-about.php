@@ -33,7 +33,7 @@
         <div class="container">
             
             <div class="row">
-                <div class="col-sm-12 col-lg-9 d-flex justify-content-center align-items-center">
+                <div class="col-sm-12 col-lg-9 col-xl-8 d-flex justify-content-center align-items-center">
                   
                     <div class="elapsed-container">
                         <div class="col-sm-12 col-lg-12 title-container">
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-3 vision-container">
+                <div class="col-sm-12 col-lg-3 col-xl-4 vision-container">
                     <!-- <?php getImage(get_field('vision_image')); ?> -->
                     <div class="content-wrapper"><?php the_field('vision_content'); ?></div>
                 </div>
