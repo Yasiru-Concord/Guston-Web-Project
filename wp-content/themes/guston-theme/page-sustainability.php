@@ -10,12 +10,14 @@
                 <?php while (have_rows('banners')) : the_row(); ?>
                     <div class="swiper-slide">
                         <div class="item">
-                            <?php getImage(get_sub_field('image'), 'd-block'); ?>
+                            <!-- <?php getImage(get_sub_field('image')); ?> -->
+                            <?php getImage(get_sub_field('image'), 'full-image', '', false); ?>
                             <div class="container">
-                                <?php /* if($content = get_sub_field('content')): ?>
+                                <?php if($content = get_sub_field('content')): ?>
                                     <div class="content-wrapper"><?php echo $content; ?></div>
-                                <?php endif; */ ?>
+                                <?php endif; ?>
                             </div>
+                           
                         </div>
                     </div>
                 <?php endwhile; ?>

@@ -33,52 +33,52 @@
         <div class="container">
             
             <div class="row">
-                <div class="col-sm-12 col-lg-9 col-xl-8 d-flex justify-content-center align-items-center">
-                  
-                    <div class="elapsed-container">
-                        <div class="col-sm-12 col-lg-12 title-container">
-                            <h1>A Legacy of Excellence</h1>
-                        </div>
-                        <div class="col-sm-12 col-lg-12 countdown-container">
-                            <div class="countdown">
-                                <div class="count">
-                                    <div class="title">
-                                        <h2 class="year"></h2>
-                                        <p>years</p>
-                                    </div>
-                                </div>
-                                <div class="count">
-                                    <div class="title">
-                                        <h2 class="month"></h2>
-                                        <p>months</p>
-                                    </div>
-                                </div>
-                                <div class="count">
-                                    <div class="title">
-                                        <h2 class="day"></h2>
-                                        <p>days</p>
-                                    </div>
-                                </div>
-                                <div class="count" id="hour-container">
-                                    <div class="title">
-                                        <h2 class="hour"></h2>
-                                        <p>hours</p>
-                                    </div>
-                                </div>
-                                <div class="count" id="minute-container">
-                                    <div class="title">
-                                        <h2 class="minute"></h2>
-                                        <p>minutes</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-3 col-xl-4 vision-container">
-                    <!-- <?php getImage(get_field('vision_image')); ?> -->
+         
+                <div class="col-sm-12 col-lg-12 col-xl-12 vision-container">
                     <div class="content-wrapper"><?php the_field('vision_content'); ?></div>
                 </div>
+                <div class="col-sm-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-4">
+                  
+                  <div class="elapsed-container">
+                      <div class="col-sm-12 col-lg-12 title-container">
+                          <h1>A Legacy of Excellence</h1>
+                      </div>
+                      <div class="col-sm-12 col-lg-12 countdown-container">
+                          <div class="countdown">
+                              <div class="count one">
+                                  <div class="title">
+                                      <h2 class="year"></h2>
+                                      <p>years</p>
+                                  </div>
+                              </div>
+                              <div class="count two">
+                                  <div class="title">
+                                      <h2 class="month"></h2>
+                                      <p>months</p>
+                                  </div>
+                              </div>
+                              <div class="count three">
+                                  <div class="title">
+                                      <h2 class="day"></h2>
+                                      <p>days</p>
+                                  </div>
+                              </div>
+                              <!-- <div class="count" id="hour-container">
+                                  <div class="title">
+                                      <h2 class="hour"></h2>
+                                      <p>hours</p>
+                                  </div>
+                              </div>
+                              <div class="count" id="minute-container">
+                                  <div class="title">
+                                      <h2 class="minute"></h2>
+                                      <p>minutes</p>
+                                  </div>
+                              </div> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
             </div>
     </section>
 <?php endif; ?>
