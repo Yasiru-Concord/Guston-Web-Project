@@ -148,7 +148,9 @@
                                                             </div>
                                                         <?php endif; ?>
                                                     </div>
-                                                    <h3><?php the_sub_field('title'); ?></h3>
+                                                   <div class="title-box">
+                                                   <h3><?php the_sub_field('title'); ?></h3>
+                                                                    </div>
                                                     <div class="content-wrapper"><?php the_sub_field('sub_content'); ?></div>
                                                 </div>
                                             </div>
@@ -306,7 +308,15 @@
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <h5><?php the_sub_field('year'); ?></h5>
-                                        <?php getImage($image, 'd-block'); ?>
+                                        <!-- <?php getImage($image, 'd-block'); ?> -->
+                                        <?php if (have_rows('images')) : // Check if there are multiple images ?>
+                                <div class="image-list">
+                                    <?php while (have_rows('images')) : the_row();
+                                        $list_image = get_sub_field('image'); ?>
+                                        <img src="<?php echo esc_url($list_image['url']); ?>" alt="<?php echo esc_attr($list_image['alt']); ?>" class="img-fluid">
+                                    <?php endwhile; ?>
+                                </div>
+                            <?php endif; ?>
                                         <?php if (have_rows('content')) : ?>
                                             <div class="content">
                                                 <?php while (have_rows('content')) : the_row(); ?>
@@ -315,6 +325,7 @@
                                                             <p><?php the_sub_field('description'); ?></p>
                                                         <?php endif; ?>
                                                         <h4><?php the_sub_field('title'); ?></h4>
+                                                        
                                                     </div>
                                                 <?php endwhile; ?>
                                             </div>
@@ -386,7 +397,7 @@
     </section>
 <?php endif; ?>
 
-<?php /* if (get_field('stakeholder_content')) : ?>
+<?php if (get_field('stakeholder_content')) : ?>
     <section class="sustain-stakeholder">
         <div class="container">
             <div class="inner">
@@ -401,7 +412,7 @@
             </div>
         </div>
     </section>
-<?php endif; */ ?>
+<?php endif; ?>
 
 <?php /* if (have_rows('featured_awards')) : ?>
     <section class="sustain-featured-awards">

@@ -19,10 +19,10 @@
         const totalMinutes = totalHours * 60;
 
         document.querySelector('.year').textContent = totalYears;
-        document.querySelector('.month').textContent = totalMonths;
-        document.querySelector('.day').textContent = totalDays;
-        document.querySelector('.hour').textContent = totalHours;
-        document.querySelector('.minute').textContent = totalMinutes;
+        document.querySelector('.month').textContent = totalMonths.toLocaleString();
+        document.querySelector('.day').textContent = totalDays.toLocaleString();
+       // document.querySelector('.hour').textContent = totalHours;
+       // document.querySelector('.minute').textContent = totalMinutes;
     };
 
     setInterval(countDown, 1000);
@@ -41,7 +41,7 @@
                   
                   <div class="elapsed-container">
                       <div class="col-sm-12 col-lg-12 title-container">
-                          <h1>A Legacy of Excellence</h1>
+                          <h1>A TIMELESS LEGACY, A SUSTAINABLE TOMORROW</h1>
                       </div>
                       <div class="col-sm-12 col-lg-12 countdown-container">
                           <div class="countdown">

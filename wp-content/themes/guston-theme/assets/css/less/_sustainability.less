@@ -73,7 +73,7 @@ section.sustain-banner {
         padding: 0px 30px;
 
         div {
-            background-color: @theme-green;
+            background-color: @primary-color;
             color: #FFF;
             width: 50px;
             height: 50px;
@@ -115,7 +115,8 @@ section.sustain-banner {
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            background-color: darken(@theme-green, 20%);
+            // background-color: darken(@theme-green, 20%);
+            background-color: #041D2C;
             display: inline-block;
 
             &:not(:last-child) {
@@ -123,7 +124,7 @@ section.sustain-banner {
             }
 
             &.swiper-pagination-bullet-active {
-                background-color: @theme-green;
+                background-color: @primary-color
             }
         }
 
@@ -207,7 +208,7 @@ section.sustain-certifications {
         }
 
         .left {
-            background-color: #157F59;
+            background-color: @theme-green;
             color: #FFF;
             padding: 30px;
             flex-shrink: 0;
@@ -325,7 +326,8 @@ section.sustain-strategy {
     }
 
     .content-wrapper {
-        background-color: darken(@theme-green, 30%);
+        background-color: @theme-green;
+        // background-color: darken(@theme-green, 30%);
         color: #FFF;
         border-radius: @theme-radius;
         padding: 60px 35px;
@@ -462,7 +464,7 @@ section.sustain-pillars {
 
             h5 {
                 font-size: 16px;
-                text-transform: uppercase;
+                // text-transform: uppercase;
                 font-weight: 800;
                 text-align: center;
                 .transitions();
@@ -509,22 +511,44 @@ section.sustain-pillars {
 
         .pillar-box-item {
             border: solid 1px @theme-bg-light;
-            padding: 0 20px 20px;
+            padding: 20px;
             height: 100%;
-
             &>h3 {
                 font-weight: 700;
-                font-size: 28px;
+                font-size: 22px;
                 margin-bottom: 20px;
                 border-bottom: solid 1px;
-                padding-bottom: 5px;
+                padding: 16px;
                 color: @theme-green;
-
+        
                 @media @mobile {
                     font-size: 36px;
                 }
             }
-
+           
+            .title-box {
+                height: 100px;
+                display: flex;
+                align-items: flex-end;
+                @media @mobileTab {
+                    height: 120px;
+                }
+                @media @mobile {
+                    height: 140px;
+                }
+                &>h3 {
+                    font-weight: 700;
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                    border-bottom: solid 1px;
+                    padding-bottom: 5px;
+                    color: @theme-green;
+            
+                    @media @mobile {
+                        font-size: 36px;
+                    }
+                }
+            }
             .slideshow {
                 position: relative;
                 width: calc(~'100% + 40px');
@@ -546,7 +570,7 @@ section.sustain-pillars {
                     padding: 0px 30px;
 
                     div {
-                        background-color: @theme-green;
+                        background-color: @primary-color;
                         color: #FFF;
                         width: 35px;
                         height: 35px;
@@ -798,13 +822,17 @@ section.sustain-road-map-title {
 section.sustain-road-map {
     @theme-green-dark: darken(@theme-green, 20%);
 
-    background-color: @theme-green-dark;
+    // background-color: @theme-green-dark;
+    background: rgb(138,195,4);
+    background: linear-gradient(144deg, rgba(138,195,4,1) 18%, rgba(47,171,210,1) 89%);
+//     background: rgb(204,231,142);
+// background: linear-gradient(144deg, rgba(204,231,142,1) 18%, rgba(73,95,102,1) 89%);
     color: #FFF;
     padding: @default-margin 0;
 
     .images {
-        width: 60%;
-        opacity: .3;
+        width: 100%;
+        opacity: .5;
         position: absolute;
         left: 0;
         top: 0;
@@ -825,11 +853,11 @@ section.sustain-road-map {
     &::before {
         content: '';
         position: absolute;
-        right: 40%;
-        width: 30%;
+        // right: 40%;
+        // width: 30%;
         height: 100%;
-        background: @theme-green-dark;
-        background: linear-gradient(90deg, fade(@theme-green-dark, 0%) 0%, @theme-green-dark 100%);
+        // background: @theme-green-dark;
+        // background: linear-gradient(90deg, fade(@theme-green-dark, 0%) 0%, @theme-green-dark 100%);
         top: 0;
         z-index: 2;
 
@@ -916,7 +944,6 @@ section.sustain-road-map {
             font-weight: 300;
             cursor: pointer;
             opacity: .5;
-
             @media @mobileTab {
                 flex-direction: column-reverse;
             }
@@ -984,16 +1011,28 @@ section.sustain-road-map {
                 // display: flex;
                 // flex-direction: column;
                 // justify-content: center;
-
+                .image-list {
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                }
+                
+                .image-list img {
+                    width: 90px;
+                    height: 100px;
+                    background: white;
+                    padding: 5px;
+                    border-radius: 10px;
+                }
                 @media @mobileTab {
                     text-align: center;
                 }
 
                 img {
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 50%;
-                    object-fit: cover;
+                    // width: 100px;
+                    // height: 100px;
+                    // border-radius: 50%;
+                    // object-fit: cover;
                     margin-bottom: 15px;
                     flex-shrink: 0;
 
@@ -1051,7 +1090,7 @@ section.sustain-road-map {
 }
 
 section.sustain-commitment-features {
-    background-color: @theme-bg-light;
+    // background-color: @theme-bg-light;
     padding: 40px 0;
 
     .content-wrapper {
@@ -1128,6 +1167,7 @@ section.sustain-commitment-features {
         width: 100%;
         gap: 20px;
         background-color: #FFF;
+        border: solid 1px @theme-green;
         padding: 25px;
         display: flex;
         align-items: center;
@@ -1139,8 +1179,8 @@ section.sustain-commitment-features {
         }
 
         img {
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
             flex-shrink: 0;
             margin-bottom: 10px;
@@ -1154,7 +1194,7 @@ section.sustain-commitment-features {
 
         p {
             color: @theme-medium-gray;
-            font-size: 14px;
+            font-size: 16px;
             margin-top: 5px;
             font-weight: 700;
             line-height: 1.5;
@@ -1197,8 +1237,8 @@ section.sustain-stakeholder-reports {
         }
 
         img {
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
             flex-shrink: 0;
             margin-bottom: 10px;
