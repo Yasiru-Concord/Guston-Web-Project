@@ -53,10 +53,12 @@ section.sustain-banner {
         display: flex;
         align-items: flex-end;
         height: 100%;
+
         img {
             width: 100%;
             max-width: 100%;
         }
+
         .full-image {
             object-position: top;
         }
@@ -163,6 +165,7 @@ section.sustain-banner {
         p {
             width: 50%;
             color: white;
+
             @media @mobileTab {
                 width: 100%;
             }
@@ -416,6 +419,16 @@ section.sustain-pillars {
         margin: 0px auto 50px;
     }
 
+//  @media @mobile {
+//     .pillar-slideshow {
+//         height: 200px;
+//     }
+//  }
+//  @media @mobileTab {
+//     .pillar-slideshow {
+//         height: 400px;
+//     }
+//  }
     #pillarsNavSwiper {
         margin-bottom: 50px;
 
@@ -472,12 +485,17 @@ section.sustain-pillars {
         }
 
         @media @mobile {
+            .swiper {
+                 height: 400px;
+            }
+            
             .swiper-wrapper {
                 flex-direction: column;
-
+               
                 .swiper-slide {
                     max-width: unset !important;
                     width: 100% !important;
+                   
                 }
             }
 
@@ -513,6 +531,7 @@ section.sustain-pillars {
             border: solid 1px @theme-bg-light;
             padding: 20px;
             height: 100%;
+
             &>h3 {
                 font-weight: 700;
                 font-size: 22px;
@@ -520,22 +539,25 @@ section.sustain-pillars {
                 border-bottom: solid 1px;
                 padding: 16px;
                 color: @theme-green;
-        
+
                 @media @mobile {
                     font-size: 36px;
                 }
             }
-           
+
             .title-box {
                 height: 100px;
                 display: flex;
                 align-items: flex-end;
+
                 @media @mobileTab {
                     height: 120px;
                 }
+
                 @media @mobile {
                     height: 140px;
                 }
+
                 &>h3 {
                     font-weight: 700;
                     font-size: 22px;
@@ -543,12 +565,58 @@ section.sustain-pillars {
                     border-bottom: solid 1px;
                     padding-bottom: 5px;
                     color: @theme-green;
-            
+
                     @media @mobile {
                         font-size: 36px;
                     }
                 }
             }
+            @media @mobileTab {
+                .pillar-slideshow-acc {
+                    min-height: 200px; /* Ensure Swiper has height */
+                    width: 100%;
+                }
+            
+                .pillar-slideshow-acc .swiper-wrapper {
+                    display: flex;
+                    align-items: center;
+                    min-height: 200px;
+                }
+            
+                .pillar-slideshow-acc .swiper-slide {
+                    min-height: 200px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            
+                .pillar-slideshow-acc .swiper-nav {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+            
+                .pillar-slideshow-acc .swiper-nav div {
+                    background-color: @primary-color;
+                        color: #FFF;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        pointer-events: all;
+                        font-size: 22px;
+                        opacity: .8;
+                        .transitions();
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                }
+            }
+            
             .slideshow {
                 position: relative;
                 width: calc(~'100% + 40px');
@@ -823,10 +891,10 @@ section.sustain-road-map {
     @theme-green-dark: darken(@theme-green, 20%);
 
     // background-color: @theme-green-dark;
-    background: rgb(138,195,4);
-    background: linear-gradient(144deg, rgba(138,195,4,1) 18%, rgba(47,171,210,1) 89%);
-//     background: rgb(204,231,142);
-// background: linear-gradient(144deg, rgba(204,231,142,1) 18%, rgba(73,95,102,1) 89%);
+    background: rgb(138, 195, 4);
+    background: linear-gradient(144deg, rgba(138, 195, 4, 1) 18%, rgba(47, 171, 210, 1) 89%);
+    //     background: rgb(204,231,142);
+    // background: linear-gradient(144deg, rgba(204,231,142,1) 18%, rgba(73,95,102,1) 89%);
     color: #FFF;
     padding: @default-margin 0;
 
@@ -895,6 +963,19 @@ section.sustain-road-map {
         }
     }
 
+
+    .road-map {
+        width: calc(~'100% - 200px');
+        margin-left: 0;
+
+        @media @mobileTab {
+            width: 100%;
+        }
+
+        
+
+      
+    }
     .road-map-side {
         display: flex;
         justify-content: center;
@@ -944,6 +1025,7 @@ section.sustain-road-map {
             font-weight: 300;
             cursor: pointer;
             opacity: .5;
+
             @media @mobileTab {
                 flex-direction: column-reverse;
             }
@@ -972,19 +1054,19 @@ section.sustain-road-map {
         }
     }
 
-    .right {
+    .swipe-row {
         display: flex;
-        align-items: center;
-        gap: 80px;
-        width: 50%;
-        margin-left: auto;
-        margin-top: 50px;
-
+        flex-direction: row;
+        height: 70vh;
         @media @mobileTab {
-            flex-direction: column;
-            width: 100%;
+            height: 80vh;
         }
-
+        @media @mobile {
+            height: 125vh;
+        }
+        .swiper {
+                height: 100%;
+            }
         .road-map-side {
             width: 120px;
             flex-shrink: 0;
@@ -994,94 +1076,159 @@ section.sustain-road-map {
             }
         }
 
-        .road-map {
-            width: calc(~'100% - 200px');
-            margin-left: 0;
-
+        .row {
+            display: flex;
+            flex-direction: row;
             @media @mobileTab {
-                width: 100%;
+                flex-direction: column-reverse;
             }
-
-            .swiper {
-                height: 100%;
+            @media @mobile {
+                flex-direction: column-reverse;
             }
-
-            .item {
-                // height: 100%;
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: center;
-                .image-list {
-                    display: flex;
-                    gap: 10px;
-                    flex-wrap: wrap;
-                }
-                
-                .image-list img {
-                    width: 90px;
-                    height: 100px;
-                    background: white;
-                    padding: 5px;
-                    border-radius: 10px;
-                }
+            .left {
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+                // background-color: red;
                 @media @mobileTab {
-                    text-align: center;
+                    width: 100%;
                 }
-
+                @media @mobile {
+                    width: 100%;
+                }
+              .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 110px;
+                margin-bottom: 20px;
+                margin:20px;
+                @media @mobile {
+                    margin-bottom: 10px;
+                }
                 img {
-                    // width: 100px;
-                    // height: 100px;
-                    // border-radius: 50%;
-                    // object-fit: cover;
-                    margin-bottom: 15px;
-                    flex-shrink: 0;
-
-                    @media @mobileTab {
-                        margin: 0px auto 15px;
-                        flex-shrink: 0;
+                    width: 100px;
+                    @media @mobile {
+                        width: 50px;
+                    }
+                }
+                h4 {
+                    text-align: center;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    font-size: 16px;
+                    @media @mobile {
+                        margin-top: 8px;
+                        font-size: 14px;
                     }
                 }
 
-                h5 {
-                    font-weight: 900;
-                    color: #FFF;
-                    opacity: .3;
-                    font-size: 4rem;
-                    margin-bottom: 15px;
+              }
+    
+            }
+    
+       
+            .right {
+                display: flex;
+                justify-content: center;
+                // align-items: center;
+                gap: 80px;
+                width: 50%;
+                margin-left: auto;
+                margin-top: 50px;
+                // background-color: gray;
+                @media @mobileTab {
+                    width: 100%;
                 }
-
-
-
-                .content {
-                    div {
-                        &:not(:last-child) {
-                            &::after {
-                                content: '';
-                                display: block;
-                                width: 50px;
-                                height: 1px;
-                                background-color: #fff;
-                                margin: 15px 0;
-
-                                @media @mobileTab {
-                                    margin: 15px auto;
+                @media @mobile {
+                    width: 100%;
+                }
+                .item {
+    
+                    // height: 100%;
+                    // display: flex;
+                    // flex-direction: column;
+                    // justify-content: center;
+                    .image-list {
+                        display: flex;
+                        gap: 10px;
+                        flex-wrap: wrap;
+                    }
+    
+                    .image-list img {
+                        width: 90px;
+                        height: 100px;
+                        background: white;
+                        padding: 5px;
+                        border-radius: 10px;
+                    }
+    
+                    @media @mobileTab {
+                        text-align: center;
+                    }
+    
+                    img {
+                        // width: 100px;
+                        // height: 100px;
+                        // border-radius: 50%;
+                        // object-fit: cover;
+                        margin-bottom: 15px;
+                        flex-shrink: 0;
+    
+                        @media @mobileTab {
+                            margin: 0px auto 15px;
+                            flex-shrink: 0;
+                        }
+                    }
+    
+                    h5 {
+                        font-weight: 900;
+                        color: #FFF;
+                        opacity: .3;
+                        font-size: 4rem;
+                        margin-bottom: 15px;
+                    }
+    
+    
+    
+                    .content {
+                        div {
+                            &:not(:last-child) {
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    width: 50px;
+                                    height: 1px;
+                                    background-color: #fff;
+                                    margin: 15px 0;
+    
+                                    @media @mobileTab {
+                                        margin: 15px auto;
+                                    }
                                 }
                             }
                         }
-                    }
-
-                    p {
-                        margin-bottom: 0;
-                    }
-
-                    h4 {
-                        font-weight: 700;
-                        font-size: 16px;
-                        margin-bottom: 0px;
+    
+                        p {
+                            margin-bottom: 0;
+                        }
+    
+                        h4 {
+                            font-weight: 700;
+                            font-size: 16px;
+                            margin-bottom: 0px;
+                        }
                     }
                 }
+              
             }
         }
+      
     }
 
     &+section.sustain-commitment-features {

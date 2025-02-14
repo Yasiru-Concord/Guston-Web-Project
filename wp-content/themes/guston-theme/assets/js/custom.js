@@ -361,6 +361,15 @@ jQuery(document).ready(function ($) {
             speed: 1000,
         });
 
+        const roadMapLeftSwiper = new Swiper("#roadMapLeftSwiper", {
+            allowTouchMove: false,
+            noSwiping: true,
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true,
+            },
+            speed: 1000,
+        });
         const roadMapSwiper = new Swiper("#roadMapSwiper", {
             direction: "vertical",
             mousewheel: true,
@@ -384,9 +393,14 @@ jQuery(document).ready(function ($) {
                     );
                 },
             },
-            thumbs: {
-                swiper: roadMapBGSwiper,
+            on: {
+                slideChange: function () {
+                    roadMapBGSwiper.slideTo(this.activeIndex);
+                },
             },
+            // thumbs: {
+            //     swiper: roadMapBGSwiper,
+            // },
         });
     }
 
@@ -586,9 +600,9 @@ jQuery(document).ready(function ($) {
                 swiper: pillarsNavSwiper,
             },
             breakpoints: {
-                0: {
-                    autoHeight: true,
-                },
+                // 0: {
+                //     autoHeight: true,
+                // },
                 1025: {
                     autoHeight: false,
                 },
@@ -614,6 +628,24 @@ jQuery(document).ready(function ($) {
             });
         });
 
+        $('.pillar-slideshow-acc').each(function (index, element) {
+            let itemID = $(this).data('gallery');
+            let childCount = $(element).find(".swiper-slide").length;
+
+            if (childCount < 2) {
+                $(element).find(".swiper-nav").hide();
+            }
+            console.log('here ', itemID)
+            new Swiper('#acco-pillar-swiNav-' + itemID, {
+                loop: true,
+                speed: 500,
+                // Navigation arrows
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        });
         const accordionPillars = document.getElementById("accordionPillars");
         accordionPillars.addEventListener("hidden.bs.collapse", (event) => {
             var $panel = $(".accordion-header").not(".collapse ");

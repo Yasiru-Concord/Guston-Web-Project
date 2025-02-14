@@ -13,11 +13,11 @@
                             <!-- <?php getImage(get_sub_field('image')); ?> -->
                             <?php getImage(get_sub_field('image'), 'full-image', '', false); ?>
                             <div class="container">
-                                <?php if($content = get_sub_field('content')): ?>
+                                <?php if ($content = get_sub_field('content')): ?>
                                     <div class="content-wrapper"><?php echo $content; ?></div>
                                 <?php endif; ?>
                             </div>
-                           
+
                         </div>
                     </div>
                 <?php endwhile; ?>
@@ -148,9 +148,9 @@
                                                             </div>
                                                         <?php endif; ?>
                                                     </div>
-                                                   <div class="title-box">
-                                                   <h3><?php the_sub_field('title'); ?></h3>
-                                                                    </div>
+                                                    <div class="title-box">
+                                                        <h3><?php the_sub_field('title'); ?></h3>
+                                                    </div>
                                                     <div class="content-wrapper"><?php the_sub_field('sub_content'); ?></div>
                                                 </div>
                                             </div>
@@ -190,7 +190,7 @@
                                                         <h3><?php the_sub_field('title'); ?></h3>
 
                                                         <?php if ($images = get_sub_field('slideshow')) : ?>
-                                                            <div class="swiper pillar-slideshow" data-gallery="<?php echo $gallery; ?>">
+                                                            <div class="swiper pillar-slideshow-acc" data-gallery="<?php echo $key; ?>" id="acco-pillar-swiNav-<?php echo $key; ?>" >
                                                                 <div class="swiper-wrapper">
                                                                     <?php foreach ($images as $image) : ?>
                                                                         <div class="swiper-slide">
@@ -199,16 +199,17 @@
                                                                     <?php endforeach; ?>
                                                                 </div>
                                                                 <div class="swiper-nav">
-                                                                    <div id="nav-prev-<?php echo $gallery; ?>"><i class="fa-solid fa-arrow-left"></i></div>
-                                                                    <div id="nav-next-<?php echo $gallery; ?>"><i class="fa-solid fa-arrow-right"></i></div>
+                                                                    <div class="swiper-button-next"><i class="fa-solid fa-arrow-left"></i></div>
+                                                                    <div class="swiper-button-prev"><i class="fa-solid fa-arrow-right"></i></div>
                                                                 </div>
+                                                            
                                                             </div>
                                                         <?php endif; ?>
 
                                                         <div class="content-wrapper"><?php the_sub_field('sub_content'); ?></div>
                                                     </div>
                                                 </div>
-                                            <?php $gallery++;
+                                            <?php $key++;
                                             endwhile; ?>
                                         </div>
                                     <?php endif; ?>
@@ -299,44 +300,58 @@
             <div class="road-map-side">
                 <div class="road-map-pagination"></div>
             </div>
-            <div class="right">
-                <div class="road-map">
-                    <div class="swiper" id="roadMapSwiper">
-                        <div class="swiper-wrapper">
-                            <?php while (have_rows('road_map')) : the_row();
-                                $image = get_sub_field('image'); ?>
-                                <div class="swiper-slide">
-                                    <div class="item">
-                                        <h5><?php the_sub_field('year'); ?></h5>
-                                        <!-- <?php getImage($image, 'd-block'); ?> -->
-                                        <?php if (have_rows('images')) : // Check if there are multiple images ?>
-                                <div class="image-list">
-                                    <?php while (have_rows('images')) : the_row();
-                                        $list_image = get_sub_field('image'); ?>
-                                        <img src="<?php echo esc_url($list_image['url']); ?>" alt="<?php echo esc_attr($list_image['alt']); ?>" class="img-fluid">
-                                    <?php endwhile; ?>
-                                </div>
-                            <?php endif; ?>
-                                        <?php if (have_rows('content')) : ?>
-                                            <div class="content">
-                                                <?php while (have_rows('content')) : the_row(); ?>
-                                                    <div>
-                                                        <?php if (get_sub_field('description')) : ?>
-                                                            <p><?php the_sub_field('description'); ?></p>
-                                                        <?php endif; ?>
-                                                        <h4><?php the_sub_field('title'); ?></h4>
-                                                        
-                                                    </div>
-                                                <?php endwhile; ?>
+            <div class="swipe-row">
+                <div class="swiper" id="roadMapSwiper">
+                    <div class="swiper-wrapper">
+                        <?php while (have_rows('road_map')) : the_row();
+                            $lefticonography = get_sub_field('lefticonography'); ?>
+                            <div class="swiper-slide swiper-autoheight">
+                                <div class="row">
+                                    <div class="left">
+                                        <?php while (have_rows('lefticonography')) : the_row();
+                                            $left_icon = get_sub_field('icon'); ?>
+                                            <div class="container">
+                                                <img src="<?php echo esc_url($left_icon); ?>" alt="<?php the_sub_field('text'); ?>" class="img-fluid">
+                                                <h4><?php the_sub_field('text'); ?></h4>
                                             </div>
-                                        <?php endif; ?>
+                                        <?php endwhile; ?>
+                                    </div>
+                                    <div class="right">
+                                        <div class="item">
+                                            <h5><?php the_sub_field('year'); ?></h5>
+                                            <!-- <?php getImage($image, 'd-block'); ?> -->
+                                            <?php if (have_rows('images')) : // Check if there are multiple images 
+                                            ?>
+                                                <div class="image-list">
+                                                    <?php while (have_rows('images')) : the_row();
+                                                        $list_image = get_sub_field('image'); ?>
+                                                        <img src="<?php echo esc_url($list_image['url']); ?>" alt="<?php echo esc_attr($list_image['alt']); ?>" class="img-fluid">
+                                                    <?php endwhile; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if (have_rows('content')) : ?>
+                                                <div class="content">
+                                                    <?php while (have_rows('content')) : the_row(); ?>
+                                                        <div>
+                                                            <?php if (get_sub_field('description')) : ?>
+                                                                <p><?php the_sub_field('description'); ?></p>
+                                                            <?php endif; ?>
+                                                            <h4><?php the_sub_field('title'); ?></h4>
+
+                                                        </div>
+                                                    <?php endwhile; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
                                 </div>
-                            <?php endwhile; ?>
-                        </div>
+                            </div>
+                        <?php endwhile; ?>
                     </div>
                 </div>
             </div>
+
+        </div>
         </div>
     </section>
 <?php endif; ?>
