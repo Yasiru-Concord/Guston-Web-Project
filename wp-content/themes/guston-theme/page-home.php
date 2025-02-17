@@ -7,65 +7,6 @@ $bannerType = get_field('banner_type');
 $bannerImage = get_field('banner_image');
 ?>
 <script>
-    // document.addEventListener('DOMContentLoaded', () => {
-    //     document.querySelectorAll('.content-wrapper.top_fact').forEach(item => {
-    //         item.addEventListener('mouseenter', event => {
-    //             console.log('ddddddd')
-    //             const infoGraphics = item.nextElementSibling; // Selects the associated info-graphics
-    //             infoGraphics.classList.add('active'); // Add the active class
-    //             item.style.opacity = '0'; // Fade out top_fact
-    //             item.style.transform = 'translateY(-20px)'; // Move up
-    //         });
-
-    //         item.addEventListener('mouseleave', event => {
-    //             console.log('eeeee')
-    //             const infoGraphics = item.nextElementSibling; // Selects the associated info-graphics
-    //             infoGraphics.classList.remove('active'); // Remove the active class
-    //             item.style.opacity = '1'; // Fade in top_fact
-    //             item.style.transform = 'translateY(0)'; // Reset position
-    //         });
-    //     });
-
-    //     // Optional: Close the info-graphics when mouse leaves it
-    //     document.querySelectorAll('.content-wrapper.info-graphics').forEach(infoGraphics => {
-    //         infoGraphics.addEventListener('mouseleave', () => {
-    //             console.log('ffffff')
-    //             infoGraphics.classList.remove('active'); // Remove active class
-    //             const topFact = infoGraphics.previousElementSibling;
-    //             topFact.style.opacity = '1'; // Fade in top_fact
-    //             topFact.style.transform = 'translateY(0)'; // Reset position
-    //         });
-    //     });
-    // });
-
-    //    document.addEventListener('DOMContentLoaded', function () {
-    //     // Get all top_fact elements
-    //     const topElements = document.querySelectorAll('.top_fact');
-
-    //     topElements.forEach((topElement) => {
-    //         // Get the unique ID of the current topElement
-    //         const uniqueId = topElement.getAttribute('data-id');
-
-    //         // Find the corresponding info-graphics element based on the unique ID
-    //         const infoGraphics = document.querySelector(`#info_graphics_${uniqueId}`);
-
-    //         // Ensure both elements exist
-    //         if (topElement && infoGraphics) {
-    //             // Show info-graphics when hovering over the top_fact
-    //             topElement.addEventListener('mouseenter', function () {
-
-    //                 infoGraphics.style.display = 'flex'; // Show the info-graphics
-    //                 topElement.style.display = 'none'; // Hide the topElement
-    //             });
-
-    //             // Hide info-graphics and show topElement when mouse leaves the info-graphics
-    //             infoGraphics.addEventListener('mouseleave', function () {
-    //                 infoGraphics.style.display = 'none'; // Hide the info-graphics
-    //                 topElement.style.display = 'block'; // Show the topElement
-    //             });
-    //         }
-    //     });
-    // });
     document.addEventListener('DOMContentLoaded', function() {
         const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
 
@@ -121,39 +62,46 @@ if (isDesktop) {
                 <?php endif; ?>
             </div>
         </div>
-    <?php elseif (have_rows('banner_sliders')) : // Swiper
-    ?>
-        <div class="swiper" id="bannerSwiper">
-            <div class="swiper-wrapper">
-                <?php while (have_rows('banner_sliders')) : the_row();
-                    $image = get_sub_field('image');
-                ?>
-                    <div class="swiper-slide">
-                        <div class="item">
-                            <?php if ($video = get_sub_field('video')): ?>
-                                <video src="<?php echo $video; ?>" class="full-image" autoplay muted playsinline loop poster="<?php echo wp_get_attachment_url($image); ?>"></video>
-                            <?php else: ?>
-                                <?php getImage($image, 'full-image no-lazyload', '', false); ?>
-                            <?php endif; ?>
-                            <div class="container">
-                                <div class="content-wrapper">
-                                    <?php the_sub_field('content'); ?>
-                                    <?php if ($link = get_sub_field('link')) : ?>
-                                        <a href="<?php echo $link['url']; ?>" class="theme-btn white" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-                                    <?php endif; ?>
-                                </div>
+        <?php elseif (have_rows('banner_sliders')) : // Swiper ?>
+    <div class="banner-slider" id="bannerSwiper">
+        <div class="swiper-wrapper">
+            <?php while (have_rows('banner_sliders')) : the_row();
+                $desktopImage = get_sub_field('image'); // Desktop image
+                $mobileImage = get_sub_field('mobile_image'); // Mobile image
+                $video = get_sub_field('video'); 
+            ?>
+                <div class="swiper-slide">
+                    <div class="item">
+                        <?php if ($video): ?>
+                            <video src="<?php echo $video; ?>" class="full-image" autoplay muted playsinline loop poster="<?php echo wp_get_attachment_url($desktopImage); ?>"></video>
+                        <?php else: ?>
+                            <picture>
+                                <!-- Mobile Image -->
+                                <source srcset="<?php echo wp_get_attachment_url($mobileImage); ?>" media="(max-width: 768px)">
+                                <!-- Desktop Image -->
+                                <img src="<?php echo wp_get_attachment_url($desktopImage); ?>" class="full-image no-lazyload" alt="Banner Image">
+                            </picture>
+                        <?php endif; ?>
+                        <div class="container">
+                            <div class="content-wrapper">
+                                <?php the_sub_field('content'); ?>
+                                <?php if ($link = get_sub_field('link')) : ?>
+                                    <a href="<?php echo $link['url']; ?>" class="theme-btn white" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
-                <?php endwhile; ?>
-            </div>
+                </div>
+            <?php endwhile; ?>
         </div>
-        <div class="swiper-nav">
-            <div class="banner-prev"><i class="fa-solid fa-chevron-left"></i></div>
-            <div class="banner-next"><i class="fa-solid fa-chevron-right"></i></div>
-        </div>
-        <div class="banner-pagination swiper-pagination"></div>
-    <?php endif; ?>
+    </div>
+    <div class="swiper-nav">
+        <div class="banner-prev"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="banner-next"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+    <div class="banner-pagination swiper-pagination"></div>
+<?php endif; ?>
+
 </section>
 
 <?php if (get_field('welcome_content')) : ?>

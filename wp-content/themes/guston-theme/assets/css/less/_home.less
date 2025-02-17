@@ -90,7 +90,30 @@ section.banner-section {
             }
         }
     }
-
+    .banner-slider .swiper-slide {
+        position: relative;
+    }
+    
+    .banner-slider .item {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Adjust based on design */
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .banner-slider .full-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    @media (max-width: 768px) {
+        .banner-slider .full-image {
+            object-position: center; /* Ensure mobile image is properly aligned */
+        }
+    }
+    
     .full-image {
         border-radius: 0;
         opacity: .7;
@@ -110,6 +133,9 @@ section.banner-section {
         z-index: 2;
         opacity: 0.8;
         pointer-events: none;
+        @media @mobile {
+            height: 12%;
+        }
     }
 
     .container {
@@ -149,6 +175,8 @@ section.banner-section {
 
         .theme-btn {
             padding: 20px 60px;
+            background-color: @primary-color;
+            color: white;
         }
     }
 
@@ -1937,8 +1965,8 @@ body.home {
     header.main-header {
         position: fixed;
 
-        @media @mobileTab {
-            position: absolute;
-        }
+        // @media @mobileTab {
+        //     position: absolute;
+        // }
     }
 }

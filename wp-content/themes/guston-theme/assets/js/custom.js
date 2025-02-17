@@ -110,13 +110,13 @@ jQuery(document).ready(function ($) {
     }
 
     // Sticky Menu
-    if (windowWidth >= 1025) {
+    // if (windowWidth >= 1025) {
         $(window).scroll(function (event) {
             stickyMenu();
         });
 
         stickyMenu();
-    }
+    // }
 
     function stickyMenu() {
         let scroll = $(window).scrollTop();
