@@ -329,8 +329,8 @@ section.sustain-strategy {
     }
 
     .content-wrapper {
-        background-color: @theme-green;
-        // background-color: darken(@theme-green, 30%);
+        background-color: @primary-color;
+        // background-color: darken(@primary-color, 10%);
         color: #FFF;
         border-radius: @theme-radius;
         padding: 60px 35px;
@@ -442,8 +442,9 @@ section.sustain-pillars {
 
                 &.swiper-slide-thumb-active {
                     .item {
-                        background: rgb(87, 124, 0);
-                        background: linear-gradient(0deg, rgba(87, 124, 0, 1) 0%, rgba(138, 195, 4, 1) 100%);
+                        // background: rgb(87, 124, 0);
+                        // background: linear-gradient(0deg, rgba(87, 124, 0, 1) 0%, rgba(138, 195, 4, 1) 100%);
+                        background-color: @primary-color;
 
                         .icon {
                             opacity: 1;
@@ -532,6 +533,11 @@ section.sustain-pillars {
             padding: 20px;
             height: 100%;
 
+            .content-wrapper {
+                p {
+                    text-align: center;
+                }
+            }
             &>h3 {
                 font-weight: 700;
                 font-size: 22px;
@@ -549,7 +555,8 @@ section.sustain-pillars {
                 height: 100px;
                 display: flex;
                 align-items: flex-end;
-
+                text-align: center;
+                justify-content: center;
                 @media @mobileTab {
                     height: 120px;
                 }
@@ -564,7 +571,8 @@ section.sustain-pillars {
                     margin-bottom: 20px;
                     border-bottom: solid 1px;
                     padding-bottom: 5px;
-                    color: @theme-green;
+                    color: @primary-color;
+                    // color: @theme-green;
 
                     @media @mobile {
                         font-size: 36px;
