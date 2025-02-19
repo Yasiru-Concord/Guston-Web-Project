@@ -7,11 +7,19 @@
     <section class="sustain-banner">
         <div class="swiper" id="sustainBannerSwiper">
             <div class="swiper-wrapper">
-                <?php while (have_rows('banners')) : the_row(); ?>
+                <?php while (have_rows('banners')) : the_row(); 
+                $desktopImage = get_sub_field('image'); // Desktop image
+                $mobileImage = get_sub_field('mobile_image'); // Mobile image
+                ?>
                     <div class="swiper-slide">
                         <div class="item">
-                            <!-- <?php getImage(get_sub_field('image')); ?> -->
-                            <?php getImage(get_sub_field('image'), 'full-image', '', false); ?>
+                            <!-- <?php getImage(get_sub_field('image'), 'full-image', '', false); ?> -->
+                            <picture>
+                                    <!-- Mobile Image -->
+                                    <source srcset="<?php echo wp_get_attachment_url($mobileImage); ?>" media="(max-width: 768px)">
+                                    <!-- Desktop Image -->
+                                    <img src="<?php echo wp_get_attachment_url($desktopImage); ?>" class="full-image no-lazyload" alt="Banner Image">
+                                </picture>
                             <div class="container">
                                 <?php if ($content = get_sub_field('content')): ?>
                                     <div class="content-wrapper"><?php echo $content; ?></div>
