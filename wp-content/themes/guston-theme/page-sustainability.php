@@ -36,7 +36,7 @@
 <?php endif; ?>
 
 <?php if (have_rows('certifications')) : ?>
-    <section class="sustain-certifications">
+    <section class="sustain-certs">
         <div class="container">
             <div class="row">
                 <?php while (have_rows('certifications')) : the_row(); ?>
@@ -275,7 +275,7 @@
     </section>
 <?php endif; ?>
 
-<?php if (have_rows('road_map')) : ?>
+<!-- <?php if (have_rows('road_map')) : ?>
     <?php if (get_field('road_map_title')) : ?>
         <section class="sustain-road-map-title">
             <div class="container">
@@ -319,7 +319,7 @@
                                     <div class="right">
                                         <div class="item">
                                             <h5><?php the_sub_field('year'); ?></h5>
-                                            <!-- <?php getImage($image, 'd-block'); ?> -->
+                                          
                                             <?php if (have_rows('images')) : // Check if there are multiple images 
                                             ?>
                                                 <div class="image-list">
@@ -354,7 +354,75 @@
         </div>
         </div>
     </section>
+<?php endif; ?>  -->
+
+<?php if (have_rows('road_map')) : ?>
+    <?php if (get_field('road_map_title')) : ?>
+        <section class="sustain-road-map-title">
+            <div class="container">
+                <div class="content-wrapper title-content mb-5"><?php the_field('road_map_title'); ?></div>
+            </div>
+        </section>
+    <?php endif; ?>
+    <section class="sustain-certifications">
+        <div class="images">
+            <div class="swiper" id="timelineBGSwiper">
+                <div class="swiper-wrapper">
+                    <?php while (have_rows('road_map')) : the_row(); ?>
+                        <div class="swiper-slide">
+                            <?php getImage(get_sub_field('bg_image'), 'full-image'); ?>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="right">
+                <div class="timeline-side">
+                    <div class="timeline-pagination"></div>
+                </div>
+                <div class="timeline">
+                    <div class="swiper" id="certificationSwiper">
+                        <div class="swiper-wrapper">
+                            <?php while (have_rows('road_map')) : the_row(); ?>
+                                <div class="swiper-slide">
+                                  <div class="slide-flex">
+                                  <div class="item">
+                                        <?php getImage(get_sub_field('image'), '', get_sub_field('title')); ?>
+                                        <h5><?php the_sub_field('year'); ?></h5>
+                                        <?php if (have_rows('content')) : ?>
+                                                <div class="content">
+                                                    <?php while (have_rows('content')) : the_row(); ?>
+                                                        <div>
+                                                            <?php if (get_sub_field('description')) : ?>
+                                                                <p><?php the_sub_field('description'); ?></p>
+                                                            <?php endif; ?>
+                                                            <h4><?php the_sub_field('title'); ?></h4>
+
+                                                        </div>
+                                                    <?php endwhile; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                        <?php if (get_sub_field('content')) : ?>
+                                            <p><?php the_sub_field('description'); ?></p>
+                                            <h3><?php the_sub_field('title'); ?></h3>
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="info">
+                                    <?php the_sub_field('certification_description'); ?>
+                                    </div>
+                                  </div>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
 <?php endif; ?>
+
 
 <?php if (have_rows('reports')) : ?>
     <section class="sustain-commitment-features">

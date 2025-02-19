@@ -337,6 +337,58 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    if ($("#certificationSwiper").length) {
+        let swiperElement = $("#certificationSwiper");
+        let maxHeight = 0;
+        $(swiperElement)
+            .find(".swiper-slide")
+            .each(function (index, element) {
+                if ($(element).height() > maxHeight) {
+                    maxHeight = $(element).height();
+                }
+            });
+
+        $(".timeline").height(maxHeight + "px");
+
+        const timelineBGSwiper = new Swiper("#timelineBGSwiper", {
+            allowTouchMove: false,
+            noSwiping: true,
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true,
+            },
+            speed: 1000,
+        });
+
+        const timelineSwiper = new Swiper("#certificationSwiper", {
+            direction: "vertical",
+            mousewheel: true,
+            slidesPerView: 1,
+            autoHeight: true,
+            pagination: {
+                el: ".timeline-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    let year = $(swiperElement)
+                        .find(".swiper-slide")
+                        .eq(index)
+                        .find("h5")
+                        .text();
+                    return (
+                        '<div class="' +
+                        className +
+                        '"><span></span>' +
+                        year +
+                        "</div>"
+                    );
+                },
+            },
+            thumbs: {
+                swiper: timelineBGSwiper,
+            },
+        });
+    }
+
     // Road Map swiper
     if ($("#roadMapSwiper").length) {
         let swiperElement = $("#roadMapSwiper");
