@@ -10,40 +10,40 @@ $bannerImage = get_field('banner_image');
     document.addEventListener('DOMContentLoaded', function() {
         const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
 
-if (isDesktop) {
-        // Get all top_fact elements
-        const topElements = document.querySelectorAll('.top_fact');
+        if (isDesktop) {
+            // Get all top_fact elements
+            const topElements = document.querySelectorAll('.top_fact');
 
-        topElements.forEach((topElement) => {
-            // Get the unique ID of the current topElement
-            const uniqueId = topElement.getAttribute('data-id');
+            topElements.forEach((topElement) => {
+                // Get the unique ID of the current topElement
+                const uniqueId = topElement.getAttribute('data-id');
 
-            // Find the corresponding info-graphics element based on the unique ID
-            const infoGraphics = document.querySelector(`#info_graphics_${uniqueId}`);
+                // Find the corresponding info-graphics element based on the unique ID
+                const infoGraphics = document.querySelector(`#info_graphics_${uniqueId}`);
 
-            // Ensure both elements exist
-            if (topElement && infoGraphics) {
-                // Initialize the info-graphics to be hidden
-                infoGraphics.style.opacity = '0'; // Set initial opacity
-                infoGraphics.style.transition = 'opacity 0.3s ease'; // Transition effect
-                infoGraphics.style.pointerEvents = 'none'; // Prevent interaction when hidden
+                // Ensure both elements exist
+                if (topElement && infoGraphics) {
+                    // Initialize the info-graphics to be hidden
+                    infoGraphics.style.opacity = '0'; // Set initial opacity
+                    infoGraphics.style.transition = 'opacity 0.3s ease'; // Transition effect
+                    infoGraphics.style.pointerEvents = 'none'; // Prevent interaction when hidden
 
-                // Show info-graphics when hovering over the top_fact
-                topElement.addEventListener('mouseenter', function() {
-                    infoGraphics.style.opacity = '1'; // Fade in the info-graphics
-                    infoGraphics.style.pointerEvents = 'auto'; // Allow interaction
-                    topElement.style.opacity = '0'; // Fade out the topElement
-                });
+                    // Show info-graphics when hovering over the top_fact
+                    topElement.addEventListener('mouseenter', function() {
+                        infoGraphics.style.opacity = '1'; // Fade in the info-graphics
+                        infoGraphics.style.pointerEvents = 'auto'; // Allow interaction
+                        topElement.style.opacity = '0'; // Fade out the topElement
+                    });
 
-                // Hide info-graphics and show topElement when mouse leaves the info-graphics
-                infoGraphics.addEventListener('mouseleave', function() {
-                    infoGraphics.style.opacity = '0'; // Fade out the info-graphics
-                    infoGraphics.style.pointerEvents = 'none'; // Prevent interaction
-                    topElement.style.opacity = '1'; // Fade in the topElement
-                });
-            }
-        });
-    }
+                    // Hide info-graphics and show topElement when mouse leaves the info-graphics
+                    infoGraphics.addEventListener('mouseleave', function() {
+                        infoGraphics.style.opacity = '0'; // Fade out the info-graphics
+                        infoGraphics.style.pointerEvents = 'none'; // Prevent interaction
+                        topElement.style.opacity = '1'; // Fade in the topElement
+                    });
+                }
+            });
+        }
     });
 </script>
 <section class="banner-section <?php echo ($bannerType == 1) ? 'default' : 'slider'; ?>">
@@ -62,45 +62,46 @@ if (isDesktop) {
                 <?php endif; ?>
             </div>
         </div>
-        <?php elseif (have_rows('banner_sliders')) : // Swiper ?>
-    <div class="banner-slider" id="bannerSwiper">
-        <div class="swiper-wrapper">
-            <?php while (have_rows('banner_sliders')) : the_row();
-                $desktopImage = get_sub_field('image'); // Desktop image
-                $mobileImage = get_sub_field('mobile_image'); // Mobile image
-                $video = get_sub_field('video'); 
-            ?>
-                <div class="swiper-slide">
-                    <div class="item">
-                        <?php if ($video): ?>
-                            <video src="<?php echo $video; ?>" class="full-image" autoplay muted playsinline loop poster="<?php echo wp_get_attachment_url($desktopImage); ?>"></video>
-                        <?php else: ?>
-                            <picture>
-                                <!-- Mobile Image -->
-                                <source srcset="<?php echo wp_get_attachment_url($mobileImage); ?>" media="(max-width: 768px)">
-                                <!-- Desktop Image -->
-                                <img src="<?php echo wp_get_attachment_url($desktopImage); ?>" class="full-image no-lazyload" alt="Banner Image">
-                            </picture>
-                        <?php endif; ?>
-                        <div class="container">
-                            <div class="content-wrapper">
-                                <?php the_sub_field('content'); ?>
-                                <?php if ($link = get_sub_field('link')) : ?>
-                                    <a href="<?php echo $link['url']; ?>" class="theme-btn white" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-                                <?php endif; ?>
+    <?php elseif (have_rows('banner_sliders')) : // Swiper 
+    ?>
+        <div class="banner-slider" id="bannerSwiper">
+            <div class="swiper-wrapper">
+                <?php while (have_rows('banner_sliders')) : the_row();
+                    $desktopImage = get_sub_field('image'); // Desktop image
+                    $mobileImage = get_sub_field('mobile_image'); // Mobile image
+                    $video = get_sub_field('video');
+                ?>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <?php if ($video): ?>
+                                <video src="<?php echo $video; ?>" class="full-image" autoplay muted playsinline loop poster="<?php echo wp_get_attachment_url($desktopImage); ?>"></video>
+                            <?php else: ?>
+                                <picture>
+                                    <!-- Mobile Image -->
+                                    <source srcset="<?php echo wp_get_attachment_url($mobileImage); ?>" media="(max-width: 768px)">
+                                    <!-- Desktop Image -->
+                                    <img src="<?php echo wp_get_attachment_url($desktopImage); ?>" class="full-image no-lazyload" alt="Banner Image">
+                                </picture>
+                            <?php endif; ?>
+                            <div class="container">
+                                <div class="content-wrapper">
+                                    <?php the_sub_field('content'); ?>
+                                    <?php if ($link = get_sub_field('link')) : ?>
+                                        <a href="<?php echo $link['url']; ?>" class="theme-btn white" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php endwhile; ?>
+                <?php endwhile; ?>
+            </div>
         </div>
-    </div>
-    <div class="swiper-nav">
-        <div class="banner-prev"><i class="fa-solid fa-chevron-left"></i></div>
-        <div class="banner-next"><i class="fa-solid fa-chevron-right"></i></div>
-    </div>
-    <div class="banner-pagination swiper-pagination"></div>
-<?php endif; ?>
+        <div class="swiper-nav">
+            <div class="banner-prev"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="banner-next"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+        <div class="banner-pagination swiper-pagination"></div>
+    <?php endif; ?>
 
 </section>
 
@@ -128,12 +129,20 @@ if (isDesktop) {
 <?php if (get_field('commitment_content')) : ?>
     <section class="home-commitment">
         <?php getImage(get_field('commitment_image'), 'full-image'); ?>
-        <div class="container">
-            <div class="content-wrapper title-content">
-                <?php the_field('commitment_content'); ?>
-                <?php if ($link = get_field('commitment_link')) : ?>
-                    <a href="<?php echo $link['url']; ?>" class="theme-btn" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-                <?php endif; ?>
+        <div class="cmt_row">
+            <div class="left">
+                <div class="content-wrapper title-content">
+                    <?php the_field('commitment_content'); ?>
+                    <?php if ($link = get_field('commitment_link')) : ?>
+                        <a href="<?php echo $link['url']; ?>" class="theme-btn" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="right">
+                <?php
+                $bottom_image = get_field('commitment_bottom_image');
+                ?>
+                <img src="<?php echo esc_url($bottom_image); ?>" alt="Commitment" />
             </div>
         </div>
     </section>
@@ -189,9 +198,9 @@ if (isDesktop) {
 <?php if (have_rows('factories')) : ?>
     <section class="home-factories">
         <div class="container">
-        <div class="title-wrapper"><?php the_field('factories_title'); ?></div>
+            <div class="title-wrapper"><?php the_field('factories_title'); ?></div>
             <div class="inner">
-            <!-- <div class="title-wrapper"><?php the_field('factories_title'); ?></div> -->
+                <!-- <div class="title-wrapper"><?php the_field('factories_title'); ?></div> -->
                 <div class="left">
                     <div class="swiper" id="homeFactoriesNavSwiper">
                         <div class="swiper-wrapper">
@@ -212,47 +221,47 @@ if (isDesktop) {
                 </div>
 
                 <div class="right">
-                <!-- <div class="title-wrapper"><?php the_field('factories_title'); ?></div> -->
-                <div class="swiper" id="homeFactoriesSwiper">
-                            <div class="swiper-wrapper">
-                                <?php while (have_rows('factories')) : the_row(); ?>
-                                    <?php $uniqueId = uniqid(); // Generate a unique ID for each factory 
-                                    ?>
-                                    <div class="swiper-slide">
-                                        <div class="item">
+                    <!-- <div class="title-wrapper"><?php the_field('factories_title'); ?></div> -->
+                    <div class="swiper" id="homeFactoriesSwiper">
+                        <div class="swiper-wrapper">
+                            <?php while (have_rows('factories')) : the_row(); ?>
+                                <?php $uniqueId = uniqid(); // Generate a unique ID for each factory 
+                                ?>
+                                <div class="swiper-slide">
+                                    <div class="item">
 
-                                            <?php if (get_sub_field('top_content')) : ?>
-                                                <div class="content-wrapper top_fact" data-id="<?php echo $uniqueId; ?>" id="factory_top_map_<?php echo $uniqueId; ?>">
+                                        <?php if (get_sub_field('top_content')) : ?>
+                                            <div class="content-wrapper top_fact" data-id="<?php echo $uniqueId; ?>" id="factory_top_map_<?php echo $uniqueId; ?>">
                                                 <img src="<?php the_sub_field('countryImg'); ?>" alt="Country Map">
-                                                </div>
-                                            <?php endif; ?>
-
-                                            <div class="content-wrapper info-graphics" data-id="<?php echo $uniqueId; ?>" id="info_graphics_<?php echo $uniqueId; ?>">
-                                                <?php if (have_rows('factory_content')) : ?>
-                                                    <ul class="slides info-ul">
-                                                        <?php while (have_rows('factory_content')) : the_row(); ?>
-                                                            <?php
-                                                            $image = get_sub_field('icon');
-                                                            $stats = get_sub_field('stats');
-                                                            $title = get_sub_field('title');
-                                                            $stat = get_sub_field('stat');
-                                                            ?>
-                                                            <li class="hover-container">
-                                                                <?php if ($stat) : ?>
-                                                                    <span><?php echo acf_esc_html($stat); ?></span>
-                                                                <?php endif; ?>
-                                                                <img src="<?php echo esc_url($image); ?>" alt="Factory Icon">
-                                                                <p><?php echo acf_esc_html($title); ?></p>
-                                                            </li>
-                                                        <?php endwhile; ?>
-                                                    </ul>
-                                                <?php endif; ?>
                                             </div>
+                                        <?php endif; ?>
+
+                                        <div class="content-wrapper info-graphics" data-id="<?php echo $uniqueId; ?>" id="info_graphics_<?php echo $uniqueId; ?>">
+                                            <?php if (have_rows('factory_content')) : ?>
+                                                <ul class="slides info-ul">
+                                                    <?php while (have_rows('factory_content')) : the_row(); ?>
+                                                        <?php
+                                                        $image = get_sub_field('icon');
+                                                        $stats = get_sub_field('stats');
+                                                        $title = get_sub_field('title');
+                                                        $stat = get_sub_field('stat');
+                                                        ?>
+                                                        <li class="hover-container">
+                                                            <?php if ($stat) : ?>
+                                                                <span><?php echo acf_esc_html($stat); ?></span>
+                                                            <?php endif; ?>
+                                                            <img src="<?php echo esc_url($image); ?>" alt="Factory Icon">
+                                                            <p><?php echo acf_esc_html($title); ?></p>
+                                                        </li>
+                                                    <?php endwhile; ?>
+                                                </ul>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
-                                <?php endwhile; ?>
-                            </div>
+                                </div>
+                            <?php endwhile; ?>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>

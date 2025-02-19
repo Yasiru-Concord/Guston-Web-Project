@@ -358,7 +358,8 @@ section.sustain-strategy {
         }
 
         .bottom-image {
-            mix-blend-mode: luminosity;
+            // mix-blend-mode: luminosity;
+            mix-blend-mode: overlay;
             max-width: 330px;
             margin: 10px auto 0;
             display: block;
@@ -889,9 +890,12 @@ section.sustain-unsdg {
 
 
 section.sustain-certifications {
-    // @theme-green-dark: darken(@theme-green, 0%);
+    @theme-green-dark: darken(@theme-green, 20%);
     // background-color: @theme-green-dark;
     background-color: @secondary-color;
+    @media @mobileTab {
+        background-color: @theme-green-dark;
+    }
     color: #FFF;
     padding: @default-margin 0;
     margin-top: 0;
@@ -991,7 +995,11 @@ section.sustain-certifications {
             flex-shrink: 0;
 
             @media @mobileTab {
+               
                 width: auto;
+            }
+            @media @mobile {
+                display: none;
             }
         }
 
@@ -1170,8 +1178,13 @@ section.sustain-certifications {
             font-size: 16px;
         }
         p {
-            font-size: 14;
+            font-size: 14px;
             font-weight: 300;
+        }
+        @media @mobile {
+            p {
+                font-size: 13px;
+            }
         }
         // height: 200px;
     }
