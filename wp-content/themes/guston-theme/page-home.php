@@ -46,6 +46,18 @@ $bannerImage = get_field('banner_image');
         }
     });
 </script>
+
+<script>
+    function openVideo(full_video) {
+        document.getElementById("onedriveVideoFrame").src = full_video;
+        document.getElementById("videoPopup").style.display = "block";
+    }
+
+    function closeVideo() {
+        document.getElementById("videoPopup").style.display = "none";
+        document.getElementById("onedriveVideoFrame").src = ""; // Stops video playback
+    }
+</script>
 <section class="banner-section <?php echo ($bannerType == 1) ? 'default' : 'slider'; ?>">
     <?php if ($bannerType == 1) : // Default Banner
     ?>
@@ -62,6 +74,7 @@ $bannerImage = get_field('banner_image');
                 <?php endif; ?>
             </div>
         </div>
+        <?php $full_video = ""; ?>
     <?php elseif (have_rows('banner_sliders')) : // Swiper 
     ?>
         <div class="banner-slider" id="bannerSwiper">
@@ -70,6 +83,7 @@ $bannerImage = get_field('banner_image');
                     $desktopImage = get_sub_field('image'); // Desktop image
                     $mobileImage = get_sub_field('mobile_image'); // Mobile image
                     $video = get_sub_field('video');
+                    $full_video = get_sub_field('full_video_url');
                 ?>
                     <div class="swiper-slide">
                         <div class="item">
@@ -89,9 +103,14 @@ $bannerImage = get_field('banner_image');
                                     <?php if ($link = get_sub_field('link')) : ?>
                                         <a href="<?php echo $link['url']; ?>" class="theme-btn white" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
                                     <?php endif; ?>
+                                    <?php if (!empty($full_video)) : ?>
+                                        <button class="theme-btn white ms-5" onclick="openVideo('<?php echo esc_js($full_video); ?>')">View Full Video</button>
+                                    <?php endif; ?>
+
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 <?php endwhile; ?>
             </div>
@@ -103,6 +122,24 @@ $bannerImage = get_field('banner_image');
         <div class="banner-pagination swiper-pagination"></div>
     <?php endif; ?>
 
+    <?php if (!empty($full_video)) : ?>
+        <div id="videoPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:1000; text-align:center;">
+            <div style="position:relative; top:10%; width:80%; margin:auto;">
+                <div style="max-width: 1280px">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                        <iframe id="onedriveVideoFrame"
+                            src="<?php echo $full_video; ?>"
+                            width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen
+                            title="Video Player"
+                            style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;">
+                        </iframe>
+                    </div>
+                </div>
+                <br>
+                <button class="theme-btn white" onclick="closeVideo()">Close</button>
+            </div>
+        </div>
+    <?php endif; ?>
 </section>
 
 <?php if (get_field('welcome_content')) : ?>

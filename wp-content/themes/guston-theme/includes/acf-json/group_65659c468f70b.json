@@ -326,6 +326,25 @@
                     "allow_in_bindings": 0,
                     "preview_size": "medium",
                     "parent_repeater": "field_65cb291a0f55b"
+                },
+                {
+                    "key": "field_67be0825485c1",
+                    "label": "full video url",
+                    "name": "full_video_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_65cb291a0f55b"
                 }
             ]
         },
@@ -1638,5 +1657,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739972061
+    "modified": 1740507213
 }
