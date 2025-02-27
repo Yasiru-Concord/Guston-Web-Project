@@ -7,19 +7,31 @@
     <section class="sustain-banner">
         <div class="swiper" id="sustainBannerSwiper">
             <div class="swiper-wrapper">
-                <?php while (have_rows('banners')) : the_row(); 
-                $desktopImage = get_sub_field('image'); // Desktop image
-                $mobileImage = get_sub_field('mobile_image'); // Mobile image
+                <?php while (have_rows('banners')) : the_row();
+                    $desktopImage = get_sub_field('image'); // Desktop image
+                    $mobileImage = get_sub_field('mobile_image'); // Mobile image
+                    $iconography = get_sub_field('iconography');
                 ?>
                     <div class="swiper-slide">
                         <div class="item">
                             <!-- <?php getImage(get_sub_field('image'), 'full-image', '', false); ?> -->
                             <picture>
-                                    <!-- Mobile Image -->
-                                    <source srcset="<?php echo wp_get_attachment_url($mobileImage); ?>" media="(max-width: 768px)">
-                                    <!-- Desktop Image -->
-                                    <img src="<?php echo wp_get_attachment_url($desktopImage); ?>" class="full-image no-lazyload" alt="Banner Image">
-                                </picture>
+                                <!-- Mobile Image -->
+                                <source srcset="<?php echo wp_get_attachment_url($mobileImage); ?>" media="(max-width: 768px)">
+                                <!-- Desktop Image -->
+                                <img src="<?php echo wp_get_attachment_url($desktopImage); ?>" class="full-image no-lazyload" alt="Banner Image">
+                            </picture>
+                            <div class="top">
+                                    <?php while (have_rows('iconography')) : the_row();
+                                        $icon = get_sub_field('icon');
+                                        $text_content = get_sub_field('text');
+                                        ?>
+                                        <div class="container">
+                                            <img src="<?php echo esc_url($icon); ?>" alt="<?php echo $text_content; ?>" class="<?php echo empty($text_content) ? 'lg-img' : ''; ?>">
+                                            <div><?php echo $text_content; ?></div>
+                                        </div>
+                                    <?php endwhile; ?>
+                                </div>
                             <div class="container">
                                 <?php if ($content = get_sub_field('content')): ?>
                                     <div class="content-wrapper"><?php echo $content; ?></div>
@@ -198,7 +210,7 @@
                                                         <h3><?php the_sub_field('title'); ?></h3>
 
                                                         <?php if ($images = get_sub_field('slideshow')) : ?>
-                                                            <div class="swiper pillar-slideshow-acc" data-gallery="<?php echo $key; ?>" id="acco-pillar-swiNav-<?php echo $key; ?>" >
+                                                            <div class="swiper pillar-slideshow-acc" data-gallery="<?php echo $key; ?>" id="acco-pillar-swiNav-<?php echo $key; ?>">
                                                                 <div class="swiper-wrapper">
                                                                     <?php foreach ($images as $image) : ?>
                                                                         <div class="swiper-slide">
@@ -210,7 +222,7 @@
                                                                     <div class="swiper-button-next"><i class="fa-solid fa-arrow-left"></i></div>
                                                                     <div class="swiper-button-prev"><i class="fa-solid fa-arrow-right"></i></div>
                                                                 </div>
-                                                            
+
                                                             </div>
                                                         <?php endif; ?>
 
@@ -394,11 +406,11 @@
                         <div class="swiper-wrapper">
                             <?php while (have_rows('road_map')) : the_row(); ?>
                                 <div class="swiper-slide">
-                                  <div class="slide-flex">
-                                  <div class="item">
-                                        <?php getImage(get_sub_field('image'), '', get_sub_field('title')); ?>
-                                        <h5><?php the_sub_field('year'); ?></h5>
-                                        <?php if (have_rows('content')) : ?>
+                                    <div class="slide-flex">
+                                        <div class="item">
+                                            <?php getImage(get_sub_field('image'), '', get_sub_field('title')); ?>
+                                            <h5><?php the_sub_field('year'); ?></h5>
+                                            <?php if (have_rows('content')) : ?>
                                                 <div class="content">
                                                     <?php while (have_rows('content')) : the_row(); ?>
                                                         <div>
@@ -411,22 +423,22 @@
                                                     <?php endwhile; ?>
                                                 </div>
                                             <?php endif; ?>
-                                        <?php if (get_sub_field('content')) : ?>
-                                            <p><?php the_sub_field('description'); ?></p>
-                                            <h3><?php the_sub_field('title'); ?></h3>
-                                        <?php endif; ?>
+                                            <?php if (get_sub_field('content')) : ?>
+                                                <p><?php the_sub_field('description'); ?></p>
+                                                <h3><?php the_sub_field('title'); ?></h3>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="info">
+                                            <?php the_sub_field('certification_description'); ?>
+                                        </div>
                                     </div>
-                                    <div class="info">
-                                    <?php the_sub_field('certification_description'); ?>
-                                    </div>
-                                  </div>
                                 </div>
                             <?php endwhile; ?>
                         </div>
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </section>
 <?php endif; ?>
@@ -447,12 +459,13 @@
                     <div class="col-sm-12 col-lg-6">
                         <div class="feature">
                             <div><?php getImage(get_sub_field('icon'), '', get_sub_field('title')); ?>
-                            <h4><?php the_sub_field('title'); ?></h4></div>
-                           <div>
-                           <?php if ($file = get_sub_field('file')) : ?>
-                                <a href="<?php echo $file; ?>" download class="theme-btn">Download</a>
-                            <?php endif; ?>
-                           </div>
+                                <h4><?php the_sub_field('title'); ?></h4>
+                            </div>
+                            <div>
+                                <?php if ($file = get_sub_field('file')) : ?>
+                                    <a href="<?php echo $file; ?>" download class="theme-btn">Download</a>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                 <?php endwhile; ?>
@@ -476,15 +489,15 @@
                 <?php while (have_rows('stakeholder_reports')) : the_row(); ?>
                     <div class="col-sm-12 col-lg-6">
                         <div class="feature">
-                           <div>
-                           <?php getImage(get_sub_field('icon'), '', get_sub_field('title')); ?>
-                           <h4><?php the_sub_field('title'); ?></h4>
-                           </div>
-                           <div>
-                           <?php if ($file = get_sub_field('file')) : ?>
-                                <a href="<?php echo $file; ?>" download class="theme-btn">Download</a>
-                            <?php endif; ?>
-                           </div>
+                            <div>
+                                <?php getImage(get_sub_field('icon'), '', get_sub_field('title')); ?>
+                                <h4><?php the_sub_field('title'); ?></h4>
+                            </div>
+                            <div>
+                                <?php if ($file = get_sub_field('file')) : ?>
+                                    <a href="<?php echo $file; ?>" download class="theme-btn">Download</a>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                 <?php endwhile; ?>
