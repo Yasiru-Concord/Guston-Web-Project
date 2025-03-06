@@ -20,7 +20,7 @@ section.sustain-banner {
     margin-top: 0;
     background-color: @theme-bg-light;
 
- 
+
     &::before {
         @gradient-color: #c7cad7;
         content: '';
@@ -52,16 +52,36 @@ section.sustain-banner {
         height: 100%;
         justify-content: space-between;
         flex-direction: column;
+
+        &::after {
+            content: "";
+            position: absolute;
+            .absolute-full-size();
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(6, 56, 80);
+            background: linear-gradient(90deg, rgba(6, 56, 80, 0.4990589985994398) 0%, rgba(241, 241, 241, 0) 99%);
+
+            @media @mobile {
+                display: none;
+            }
+        }
+
         .top {
             width: 60%;
             margin-left: 80px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            display: grid;
+
+            // flex-direction: column;
+            // flex-wrap: wrap;
             @media @mobile {
                 margin-left: 0px;
                 width: 100%;
+                display: none;
             }
+
             .container {
                 display: flex;
                 justify-content: flex;
@@ -72,42 +92,52 @@ section.sustain-banner {
                 width: fit-content;
                 flex-grow: 1;
                 flex-basis: 35%;
+
                 img {
-                    width: 80px;
-                    height: 80px;
+                    width: 55px;
+                    height: 55px;
                 }
+
                 .lg-img {
-                    width: 140px;
-                    height: 140px;
+                    width: 100px;
+                    height: 100px;
                 }
+
                 div {
                     color: white;
                     text-align: left;
+
                     h3 {
-                        font-size: 20px;
-                    }
-                    h4 {
                         font-size: 17px;
+                    }
+
+                    h4 {
+                        font-size: 15px;
                         font-weight: bold;
                     }
                 }
+
                 @media @mobileTab {
                     img {
-                        width: 80px;
-                        height: 80px;
+                        width: 50px;
+                        height: 50px;
                     }
+
                     .lg-img {
-                        width: 120px;
-                        height: 120px;
+                        width: 100px;
+                        height: 100px;
                     }
+
                     div {
                         color: white;
                         text-align: left;
+
                         h3 {
-                            font-size: 20px;
+                            font-size: 16px;
                         }
+
                         h4 {
-                            font-size: 15px;
+                            font-size: 14px;
                             font-weight: bold;
                         }
                     }
@@ -118,16 +148,20 @@ section.sustain-banner {
                         width: 50px;
                         height: 50px;
                     }
+
                     .lg-img {
                         width: 100px;
                         height: 100px;
                     }
+
                     div {
                         color: white;
                         text-align: left;
+
                         h3 {
                             font-size: 20px;
                         }
+
                         h4 {
                             font-size: 12px;
                             font-weight: bold;
@@ -136,6 +170,11 @@ section.sustain-banner {
                 }
             }
         }
+
+        .top:has(.container:nth-child(6)) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
         img {
             width: 100%;
             max-width: 100%;
@@ -216,12 +255,12 @@ section.sustain-banner {
             display: none;
         }
     }
-   
+
     .container {
         position: relative;
         z-index: 10;
 
-      
+
         @media @mobileTab {
             flex-direction: column;
             text-align: center;
@@ -501,11 +540,12 @@ section.sustain-pillars {
         text-align: center;
         max-width: 900px;
         margin: 0px auto 50px;
+
         h2 {
             text-transform: unset;
         }
     }
-  
+
     //  @media @mobile {
     //     .pillar-slideshow {
     //         height: 200px;
@@ -979,9 +1019,11 @@ section.sustain-certifications {
     @theme-green-dark: darken(@theme-green, 20%);
     // background-color: @theme-green-dark;
     background-color: @secondary-color;
+
     @media @mobileTab {
         background-color: @theme-green-dark;
     }
+
     color: #FFF;
     padding: @default-margin 0;
     margin-top: 0;
@@ -1054,16 +1096,18 @@ section.sustain-certifications {
             font-size: 4rem;
         }
     }
-.slide-flex {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    // height: 100%;
-     
-    @media (max-width: 1200px) {
-        flex-direction: column;
+
+    .slide-flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        // height: 100%;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
     }
-}
+
     .right {
         display: flex;
         // align-items: center;
@@ -1081,9 +1125,10 @@ section.sustain-certifications {
             flex-shrink: 0;
 
             @media @mobileTab {
-               
+
                 width: auto;
             }
+
             @media @mobile {
                 display: none;
             }
@@ -1219,6 +1264,7 @@ section.sustain-certifications {
                 .content {
                     div {
                         text-align: center;
+
                         &:not(:last-child) {
                             &::after {
                                 content: '';
@@ -1238,15 +1284,16 @@ section.sustain-certifications {
                     p {
                         margin-bottom: 0;
                         font-weight: 700;
-                      
+
                     }
 
                     h4 {
                         font-weight: 500;
                         font-size: 14px;
                         margin-bottom: 0px;
-                          color: #b4b2b2;
+                        color: #b4b2b2;
                     }
+
                     @media @mobile {
                         p {
                             line-height: 20px;
@@ -1257,38 +1304,48 @@ section.sustain-certifications {
             }
         }
     }
+
     .info {
         width: 100%;
         text-align: left;
         margin-left: 25px;
+
         h3 {
             font-size: 16px;
         }
+
         p {
             font-size: 12px;
             font-weight: 300;
         }
+
         @media (max-width: 1200px) {
             margin-left: 0;
             text-align: center !important;
+
             p {
                 font-size: 11px;
             }
         }
+
         @media @mobileTab {
             margin-left: 0;
             text-align: center !important;
+
             p {
                 font-size: 11px;
             }
         }
+
         @media @mobile {
             margin-left: 0;
             text-align: center !important;
+
             p {
                 font-size: 10px;
             }
         }
+
         // height: 200px;
     }
 }
@@ -1756,6 +1813,7 @@ section.sustain-commitment-features {
         display: flex;
         align-items: center;
         gap: 10px 30px;
+
         div {
             display: flex;
             width: 50%;
@@ -1764,13 +1822,16 @@ section.sustain-commitment-features {
             justify-content: center;
             gap: 20px;
         }
+
         @media @mobileTab {
             flex-direction: column;
             text-align: center;
+
             div {
                 width: 100%;
             }
         }
+
         img {
             width: 50px;
             height: 50px;
@@ -1828,6 +1889,7 @@ section.sustain-stakeholder-reports {
             flex-direction: column;
             text-align: center;
         }
+
         div {
             display: flex;
             width: 50%;
@@ -1836,6 +1898,7 @@ section.sustain-stakeholder-reports {
             justify-content: center;
             gap: 20px;
         }
+
         img {
             width: 50px;
             height: 50px;
