@@ -388,9 +388,16 @@
         <div class="images">
             <div class="swiper" id="timelineBGSwiper">
                 <div class="swiper-wrapper">
-                    <?php while (have_rows('road_map')) : the_row(); ?>
+                    <?php while (have_rows('road_map')) : the_row(); 
+                     $desktopImage = get_sub_field('bg_image'); // Desktop image
+                     $mobileImage = get_sub_field('mobileImage'); // Mobile image
+                     ?>
                         <div class="swiper-slide">
-                            <?php getImage(get_sub_field('bg_image'), 'full-image'); ?>
+                        <picture>
+                <source srcset="<?php echo wp_get_attachment_url($mobileImage); ?>" media="(max-width: 768px)">
+                <source srcset="<?php echo wp_get_attachment_url($desktopImage); ?>" media="(min-width: 769px)">
+                <img src="<?php echo wp_get_attachment_url($desktopImage); ?>" alt="Roadmap Image" class="full-image">
+            </picture>
                         </div>
                     <?php endwhile; ?>
                 </div>
