@@ -21,7 +21,7 @@
                                 <!-- Desktop Image -->
                                 <img src="<?php echo wp_get_attachment_url($desktopImage); ?>" class="full-image no-lazyload" alt="Banner Image">
                             </picture>
-                            <div class="top">
+                            <!-- <div class="top">
                                     <?php while (have_rows('iconography')) : the_row();
                                         $icon = get_sub_field('icon');
                                         $text_content = get_sub_field('text');
@@ -31,7 +31,7 @@
                                             <div><?php echo $text_content; ?></div>
                                         </div>
                                     <?php endwhile; ?>
-                                </div>
+                                </div> -->
                             <div class="container">
                                 <?php if ($content = get_sub_field('content')): ?>
                                     <div class="content-wrapper"><?php echo $content; ?></div>

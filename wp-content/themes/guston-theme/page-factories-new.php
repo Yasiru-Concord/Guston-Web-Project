@@ -52,6 +52,7 @@
                                             <div class="item">
                                                 <?php getImage($image, 'full-image'); ?>
                                                 <a data-fancybox="factory<?php echo $factoryID; ?>" href="<?php echo wp_get_attachment_url($image); ?>" class="full-link"></a>
+                                                 <h1>factory name</h1>
                                             </div>
                                         </div>
                                     <?php endforeach; ?>

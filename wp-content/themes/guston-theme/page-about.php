@@ -45,10 +45,10 @@
                       </div>
                       <div class="col-sm-12 col-lg-12 countdown-container">
                           <div class="countdown">
-                              <div class="count one">
+                              <div class="count three">
                                   <div class="title">
-                                      <h2 class="year"></h2>
-                                      <p>years</p>
+                                      <h2 class="day"></h2>
+                                      <p>days</p>
                                   </div>
                               </div>
                               <div class="count two">
@@ -57,12 +57,16 @@
                                       <p>months</p>
                                   </div>
                               </div>
-                              <div class="count three">
+                              <div class="count one">
                                   <div class="title">
-                                      <h2 class="day"></h2>
-                                      <p>days</p>
+                                      <h2 class="year"></h2>
+                                      <p>years</p>
                                   </div>
                               </div>
+                              <!-- <div class="count"> -->
+
+                                      <!-- <p class="andCounting">and counting...</p> -->
+                              <!-- </div> -->
                               <!-- <div class="count" id="hour-container">
                                   <div class="title">
                                       <h2 class="hour"></h2>
@@ -76,6 +80,7 @@
                                   </div>
                               </div> -->
                           </div>
+                          <p class="andCounting">and counting...</p>
                       </div>
                   </div>
               </div>
