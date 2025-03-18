@@ -1,0 +1,963 @@
+0000.002 (0) Opened log file at time: Mon, 17 Mar 2025 23:25:41 +0000 on https://guston.ddev.site
+0000.006 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.11 WP: 6.7.1 PHP: 8.4.1 (fpm-fcgi, Linux guston-web 5.15.49-linuxkit #1 SMP Tue Sep 13 07:51:46 UTC 2022 x86_64) MySQL: 10.11.10-MariaDB-ubu2204-log (max packet size=268435456) WPLANG: en_US Server: nginx/1.26.2 safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 17.2M | 20M) multisite: N openssl: OpenSSL 3.0.15 3 Sep 2024 mcrypt: N LANG: C.UTF-8 ZipArchive::addFile: Y
+0000.011 (0) Free space on disk containing Updraft's temporary directory: 39559.3 MB
+0000.014 (0) Tasks: Backup files: 1 (schedule: weekly) Backup DB:  (schedule: weekly)
+0000.015 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.031 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1741919903, seconds_ago=334038)
+0000.044 (0) Set semaphore last lock (fd) time to 2025-03-17 23:25:41
+0000.045 (0) Semaphore lock (fd) complete
+0000.056 (0) Backup run: resumption=0, nonce=89fea7b866f0, file_nonce=89fea7b866f0 begun at=1742253941 (0s ago), job type=backup
+0000.059 (0) Scheduling a resumption (1) after 600 seconds (1742254541) in case this run gets aborted
+0000.169 (0) Checking if we have a zip executable available
+0000.176 (0) Testing: /usr/bin/zip
+0000.205 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.206 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.207 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.209 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.210 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.218 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.220 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.250 (0) Working binary zip found: /usr/bin/zip
+0000.254 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.255 (0) Creation of backups of directories: beginning
+0000.267 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.507 (0) Total entities for the zip file: 1179 directories, 6951 files (0 skipped as non-modified), 121.7 MB
+0000.510 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.512 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.515 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.517 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.519 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.522 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 600 files added (on-disk size: 0 KB)
+0000.524 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 700 files added (on-disk size: 0 KB)
+0000.527 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 800 files added (on-disk size: 0 KB)
+0000.529 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 900 files added (on-disk size: 0 KB)
+0000.532 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1000 files added (on-disk size: 0 KB)
+0000.533 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (14.5 MB, 6951 files batched, 1001 (1001) added so far); re-opening (prior size: 0 KB)
+0002.183 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: size is now: 5.40 MB
+0002.188 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1100 files added (on-disk size: 5525.7 KB)
+0002.191 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1200 files added (on-disk size: 5525.7 KB)
+0002.193 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1300 files added (on-disk size: 5525.7 KB)
+0002.195 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1400 files added (on-disk size: 5525.7 KB)
+0002.197 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1500 files added (on-disk size: 5525.7 KB)
+0002.200 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1600 files added (on-disk size: 5525.7 KB)
+0002.202 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1700 files added (on-disk size: 5525.7 KB)
+0002.204 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1800 files added (on-disk size: 5525.7 KB)
+0002.206 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 1900 files added (on-disk size: 5525.7 KB)
+0002.208 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2000 files added (on-disk size: 5525.7 KB)
+0002.209 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (18.2 MB, 6951 files batched, 1001 (2002) added so far); re-opening (prior size: 5525.7 KB)
+0004.037 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: size is now: 12.50 MB
+0004.041 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2100 files added (on-disk size: 12846.9 KB)
+0004.043 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2200 files added (on-disk size: 12846.9 KB)
+0004.045 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2300 files added (on-disk size: 12846.9 KB)
+0004.047 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2400 files added (on-disk size: 12846.9 KB)
+0004.048 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2500 files added (on-disk size: 12846.9 KB)
+0004.050 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2600 files added (on-disk size: 12846.9 KB)
+0004.052 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2700 files added (on-disk size: 12846.9 KB)
+0004.054 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2800 files added (on-disk size: 12846.9 KB)
+0004.056 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 2900 files added (on-disk size: 12846.9 KB)
+0004.058 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3000 files added (on-disk size: 12846.9 KB)
+0004.059 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (20.1 MB, 6951 files batched, 1001 (3003) added so far); re-opening (prior size: 12846.9 KB)
+0005.095 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: size is now: 17.90 MB
+0005.101 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3100 files added (on-disk size: 18331.4 KB)
+0005.104 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3200 files added (on-disk size: 18331.4 KB)
+0005.109 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3300 files added (on-disk size: 18331.4 KB)
+0005.114 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3400 files added (on-disk size: 18331.4 KB)
+0005.116 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3500 files added (on-disk size: 18331.4 KB)
+0005.118 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3600 files added (on-disk size: 18331.4 KB)
+0005.121 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3700 files added (on-disk size: 18331.4 KB)
+0005.123 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3800 files added (on-disk size: 18331.4 KB)
+0005.125 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 3900 files added (on-disk size: 18331.4 KB)
+0005.127 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4000 files added (on-disk size: 18331.4 KB)
+0005.127 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (4.6 MB, 6951 files batched, 1001 (4004) added so far); re-opening (prior size: 18331.4 KB)
+0006.007 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4100 files added (on-disk size: 19968.2 KB)
+0006.009 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4200 files added (on-disk size: 19968.2 KB)
+0006.011 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4300 files added (on-disk size: 19968.2 KB)
+0006.013 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4400 files added (on-disk size: 19968.2 KB)
+0006.015 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4500 files added (on-disk size: 19968.2 KB)
+0006.017 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4600 files added (on-disk size: 19968.2 KB)
+0006.019 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4700 files added (on-disk size: 19968.2 KB)
+0006.021 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4800 files added (on-disk size: 19968.2 KB)
+0006.023 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 4900 files added (on-disk size: 19968.2 KB)
+0006.025 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5000 files added (on-disk size: 19968.2 KB)
+0006.025 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (17.8 MB, 6951 files batched, 1001 (5005) added so far); re-opening (prior size: 19968.2 KB)
+0007.322 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: size is now: 24.20 MB
+0007.326 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5100 files added (on-disk size: 24824.8 KB)
+0007.328 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5200 files added (on-disk size: 24824.8 KB)
+0007.330 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5300 files added (on-disk size: 24824.8 KB)
+0007.332 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5400 files added (on-disk size: 24824.8 KB)
+0007.334 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5500 files added (on-disk size: 24824.8 KB)
+0007.336 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5600 files added (on-disk size: 24824.8 KB)
+0007.338 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5700 files added (on-disk size: 24824.8 KB)
+0007.339 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5800 files added (on-disk size: 24824.8 KB)
+0007.341 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 5900 files added (on-disk size: 24824.8 KB)
+0007.343 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 25 MB added on this batch (25 MB, 6951 files batched, 969 (5974) added so far); re-opening (prior size: 24824.8 KB)
+1837.609 (0) The time we have been running (1837.6) is approaching the resumption interval (600) - increasing resumption interval to 1868
+1838.070 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: size is now: 31.80 MB
+1838.075 (0) The time we have been running (1838.1) is approaching the resumption interval (1868) - increasing resumption interval to 1869
+1838.077 (0) A useful amount of data was added after this amount of zip processing: 1831.4 s (normalised: 1830 s, rate: 14 KB/s)
+1838.080 (0) Adjust: Reducing maximum amount of batched data (time=1831.434844017, normalised_time=1830.0485409193, max_time=1838.0769629478, data points known=1, new_max_bytes=15797641, old_max_bytes=26214400)
+1838.083 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6000 files added (on-disk size: 32554.8 KB)
+1838.086 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6100 files added (on-disk size: 32554.8 KB)
+1838.090 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6200 files added (on-disk size: 32554.8 KB)
+1838.093 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6300 files added (on-disk size: 32554.8 KB)
+1838.097 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6400 files added (on-disk size: 32554.8 KB)
+1838.101 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6500 files added (on-disk size: 32554.8 KB)
+1838.105 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6600 files added (on-disk size: 32554.8 KB)
+1838.109 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6700 files added (on-disk size: 32554.8 KB)
+1838.114 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 15.1 MB added on this batch (15.1 MB, 6951 files batched, 820 (6794) added so far); re-opening (prior size: 32554.8 KB)
+1839.836 (0) PHP event: code E_WARNING: filesize(): stat failed for /var/www/html/wp-content/updraft/backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp (line 506, wp-content/plugins/updraftplus/includes/class-zip.php)
+1839.864 (0) The time we have been running (1839.9) is approaching the resumption interval (1869) - increasing resumption interval to 1870
+1839.867 (0) A useful amount of data was added after this amount of zip processing: 2.2 s (normalised: 2.2 s, rate: 6945.6 KB/s)
+1839.869 (0) Performance is good - will increase the amount of data we attempt to batch (time=2.2245519161224, normalised_time=2.2211639946211, max_time=1839.8670680523, data points known=1, old_max_bytes=15797641, new_max_bytes=209715200)
+1839.872 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6800 files added (on-disk size: 36951.4 KB)
+1839.874 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.tmp: 6900 files added (on-disk size: 36951.4 KB)
+1840.381 (0) The time we have been running (1840.4) is approaching the resumption interval (1870) - increasing resumption interval to 1871
+1840.454 (0) Creating zip file manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.list-temp.tmp)
+1840.488 (0) Successfully created zip file manifest (size: 665111)
+1840.734 (0) Created plugins zip (0) - 38580.8 KB in 1840.5 s (21 KB/s) (sha1: 14f651d211647a076e4158006b86cd6a4ebade88, sha256: 2ac16fa14aaab75a6cf10dfa61723db83580dc6bfc833d2c5435a2dfd523cd7c)
+1840.749 (0) Cloud backup selection (1/1): s3generic with instance (1/1) (last)
+1840.753 (0) Beginning dispatch of backup to remote (s3generic) (instance identifier s-e61b5f08751bdf628b08010bdfeb7aa7)
+1840.774 (0) S3-Compatible (Generic): Set endpoint (UpdraftPlus_S3): sgp1.digitaloceanspaces.com
+1842.609 (0) S3-Compatible (Generic): upload: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip (chunks: 8) -> s3generic://hive-wp-backup/guston.store/backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip
+1842.823 (0) S3-Compatible (Generic): chunked upload: got multipart ID: 2~HP8Kw-DfKb8OCtRay4ST9PaXnjorodg
+1845.455 (0) The time we have been running (1845.4) is approaching the resumption interval (1871) - increasing resumption interval to 1876
+1845.458 (0) S3generic chunked upload: 12.5 % uploaded (1, df564135ab6a499b303839c3814865b5)
+1847.963 (0) The time we have been running (1847.9) is approaching the resumption interval (1876) - increasing resumption interval to 1878
+1848.000 (0) S3generic chunked upload: 25 % uploaded (2, cfc4d15edbc744b7f4eb2a375e087769)
+1852.939 (0) The time we have been running (1852.9) is approaching the resumption interval (1878) - increasing resumption interval to 1883
+1852.992 (0) S3generic chunked upload: 37.5 % uploaded (3, cbd8bce6bb3c1b52f5269723077f61f8)
+1858.457 (0) The time we have been running (1858.4) is approaching the resumption interval (1883) - increasing resumption interval to 1889
+1858.491 (0) S3generic chunked upload: 50 % uploaded (4, 06a6575a4284d53942ad027bba20b501)
+1863.919 (0) The time we have been running (1863.8) is approaching the resumption interval (1889) - increasing resumption interval to 1894
+1863.962 (0) S3generic chunked upload: 62.5 % uploaded (5, 5220ab961ffc7096f9d9eb8088178055)
+1869.109 (0) The time we have been running (1869) is approaching the resumption interval (1894) - increasing resumption interval to 1900
+1869.149 (0) S3generic chunked upload: 75 % uploaded (6, f42894df0b954e879c2b7cf991169da4)
+1874.684 (0) The time we have been running (1874.6) is approaching the resumption interval (1900) - increasing resumption interval to 1905
+1874.728 (0) S3generic chunked upload: 87.5 % uploaded (7, 0563462d8bc86d51a7d37687aae8c720)
+1878.749 (0) The time we have been running (1878.7) is approaching the resumption interval (1905) - increasing resumption interval to 1909
+1878.797 (0) S3generic chunked upload: 100 % uploaded (8, 6b240848fc27c772634c9e0cfb68cefe)
+1878.868 (0) S3-Compatible (Generic): upload: all chunks uploaded; will now instruct S3 to re-assemble
+1880.999 (0) S3-Compatible (Generic): upload (plugins0): re-assembly succeeded
+1881.031 (0) Recording as successfully uploaded: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip
+1881.418 (0) Deleting local file: backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip: OK
+1881.557 (0) Beginning creation of dump of themes (split every: 400 MB)
+1882.311 (0) Total entities for the zip file: 148 directories, 745 files (0 skipped as non-modified), 18 MB
+1882.403 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+1882.699 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+1882.862 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+1882.952 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+1883.051 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+1883.121 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.tmp: 600 files added (on-disk size: 0 KB)
+1883.299 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.tmp: 700 files added (on-disk size: 0 KB)
+1888.817 (0) The time we have been running (1888.7) is approaching the resumption interval (1909) - increasing resumption interval to 1919
+1894.862 (0) The time we have been running (1894.8) is approaching the resumption interval (1919) - increasing resumption interval to 1925
+7260.325 (0) The time we have been running (7260.3) is approaching the resumption interval (1925) - increasing resumption interval to 7291
+7261.108 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.tmp: size is now: 14.40 MB
+7261.116 (0) The time we have been running (7261.1) is approaching the resumption interval (7291) - increasing resumption interval to 7292
+7261.129 (0) Creating zip file manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.list-temp.tmp)
+7261.156 (0) Successfully created zip file manifest (size: 57920)
+7261.330 (0) Created themes zip (0) - 14757 KB in 5379.7 s (2.7 KB/s) (sha1: f38e3a5ef3c2cec7516f16ee842b5e65900938ef, sha256: ccaa0020b247be228ef3f06aff994c40a465217c808014675eec7e9bc5b9bf63)
+7261.347 (0) Cloud backup selection (1/1): s3generic with instance (1/1) (last)
+7261.348 (0) Beginning dispatch of backup to remote (s3generic) (instance identifier s-e61b5f08751bdf628b08010bdfeb7aa7)
+7261.350 (0) S3-Compatible (Generic): Set endpoint (UpdraftPlus_S3): sgp1.digitaloceanspaces.com
+7262.609 (1) Opened log file at time: Tue, 18 Mar 2025 01:26:43 +0000 on https://guston.ddev.site
+7262.612 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.11 WP: 6.7.1 PHP: 8.4.1 (fpm-fcgi, Linux guston-web 5.15.49-linuxkit #1 SMP Tue Sep 13 07:51:46 UTC 2022 x86_64) MySQL: 10.11.10-MariaDB-ubu2204-log (max packet size=268435456) WPLANG: en_US Server: nginx/1.26.2 safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 17.2M | 20M) multisite: N openssl: OpenSSL 3.0.15 3 Sep 2024 mcrypt: N LANG: C.UTF-8 ZipArchive::addFile: Y
+7262.613 (1) Free space on disk containing Updraft's temporary directory: 39544.2 MB
+7262.617 (1) Requesting backup semaphore lock (89fea7b866f0)
+7262.621 (1) [Debug] Lock option (updraft_lock_89fea7b866f0, wp_options) was created in the database
+7262.622 (1) [Info] Lock (updraft_lock_89fea7b866f0, wp_options) acquired after initialising the database
+7262.626 (1) Terminate: check-in exists with activity within the last 30 seconds (time_mod=1742261202.5, time_now=1742261204, diff=1, size=n/a). This likely means that another UpdraftPlus run is at work; so we will exit.
+7262.629 (1) A new resumption will be scheduled to prevent the job ending
+7262.631 (1) Rescheduling resumption 2: moving to 600 seconds from now (1742261803)
+7262.637 (1) To decrease the likelihood of overlaps, increasing resumption interval to: 7292 + 120 = 7412
+7263.297 (0) S3-Compatible (Generic): upload: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip (chunks: 3) -> s3generic://hive-wp-backup/guston.store/backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip
+7263.491 (0) S3-Compatible (Generic): chunked upload: got multipart ID: 2~pQgwu6TpRm0bdi9yj4zVWMds7-dw0ZP
+7265.441 (0) The time we have been running (7265.4) is approaching the resumption interval (7292) - increasing resumption interval to 7296
+7265.445 (0) S3generic chunked upload: 33.3 % uploaded (1, 96815e6ffb205f9b63092e8e12a2585b)
+7267.731 (0) The time we have been running (7267.7) is approaching the resumption interval (7296) - increasing resumption interval to 7298
+7267.734 (0) S3generic chunked upload: 66.7 % uploaded (2, 14ca099e81ca3944c1312321bc775ec4)
+7270.456 (0) The time we have been running (7270.4) is approaching the resumption interval (7298) - increasing resumption interval to 7301
+7270.520 (0) S3generic chunked upload: 100 % uploaded (3, b68c14e91386da1af7d89a8d2782eb4a)
+7270.632 (0) S3-Compatible (Generic): upload: all chunks uploaded; will now instruct S3 to re-assemble
+7273.180 (0) S3-Compatible (Generic): upload (themes0): re-assembly succeeded
+7273.202 (0) Recording as successfully uploaded: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip
+7273.354 (0) Deleting local file: backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip: OK
+7273.454 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+7273.477 (0) Looking for candidates to backup in: /var/www/html/wp-content/uploads
+7273.514 (0) finding files: 2023: adding to list (1)
+7273.538 (0) finding files: 2024: adding to list (2)
+7273.554 (0) finding files: 2025: adding to list (3)
+7273.569 (0) finding files: forminator: adding to list (4)
+7273.599 (0) finding files: smush: adding to list (5)
+7273.610 (0) finding files: smush-webp-test.png: adding to list (6)
+7273.627 (0) Beginning creation of dump of uploads (split every: 400 MB)
+8207.957 (0) File counting took a long time (934s); will attempt to cache results (memory_limit: 1024M (used: 17.7M | 28M), estimated uncompressed bytes: 226.1 Kb)
+8207.966 (0) Total entities for the zip file: 28 directories, 1919 files (0 skipped as non-modified), 474.1 MB
+8207.967 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+8207.984 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: size is now: 0.00 MB
+8207.990 (0) The time we have been running (8208) is approaching the resumption interval (7301) - increasing resumption interval to 8238
+8207.999 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 100 files added (on-disk size: 9.7 KB)
+8208.002 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 200 files added (on-disk size: 9.7 KB)
+8208.004 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 300 files added (on-disk size: 9.7 KB)
+8208.007 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 400 files added (on-disk size: 9.7 KB)
+8208.010 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 500 files added (on-disk size: 9.7 KB)
+8208.012 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 600 files added (on-disk size: 9.7 KB)
+8208.015 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 700 files added (on-disk size: 9.7 KB)
+8208.018 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 800 files added (on-disk size: 9.7 KB)
+8208.020 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 200 MB added on this batch (200.7 MB, 1919 files batched, 875 (876) added so far); re-opening (prior size: 9.7 KB)
+9985.385 (0) The time we have been running (9985.4) is approaching the resumption interval (8238) - increasing resumption interval to 10016
+9990.648 (0) The time we have been running (9990.6) is approaching the resumption interval (10016) - increasing resumption interval to 10021
+9991.854 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: size is now: 200.90 MB
+9991.861 (0) The time we have been running (9991.9) is approaching the resumption interval (10021) - increasing resumption interval to 10022
+9991.864 (0) A useful amount of data was added after this amount of zip processing: 1784.2 s (normalised: 1777.9 s, rate: 115.2 KB/s)
+9991.865 (0) Performance is good - but we will not increase the amount of data we batch, as we are already at the present limit (time=1784.2216889858, normalised_time=1777.8889126208, max_time=9991.864043951, data points known=1, max_bytes=209715200)
+9991.869 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 900 files added (on-disk size: 205703.2 KB)
+9991.872 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 1000 files added (on-disk size: 205703.2 KB)
+9991.874 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 1100 files added (on-disk size: 205703.2 KB)
+9991.876 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 1200 files added (on-disk size: 205703.2 KB)
+9991.879 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 1300 files added (on-disk size: 205703.2 KB)
+9991.881 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: 1400 files added (on-disk size: 205703.2 KB)
+9991.884 (0) Adding batch to zip file (UpdraftPlus_BinZip): possibly approaching split limit (185.5 MB, 591 (1467) files added so far); last ratio: 1; re-opening (prior size: 205703.2 KB)
+10020.531 (0) The time we have been running (10020.2) is approaching the resumption interval (10022) - increasing resumption interval to 10051
+10026.919 (0) The time we have been running (10026.7) is approaching the resumption interval (10051) - increasing resumption interval to 10057
+10033.211 (0) The time we have been running (10032.9) is approaching the resumption interval (10057) - increasing resumption interval to 10063
+10039.215 (0) The time we have been running (10038.9) is approaching the resumption interval (10063) - increasing resumption interval to 10069
+10048.314 (0) The time we have been running (10047.1) is approaching the resumption interval (10069) - increasing resumption interval to 10078
+10923.581 (0) The time we have been running (10923.6) is approaching the resumption interval (10078) - increasing resumption interval to 10954
+10927.791 (2) Opened log file at time: Tue, 18 Mar 2025 02:27:49 +0000 on https://guston.ddev.site
+10927.793 (2) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.11 WP: 6.7.1 PHP: 8.4.1 (fpm-fcgi, Linux guston-web 5.15.49-linuxkit #1 SMP Tue Sep 13 07:51:46 UTC 2022 x86_64) MySQL: 10.11.10-MariaDB-ubu2204-log (max packet size=268435456) WPLANG: en_US Server: nginx/1.26.2 safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 17.2M | 20M) multisite: N openssl: OpenSSL 3.0.15 3 Sep 2024 mcrypt: N LANG: C.UTF-8 ZipArchive::addFile: Y
+10927.794 (2) Free space on disk containing Updraft's temporary directory: 39078.1 MB
+10927.796 (2) Requesting backup semaphore lock (89fea7b866f0)
+10927.803 (2) [Info] Lock (updraft_lock_89fea7b866f0, wp_options) acquired
+10927.805 (2) Terminate: check-in exists with activity within the last 30 seconds (time_mod=1742264865, time_now=1742264869.1, diff=4, size=n/a). This likely means that another UpdraftPlus run is at work; so we will exit.
+10927.806 (2) A new resumption will be scheduled to prevent the job ending
+10927.807 (2) Rescheduling resumption 3: moving to 900 seconds from now (1742265769)
+10927.811 (2) To decrease the likelihood of overlaps, increasing resumption interval to: 10954 + 120 = 11074
+10928.664 (0) The time we have been running (10928.6) is approaching the resumption interval (10954) - increasing resumption interval to 10959
+10935.145 (0) The time we have been running (10935) is approaching the resumption interval (10959) - increasing resumption interval to 10966
+10941.749 (0) The time we have been running (10941.6) is approaching the resumption interval (10966) - increasing resumption interval to 10972
+10947.886 (0) The time we have been running (10947.8) is approaching the resumption interval (10972) - increasing resumption interval to 10978
+10955.550 (0) The time we have been running (10955.4) is approaching the resumption interval (10978) - increasing resumption interval to 10986
+10960.813 (0) The time we have been running (10960.7) is approaching the resumption interval (10986) - increasing resumption interval to 10991
+10968.596 (0) The time we have been running (10968.5) is approaching the resumption interval (10991) - increasing resumption interval to 10999
+14584.877 (0) The time we have been running (14584.9) is approaching the resumption interval (10999) - increasing resumption interval to 14615
+14588.253 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.tmp: size is now: 386.50 MB
+14588.260 (0) The time we have been running (14588.3) is approaching the resumption interval (14615) - increasing resumption interval to 14619
+14588.268 (0) Zip size is at/near split limit (386.5 MB / 400 MB) - bumping index (from: 0)
+14588.994 (3) Opened log file at time: Tue, 18 Mar 2025 03:28:50 +0000 on https://guston.ddev.site
+14588.998 (3) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.11 WP: 6.7.1 PHP: 8.4.1 (fpm-fcgi, Linux guston-web 5.15.49-linuxkit #1 SMP Tue Sep 13 07:51:46 UTC 2022 x86_64) MySQL: 10.11.10-MariaDB-ubu2204-log (max packet size=268435456) WPLANG: en_US Server: nginx/1.26.2 safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 17.2M | 20M) multisite: N openssl: OpenSSL 3.0.15 3 Sep 2024 mcrypt: N LANG: C.UTF-8 ZipArchive::addFile: Y
+14589.001 (3) Free space on disk containing Updraft's temporary directory: 38984 MB
+14589.003 (3) Requesting backup semaphore lock (89fea7b866f0)
+14589.008 (3) [Info] Lock (updraft_lock_89fea7b866f0, wp_options) acquired
+14589.015 (3) Terminate: check-in exists with activity within the last 30 seconds (time_mod=1742268529.7, time_now=1742268530.3, diff=0, size=n/a). This likely means that another UpdraftPlus run is at work; so we will exit.
+14589.017 (3) A new resumption will be scheduled to prevent the job ending
+14589.018 (3) Rescheduling resumption 4: moving to 900 seconds from now (1742269430)
+14589.034 (3) To decrease the likelihood of overlaps, increasing resumption interval to: 14619 + 120 = 14739
+14592.519 (0) Creating zip file manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.list-temp.tmp)
+14592.527 (0) Successfully created zip file manifest (size: 81707)
+14592.539 (0) The time we have been running (14592.5) is approaching the resumption interval (14619) - increasing resumption interval to 14623
+14592.543 (0) Created uploads zip (0) - 395777.5 KB in 7314.6 s (54.1 KB/s) (checksums: sha1: d892e9dc8f700e9d4e4da6e3550a322714578a5f, sha256: 56716e40022428b52da53108eade344663624dcde5268159b06f504c299a8614)
+14592.559 (0) Cloud backup selection (1/1): s3generic with instance (1/1) (last)
+14592.561 (0) Beginning dispatch of backup to remote (s3generic) (instance identifier s-e61b5f08751bdf628b08010bdfeb7aa7)
+14592.563 (0) S3-Compatible (Generic): Set endpoint (UpdraftPlus_S3): sgp1.digitaloceanspaces.com
+14594.428 (0) S3-Compatible (Generic): upload: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip (chunks: 78) -> s3generic://hive-wp-backup/guston.store/backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip
+14607.081 (0) S3-Compatible (Generic): chunked upload: got multipart ID: 2~7PPFdFjkwiA5SgTy91Ft7HExXUzWv1X
+14629.549 (0) The time we have been running (14629.4) is approaching the resumption interval (14623) - increasing resumption interval to 14660
+14629.606 (0) S3generic chunked upload: 1.3 % uploaded (1, bce19fa03a29205927399a3b24c01501)
+14644.833 (0) The time we have been running (14644.7) is approaching the resumption interval (14660) - increasing resumption interval to 14675
+14644.947 (0) S3generic chunked upload: 2.6 % uploaded (2, 81241584ba58eabe0ab9f7d0e336ee26)
+17850.197 (0) S3-Compatible (Generic): exception (UpdraftPlus_S3Exception) during uploadPart: UpdraftPlus_S3::uploadPart(): [18] HTTP/2 stream 1 was not closed cleanly before end of the underlying stream (line: 671, file: /var/www/html/wp-content/plugins/updraftplus/includes/S3.php)
+17851.191 (0) S3-Compatible (Generic): chunk 3: upload failed
+17851.205 (0) An error condition has occurred for the first time during this job
+17857.724 (0) The time we have been running (17857.6) is approaching the resumption interval (14675) - increasing resumption interval to 17888
+17857.735 (0) S3generic chunked upload: 5.1 % uploaded (4, 7694fbd314a0b31318f533d41ad29108)
+17858.093 (4) Opened log file at time: Tue, 18 Mar 2025 04:23:19 +0000 on https://guston.ddev.site
+17858.109 (4) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.11 WP: 6.7.1 PHP: 8.4.1 (fpm-fcgi, Linux guston-web 5.15.49-linuxkit #1 SMP Tue Sep 13 07:51:46 UTC 2022 x86_64) MySQL: 10.11.10-MariaDB-ubu2204-log (max packet size=268435456) WPLANG: en_US Server: nginx/1.26.2 safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 17.2M | 20M) multisite: N openssl: OpenSSL 3.0.15 3 Sep 2024 mcrypt: N LANG: C.UTF-8 ZipArchive::addFile: Y
+17858.115 (4) Free space on disk containing Updraft's temporary directory: 39174.8 MB
+17858.123 (4) Requesting backup semaphore lock (89fea7b866f0)
+17858.129 (4) [Info] Lock (updraft_lock_89fea7b866f0, wp_options) acquired
+17858.146 (4) Terminate: check-in exists with activity within the last 30 seconds (time_mod=1742271799.1, time_now=1742271799.4, diff=0, size=n/a). This likely means that another UpdraftPlus run is at work; so we will exit.
+17858.147 (4) A new resumption will be scheduled to prevent the job ending
+17858.149 (4) Rescheduling resumption 5: moving to 900 seconds from now (1742272699)
+17858.163 (4) To decrease the likelihood of overlaps, increasing resumption interval to: 17888 + 120 = 18008
+17861.440 (0) The time we have been running (17861.4) is approaching the resumption interval (17888) - increasing resumption interval to 17892
+17861.444 (0) S3generic chunked upload: 6.4 % uploaded (5, 69c43b7f16f4b23d442a6d437e517bc7)
+17864.863 (0) The time we have been running (17864.9) is approaching the resumption interval (17892) - increasing resumption interval to 17895
+17864.866 (0) S3generic chunked upload: 7.7 % uploaded (6, 1445f9b9c935368fcd73ef84de4c69d0)
+17869.562 (0) The time we have been running (17869.6) is approaching the resumption interval (17895) - increasing resumption interval to 17900
+17869.565 (0) S3generic chunked upload: 9 % uploaded (7, 203ecb07a8d4ca9540464e95780778ce)
+17872.345 (0) The time we have been running (17872.3) is approaching the resumption interval (17900) - increasing resumption interval to 17903
+17872.349 (0) S3generic chunked upload: 10.3 % uploaded (8, 49b9a42172643f0215f9bae10ba999ed)
+17874.887 (0) The time we have been running (17874.9) is approaching the resumption interval (17903) - increasing resumption interval to 17905
+17874.889 (0) S3generic chunked upload: 11.5 % uploaded (9, f8eb4d0823589991636417054f352063)
+17880.296 (0) The time we have been running (17880.3) is approaching the resumption interval (17905) - increasing resumption interval to 17911
+17880.299 (0) S3generic chunked upload: 12.8 % uploaded (10, 9227c70d3f60ca098a8d21508f5dc92a)
+17884.018 (0) The time we have been running (17884) is approaching the resumption interval (17911) - increasing resumption interval to 17915
+17884.021 (0) S3generic chunked upload: 14.1 % uploaded (11, d510980363cf33849ce75630d54b11a6)
+17889.410 (0) The time we have been running (17889.4) is approaching the resumption interval (17915) - increasing resumption interval to 17920
+17889.412 (0) S3generic chunked upload: 15.4 % uploaded (12, 38145567ef225eb7c09e54b9c1427f9e)
+17893.245 (0) The time we have been running (17893.2) is approaching the resumption interval (17920) - increasing resumption interval to 17924
+17893.247 (0) S3generic chunked upload: 16.7 % uploaded (13, 017bdd5c9ee7a072ef568b3bc23fe970)
+17896.227 (0) The time we have been running (17896.2) is approaching the resumption interval (17924) - increasing resumption interval to 17927
+17896.230 (0) S3generic chunked upload: 17.9 % uploaded (14, fef56e2d9d5138c8c4ef08af7c141aea)
+17898.286 (0) The time we have been running (17898.3) is approaching the resumption interval (17927) - increasing resumption interval to 17929
+17898.293 (0) S3generic chunked upload: 19.2 % uploaded (15, ec147609809317da6ccdd1b4a2af4dfb)
+17899.696 (0) The time we have been running (17899.7) is approaching the resumption interval (17929) - increasing resumption interval to 17930
+17899.699 (0) S3generic chunked upload: 20.5 % uploaded (16, 45d0cdc39387c248fce0e8cc4a5e8909)
+17902.834 (0) The time we have been running (17902.8) is approaching the resumption interval (17930) - increasing resumption interval to 17933
+17902.840 (0) S3generic chunked upload: 21.8 % uploaded (17, 85f330ea63b4bcdc07a112e891c7a188)
+17907.035 (0) The time we have been running (17907) is approaching the resumption interval (17933) - increasing resumption interval to 17938
+17907.039 (0) S3generic chunked upload: 23.1 % uploaded (18, 3041734e75bed04a5e6a2c825c1e6564)
+17910.924 (0) The time we have been running (17910.9) is approaching the resumption interval (17938) - increasing resumption interval to 17941
+17910.927 (0) S3generic chunked upload: 24.4 % uploaded (19, 5224f13b605b1ff7b4c24b2f7c11a13e)
+17914.634 (0) The time we have been running (17914.6) is approaching the resumption interval (17941) - increasing resumption interval to 17945
+17914.637 (0) S3generic chunked upload: 25.6 % uploaded (20, 87a8fe416fef62e4031cadfbf83e4e58)
+17919.094 (0) The time we have been running (17919.1) is approaching the resumption interval (17945) - increasing resumption interval to 17950
+17919.098 (0) S3generic chunked upload: 26.9 % uploaded (21, 6a5566df58e7b2efd60e2f5d6aac2577)
+17922.991 (0) The time we have been running (17923) is approaching the resumption interval (17950) - increasing resumption interval to 17953
+17922.995 (0) S3generic chunked upload: 28.2 % uploaded (22, 0765ea1050faf753c2770da64d65be97)
+17925.261 (0) The time we have been running (17925.3) is approaching the resumption interval (17953) - increasing resumption interval to 17956
+17925.266 (0) S3generic chunked upload: 29.5 % uploaded (23, b833d13fdf4be38ed35797f3e4c4cd59)
+17927.684 (0) The time we have been running (17927.7) is approaching the resumption interval (17956) - increasing resumption interval to 17958
+17927.688 (0) S3generic chunked upload: 30.8 % uploaded (24, a8c47ac18488a3abd80d1592eb59e08a)
+17931.188 (0) The time we have been running (17931.2) is approaching the resumption interval (17958) - increasing resumption interval to 17962
+17931.193 (0) S3generic chunked upload: 32.1 % uploaded (25, c79dce7e791b29f06e58b706ac745237)
+17933.928 (0) The time we have been running (17933.9) is approaching the resumption interval (17962) - increasing resumption interval to 17964
+17933.936 (0) S3generic chunked upload: 33.3 % uploaded (26, 3177df039ae246e924a3617469488dc2)
+17936.254 (0) The time we have been running (17936.2) is approaching the resumption interval (17964) - increasing resumption interval to 17967
+17936.260 (0) S3generic chunked upload: 34.6 % uploaded (27, 0d1bd7241f7e66162b82b1fd8ccfa93e)
+17939.349 (0) The time we have been running (17939.3) is approaching the resumption interval (17967) - increasing resumption interval to 17970
+17939.358 (0) S3generic chunked upload: 35.9 % uploaded (28, f9e89b4408690e24a142dc61b3ac52a7)
+17941.116 (0) The time we have been running (17941.1) is approaching the resumption interval (17970) - increasing resumption interval to 17972
+17941.120 (0) S3generic chunked upload: 37.2 % uploaded (29, cca630b414e28b6dc1d19d0a3a1b3f58)
+17943.282 (0) The time we have been running (17943.3) is approaching the resumption interval (17972) - increasing resumption interval to 17974
+17943.286 (0) S3generic chunked upload: 38.5 % uploaded (30, 87a3448a8593efcc338500c9fb28a8dc)
+17944.872 (0) The time we have been running (17944.9) is approaching the resumption interval (17974) - increasing resumption interval to 17975
+17944.876 (0) S3generic chunked upload: 39.7 % uploaded (31, c80f6316e4390ff0d4e6a1e4f94efe61)
+17946.643 (0) The time we have been running (17946.6) is approaching the resumption interval (17975) - increasing resumption interval to 17977
+17946.647 (0) S3generic chunked upload: 41 % uploaded (32, b98436928cb1268fb621e6a420735077)
+17948.476 (0) The time we have been running (17948.5) is approaching the resumption interval (17977) - increasing resumption interval to 17979
+17948.481 (0) S3generic chunked upload: 42.3 % uploaded (33, 31511c3ded3207206d98537db47af53d)
+17950.853 (0) The time we have been running (17950.8) is approaching the resumption interval (17979) - increasing resumption interval to 17981
+17950.858 (0) S3generic chunked upload: 43.6 % uploaded (34, f69cfb0256372aa2505243ea44142276)
+17953.847 (0) The time we have been running (17953.8) is approaching the resumption interval (17981) - increasing resumption interval to 17984
+17953.850 (0) S3generic chunked upload: 44.9 % uploaded (35, ef5c7ce34f9115a53905ac15dd7fdf73)
+17956.921 (0) The time we have been running (17956.9) is approaching the resumption interval (17984) - increasing resumption interval to 17987
+17956.924 (0) S3generic chunked upload: 46.2 % uploaded (36, fe7dbd5ab6b5c7ac2849b4569561e7f6)
+17958.901 (0) The time we have been running (17958.9) is approaching the resumption interval (17987) - increasing resumption interval to 17989
+17958.905 (0) S3generic chunked upload: 47.4 % uploaded (37, 0300013d9ac5631b1dcc721c016b45f4)
+17960.655 (0) The time we have been running (17960.6) is approaching the resumption interval (17989) - increasing resumption interval to 17991
+17960.658 (0) S3generic chunked upload: 48.7 % uploaded (38, e96af8c493f8ea1f3d76aa30494f3bad)
+17962.312 (0) The time we have been running (17962.3) is approaching the resumption interval (17991) - increasing resumption interval to 17993
+17962.317 (0) S3generic chunked upload: 50 % uploaded (39, cdd4f194cfca15869ef3d930896dfe82)
+17963.969 (0) The time we have been running (17964) is approaching the resumption interval (17993) - increasing resumption interval to 17994
+17963.973 (0) S3generic chunked upload: 51.3 % uploaded (40, 7047dcb8dc864ad6c57dc7b7f4433c2a)
+17965.814 (0) The time we have been running (17965.8) is approaching the resumption interval (17994) - increasing resumption interval to 17996
+17965.818 (0) S3generic chunked upload: 52.6 % uploaded (41, 66ef08cc6e69caf75fadcbac1d119009)
+17967.586 (0) The time we have been running (17967.6) is approaching the resumption interval (17996) - increasing resumption interval to 17998
+17967.588 (0) S3generic chunked upload: 53.8 % uploaded (42, f2450349eb085d50e81a9392c39c5afb)
+17969.359 (0) The time we have been running (17969.4) is approaching the resumption interval (17998) - increasing resumption interval to 18000
+17969.363 (0) S3generic chunked upload: 55.1 % uploaded (43, 706d4f58dbee50ee2e2cb081138bbb6e)
+17970.937 (0) The time we have been running (17970.9) is approaching the resumption interval (18000) - increasing resumption interval to 18001
+17970.942 (0) S3generic chunked upload: 56.4 % uploaded (44, f81682ef0e19daa597a44d832cc4e80e)
+17972.676 (0) The time we have been running (17972.7) is approaching the resumption interval (18001) - increasing resumption interval to 18003
+17972.679 (0) S3generic chunked upload: 57.7 % uploaded (45, d660378fe405484cd68be70d238b6934)
+17974.315 (0) The time we have been running (17974.3) is approaching the resumption interval (18003) - increasing resumption interval to 18005
+17974.317 (0) S3generic chunked upload: 59 % uploaded (46, 87d94fec715626ef060c6413ddfd695b)
+17975.919 (0) The time we have been running (17975.9) is approaching the resumption interval (18005) - increasing resumption interval to 18006
+17975.924 (0) S3generic chunked upload: 60.3 % uploaded (47, 83d7c32190c475090ce3fba57f0062e9)
+17977.758 (0) The time we have been running (17977.8) is approaching the resumption interval (18006) - increasing resumption interval to 18008
+17977.760 (0) S3generic chunked upload: 61.5 % uploaded (48, 4728869c31013c21c2fabd808841d439)
+17979.499 (0) The time we have been running (17979.5) is approaching the resumption interval (18008) - increasing resumption interval to 18010
+17979.503 (0) S3generic chunked upload: 62.8 % uploaded (49, ecfab50c93556ddf14a9b77d9354e560)
+17981.273 (0) The time we have been running (17981.3) is approaching the resumption interval (18010) - increasing resumption interval to 18012
+17981.278 (0) S3generic chunked upload: 64.1 % uploaded (50, 0808e1fe4aafe1719680c7be63d27c73)
+17983.068 (0) The time we have been running (17983.1) is approaching the resumption interval (18012) - increasing resumption interval to 18014
+17983.071 (0) S3generic chunked upload: 65.4 % uploaded (51, bd11648f6c164c37c2a1baee461d5f9e)
+17984.633 (0) The time we have been running (17984.6) is approaching the resumption interval (18014) - increasing resumption interval to 18015
+17984.634 (0) S3generic chunked upload: 66.7 % uploaded (52, cce3fdfef304b6adac834d32dd5ac70b)
+17986.343 (0) The time we have been running (17986.3) is approaching the resumption interval (18015) - increasing resumption interval to 18017
+17986.344 (0) S3generic chunked upload: 67.9 % uploaded (53, 7874b4acdeae4d0e14b09ffbf64e4517)
+17988.029 (0) The time we have been running (17988) is approaching the resumption interval (18017) - increasing resumption interval to 18019
+17988.032 (0) S3generic chunked upload: 69.2 % uploaded (54, 503c07db1fd8360ba1b8e9d51fd68654)
+17989.762 (0) The time we have been running (17989.8) is approaching the resumption interval (18019) - increasing resumption interval to 18020
+17989.765 (0) S3generic chunked upload: 70.5 % uploaded (55, b31af9d06f94ec33e03050c1ee507028)
+17991.663 (0) The time we have been running (17991.7) is approaching the resumption interval (18020) - increasing resumption interval to 18022
+17991.667 (0) S3generic chunked upload: 71.8 % uploaded (56, 3ca6999a6640cc37522f94a766e6706d)
+17993.471 (0) The time we have been running (17993.5) is approaching the resumption interval (18022) - increasing resumption interval to 18024
+17993.474 (0) S3generic chunked upload: 73.1 % uploaded (57, 9f9e55a4feb154257ce1e417986c9f6f)
+17995.432 (0) The time we have been running (17995.4) is approaching the resumption interval (18024) - increasing resumption interval to 18026
+17995.435 (0) S3generic chunked upload: 74.4 % uploaded (58, 3688fc12a804b26d5831d68525387c02)
+17997.079 (0) The time we have been running (17997.1) is approaching the resumption interval (18026) - increasing resumption interval to 18028
+17997.083 (0) S3generic chunked upload: 75.6 % uploaded (59, e12fcaab6434ef661ac4975226bd6c46)
+17999.072 (0) The time we have been running (17999.1) is approaching the resumption interval (18028) - increasing resumption interval to 18030
+17999.076 (0) S3generic chunked upload: 76.9 % uploaded (60, 603945b0736ac8961f4c18038f55f3c6)
+18001.065 (0) The time we have been running (18001.1) is approaching the resumption interval (18030) - increasing resumption interval to 18032
+18001.069 (0) S3generic chunked upload: 78.2 % uploaded (61, cda375b937ea1fabc5644db4465ba682)
+18003.010 (0) The time we have been running (18003) is approaching the resumption interval (18032) - increasing resumption interval to 18034
+18003.012 (0) S3generic chunked upload: 79.5 % uploaded (62, 862a21373f79c2d4e1cdef787294e86d)
+18004.562 (0) The time we have been running (18004.6) is approaching the resumption interval (18034) - increasing resumption interval to 18035
+18004.566 (0) S3generic chunked upload: 80.8 % uploaded (63, 5867f2479c04428eb3e2628bf7589ffa)
+18006.261 (0) The time we have been running (18006.3) is approaching the resumption interval (18035) - increasing resumption interval to 18037
+18006.262 (0) S3generic chunked upload: 82.1 % uploaded (64, 99aa1cdd39dc8add4bf6a0c149f54ded)
+18011.163 (0) The time we have been running (18011.2) is approaching the resumption interval (18037) - increasing resumption interval to 18042
+18011.166 (0) S3generic chunked upload: 83.3 % uploaded (65, eca73819a592b649351a3c8c0126d539)
+18012.975 (0) The time we have been running (18013) is approaching the resumption interval (18042) - increasing resumption interval to 18043
+18012.976 (0) S3generic chunked upload: 84.6 % uploaded (66, 0bb712cf8b6caf32e41a023a66031ea3)
+18015.004 (0) The time we have been running (18015) is approaching the resumption interval (18043) - increasing resumption interval to 18046
+18015.006 (0) S3generic chunked upload: 85.9 % uploaded (67, a8adfa18e9f436783e7164014862c349)
+18017.035 (0) The time we have been running (18017) is approaching the resumption interval (18046) - increasing resumption interval to 18048
+18017.039 (0) S3generic chunked upload: 87.2 % uploaded (68, 73842738116282afe6505bda6fe2fb46)
+18018.956 (0) The time we have been running (18018.9) is approaching the resumption interval (18048) - increasing resumption interval to 18049
+18018.959 (0) S3generic chunked upload: 88.5 % uploaded (69, 0cae946673a1078e38de4177cbfce78d)
+18020.733 (0) The time we have been running (18020.7) is approaching the resumption interval (18049) - increasing resumption interval to 18051
+18020.736 (0) S3generic chunked upload: 89.7 % uploaded (70, e83f7bd1a9c159322f4fd69cbaae62bf)
+18022.458 (0) The time we have been running (18022.5) is approaching the resumption interval (18051) - increasing resumption interval to 18053
+18022.464 (0) S3generic chunked upload: 91 % uploaded (71, 12319e1aad307a3b711e45960af16487)
+18024.264 (0) The time we have been running (18024.3) is approaching the resumption interval (18053) - increasing resumption interval to 18055
+18024.267 (0) S3generic chunked upload: 92.3 % uploaded (72, 2055269128e459770e308baf72824f4b)
+18026.203 (0) The time we have been running (18026.2) is approaching the resumption interval (18055) - increasing resumption interval to 18057
+18026.206 (0) S3generic chunked upload: 93.6 % uploaded (73, a8c0d83cb6fabf017bf0949a553c7557)
+18028.115 (0) The time we have been running (18028.1) is approaching the resumption interval (18057) - increasing resumption interval to 18059
+18028.121 (0) S3generic chunked upload: 94.9 % uploaded (74, 36a0563b916909b6177ab2dc211eec4f)
+18029.945 (0) The time we have been running (18029.9) is approaching the resumption interval (18059) - increasing resumption interval to 18060
+18029.949 (0) S3generic chunked upload: 96.2 % uploaded (75, 99316219adc78aae3926c6022e4dae88)
+18031.729 (0) The time we have been running (18031.7) is approaching the resumption interval (18060) - increasing resumption interval to 18062
+18031.735 (0) S3generic chunked upload: 97.4 % uploaded (76, 33963e1cfcd01c1cdd432ff6ff9fa043)
+18033.993 (0) The time we have been running (18034) is approaching the resumption interval (18062) - increasing resumption interval to 18064
+18033.996 (0) S3generic chunked upload: 98.7 % uploaded (77, 2053b7ee8559951345224e4eb130e59f)
+18034.883 (0) The time we have been running (18034.9) is approaching the resumption interval (18064) - increasing resumption interval to 18065
+18034.884 (0) S3generic chunked upload: 100 % uploaded (78, 14f436891eb238bf7e56fb46fecb69be)
+18034.887 (0) S3-Compatible (Generic): upload: upload was not completely successful on this run
+18034.889 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 2.0 seconds have passed since the last write (0 MB, 1 (1468) files added so far); re-opening (prior size: 0 KB)
+18034.897 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip.tmp: size is now: 0.00 MB
+18034.900 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip.tmp: 1500 files added (on-disk size: 4.6 KB)
+18034.901 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip.tmp: 1600 files added (on-disk size: 4.6 KB)
+18034.903 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip.tmp: 1700 files added (on-disk size: 4.6 KB)
+18034.905 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip.tmp: 1800 files added (on-disk size: 4.6 KB)
+18034.906 (0) Zip: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip.tmp: 1900 files added (on-disk size: 4.6 KB)
+18040.652 (0) The time we have been running (18040.6) is approaching the resumption interval (18065) - increasing resumption interval to 18071
+18041.052 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip.tmp: size is now: 87.80 MB
+18041.059 (0) The time we have been running (18041.1) is approaching the resumption interval (18071) - increasing resumption interval to 18072
+18041.067 (0) Creating zip file manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip.list-temp.tmp)
+18041.072 (0) Successfully created zip file manifest (size: 25641)
+18041.710 (0) Created uploads zip (1) - 89893.9 KB in 3449.2 s (26.1 KB/s) (sha1: 629f6bd4edf3417dceac18ea343dd9f4316c3415, sha256: 73d0d579364a3d2b54a858fc7f6e5d4aadbc6225fe586e3aa461af58d20f1f3b)
+18041.720 (0) Cloud backup selection (1/1): s3generic with instance (1/1) (last)
+18041.722 (0) Beginning dispatch of backup to remote (s3generic) (instance identifier s-e61b5f08751bdf628b08010bdfeb7aa7)
+18041.724 (0) S3-Compatible (Generic): Set endpoint (UpdraftPlus_S3): sgp1.digitaloceanspaces.com
+18043.410 (0) S3-Compatible (Generic): upload: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip (chunks: 18) -> s3generic://hive-wp-backup/guston.store/backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip
+18043.670 (0) S3-Compatible (Generic): chunked upload: got multipart ID: 2~FOYtIcNMMvXRFeMqDzRuItKQXk-Tf8y
+18045.924 (0) The time we have been running (18045.9) is approaching the resumption interval (18072) - increasing resumption interval to 18076
+18045.929 (0) S3generic chunked upload: 5.6 % uploaded (1, 56b52d5492f1f2c5d13c23aabb6a5d8d)
+18047.913 (0) The time we have been running (18047.9) is approaching the resumption interval (18076) - increasing resumption interval to 18078
+18047.915 (0) S3generic chunked upload: 11.1 % uploaded (2, 957b58c04fe755cdce3928148145ff95)
+18049.971 (0) The time we have been running (18050) is approaching the resumption interval (18078) - increasing resumption interval to 18080
+18049.974 (0) S3generic chunked upload: 16.7 % uploaded (3, a06a56876a547d1319b99a15d5b0e6f0)
+18052.173 (0) The time we have been running (18052.2) is approaching the resumption interval (18080) - increasing resumption interval to 18083
+18052.178 (0) S3generic chunked upload: 22.2 % uploaded (4, 1de862c71e140356cd075faef91f8e31)
+18053.877 (0) The time we have been running (18053.9) is approaching the resumption interval (18083) - increasing resumption interval to 18084
+18053.879 (0) S3generic chunked upload: 27.8 % uploaded (5, f8e5f1b90aaa4cabfa2a2d7f16545581)
+18055.580 (0) The time we have been running (18055.6) is approaching the resumption interval (18084) - increasing resumption interval to 18086
+18055.582 (0) S3generic chunked upload: 33.3 % uploaded (6, ea0351a7ddcb1dc3cf9b4c8102ded83a)
+18057.773 (0) The time we have been running (18057.8) is approaching the resumption interval (18086) - increasing resumption interval to 18088
+18057.776 (0) S3generic chunked upload: 38.9 % uploaded (7, 91dcafb9ec1568ab502bec82aaa0a876)
+18059.893 (0) The time we have been running (18059.9) is approaching the resumption interval (18088) - increasing resumption interval to 18090
+18059.895 (0) S3generic chunked upload: 44.4 % uploaded (8, 3a8d681ea1a6dc95c42a6a854ce7a397)
+18061.655 (0) The time we have been running (18061.6) is approaching the resumption interval (18090) - increasing resumption interval to 18092
+18061.659 (0) S3generic chunked upload: 50 % uploaded (9, 7ff8aeb826ab13d1a5c01f2fb4c2e5fa)
+18063.869 (0) The time we have been running (18063.9) is approaching the resumption interval (18092) - increasing resumption interval to 18094
+18063.873 (0) S3generic chunked upload: 55.6 % uploaded (10, dab9fec9e6cc524eee1bca68d9056028)
+18065.851 (0) The time we have been running (18065.8) is approaching the resumption interval (18094) - increasing resumption interval to 18096
+18065.854 (0) S3generic chunked upload: 61.1 % uploaded (11, 9af10d771452256510895feed57664e7)
+18067.908 (0) The time we have been running (18067.9) is approaching the resumption interval (18096) - increasing resumption interval to 18098
+18067.911 (0) S3generic chunked upload: 66.7 % uploaded (12, 0053a87c30b9991e3e9cb79d95a4a385)
+18070.345 (0) The time we have been running (18070.3) is approaching the resumption interval (18098) - increasing resumption interval to 18101
+18070.350 (0) S3generic chunked upload: 72.2 % uploaded (13, 05892166dff97fb0738304c2223a0355)
+18072.535 (0) The time we have been running (18072.5) is approaching the resumption interval (18101) - increasing resumption interval to 18103
+18072.538 (0) S3generic chunked upload: 77.8 % uploaded (14, 3c50e72733e2fb47f2fcc97b36b89836)
+18074.589 (0) The time we have been running (18074.6) is approaching the resumption interval (18103) - increasing resumption interval to 18105
+18074.591 (0) S3generic chunked upload: 83.3 % uploaded (15, 2d8192f75a24ce73470b447271fcdd46)
+18076.881 (0) The time we have been running (18076.9) is approaching the resumption interval (18105) - increasing resumption interval to 18107
+18076.885 (0) S3generic chunked upload: 88.9 % uploaded (16, 7179bea03d43d1bfa41820af7f631818)
+18079.221 (0) The time we have been running (18079.2) is approaching the resumption interval (18107) - increasing resumption interval to 18110
+18079.228 (0) S3generic chunked upload: 94.4 % uploaded (17, 879725beff32b638b512c0080983b337)
+18080.588 (0) The time we have been running (18080.6) is approaching the resumption interval (18110) - increasing resumption interval to 18111
+18080.591 (0) S3generic chunked upload: 100 % uploaded (18, 8d73abb69fab3ee0b8ba415fef724fb3)
+18080.596 (0) S3-Compatible (Generic): upload: all chunks uploaded; will now instruct S3 to re-assemble
+18080.855 (0) S3-Compatible (Generic): upload (uploads1): re-assembly succeeded
+18080.856 (0) Recording as successfully uploaded: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip
+18080.886 (0) Deleting local file: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip: OK
+18080.890 (0) Deleting old temporary file: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads-cachelist--1-zfb.gz.tmp
+18080.892 (0) Deleting old temporary file: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads-cachelist--1-zfd.gz.tmp
+18080.893 (0) Deleting old temporary file: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads-cachelist--1-info.tmp
+18080.896 (0) Beginning creation of dump of mu-plugins (split every: 400 MB)
+18080.897 (0) Does not exist: /var/www/html/wp-content/mu-plugins
+18080.898 (0) There are no mu-plugins to backup. Will not raise an error.
+18080.899 (0) mu-plugins: create_zip returned an error
+18080.900 (0) Beginning backup of other directories found in the content directory (index: 0)
+18080.902 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+18080.903 (0) Looking for candidates to backup in: /var/www/html/wp-content
+18080.905 (0) finding files: themes: skipping: this is the themes directory
+18080.906 (0) finding files: wflogs: adding to list (1)
+18080.907 (0) finding files: updraft: skipping: this is the updraft directory
+18080.907 (0) finding files: uploads: skipping: this is the uploads directory
+18080.908 (0) finding files: index.php: adding to list (2)
+18080.908 (0) finding files: upgrade-temp-backup: adding to list (3)
+18080.910 (0) finding files: ai1wm-backups: skipping: excluded by options (glob)
+18080.911 (0) finding files: plugins: skipping: this is the plugins directory
+18080.912 (0) finding files: upgrade: skipping: excluded by options
+18080.915 (0) Total entities for the zip file: 2 directories, 11 files (0 skipped as non-modified), 9.8 MB
+18081.851 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-others.zip.tmp: size is now: 4.60 MB
+18081.855 (0) The time we have been running (18081.9) is approaching the resumption interval (18111) - increasing resumption interval to 18112
+18081.858 (0) Creating zip file manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-others.zip.list-temp.tmp)
+18081.859 (0) Successfully created zip file manifest (size: 364)
+18081.883 (0) Created others zip (0) - 4756.7 KB in 1 s (4915.6 KB/s) (sha1: 0f6c3b348158aca9325f3235749279507c928cf9, sha256: 0ca8c5ff1c726d559fffab2ea6b1d74c33d31fd3e20bf22aa2c82d643fedd132)
+18081.887 (0) Cloud backup selection (1/1): s3generic with instance (1/1) (last)
+18081.887 (0) Beginning dispatch of backup to remote (s3generic) (instance identifier s-e61b5f08751bdf628b08010bdfeb7aa7)
+18081.888 (0) S3-Compatible (Generic): Set endpoint (UpdraftPlus_S3): sgp1.digitaloceanspaces.com
+18083.698 (0) S3-Compatible (Generic): upload: backup_2025-03-18-0455_Guston_89fea7b866f0-others.zip (chunks: 1) -> s3generic://hive-wp-backup/guston.store/backup_2025-03-18-0455_Guston_89fea7b866f0-others.zip
+18086.298 (0) S3-Compatible (Generic): regular upload: success
+18086.300 (0) Recording as successfully uploaded: backup_2025-03-18-0455_Guston_89fea7b866f0-others.zip
+18086.306 (0) Deleting local file: backup_2025-03-18-0455_Guston_89fea7b866f0-others.zip: OK
+18086.313 (0) Saving backup status to database (elements: 9)
+18086.319 (0) Beginning creation of database dump (WordPress DB)
+18086.322 (0) SQL compatibility mode is: ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+18086.330 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+18086.410 (0) Output: /*M!999999\- enable the sandbox mode */ \n/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!4010 (truncated - 1486 bytes total)
+18086.411 (0) Working binary mysqldump found: /usr/bin/mysqldump
+18086.441 (0) Table wp_options: Total expected rows (via COUNT): 373
+18086.442 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18086.481 (0) Table wp_options: Rows added in this batch (next record: 36529): 369 (uncompressed bytes in this segment=806881) in 0.05 seconds
+18086.489 (0) The time we have been running (18086.5) is approaching the resumption interval (18112) - increasing resumption interval to 18117
+18086.493 (0) Table wp_options: finishing file(s) (2, 199.2 KB)
+18086.500 (0) Table wp_users: Total expected rows (via COUNT): 3
+18086.500 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18086.504 (0) Table wp_users: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=1550) in 0.01 seconds
+18086.507 (0) Table wp_users: finishing file(s) (2, 0.8 KB)
+18086.516 (0) Table wp_usermeta: Total expected rows (via COUNT): 73
+18086.517 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18086.521 (0) Table wp_usermeta: Rows added in this batch (next record: 74): 73 (uncompressed bytes in this segment=5146) in 0.01 seconds
+18086.532 (0) Table wp_usermeta: finishing file(s) (2, 2 KB)
+18086.543 (0) Table wp_actionscheduler_actions: Total expected rows (via COUNT): 14
+18086.544 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18086.549 (0) Table wp_actionscheduler_actions: Rows added in this batch (next record: 46114): 14 (uncompressed bytes in this segment=7996) in 0.01 seconds
+18086.558 (0) Table wp_actionscheduler_actions: finishing file(s) (2, 1.2 KB)
+18086.566 (0) Table wp_actionscheduler_claims: Total expected rows (via COUNT): 0
+18086.570 (0) Table wp_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=627) in 0.01 seconds
+18086.579 (0) Table wp_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+18086.586 (0) Table wp_actionscheduler_groups: Total expected rows (via COUNT): 2
+18086.586 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18086.589 (0) Table wp_actionscheduler_groups: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=678) in 0.00 seconds
+18086.594 (0) Table wp_actionscheduler_groups: finishing file(s) (2, 0.4 KB)
+18086.599 (0) Table wp_actionscheduler_logs: Total expected rows (via COUNT): 30
+18086.600 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18086.604 (0) Table wp_actionscheduler_logs: Rows added in this batch (next record: 138312): 30 (uncompressed bytes in this segment=3517) in 0.01 seconds
+18086.612 (0) Table wp_actionscheduler_logs: finishing file(s) (2, 0.7 KB)
+18086.626 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+18086.628 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=634) in 0.01 seconds
+18086.634 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+18086.644 (0) Table wp_comments: Total expected rows (via COUNT): 0
+18086.652 (0) Table wp_comments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1466) in 0.01 seconds
+18086.661 (0) Table wp_comments: finishing file(s) (2, 0.5 KB)
+18086.676 (0) Table wp_links: Total expected rows (via COUNT): 0
+18086.678 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1027) in 0.01 seconds
+18086.684 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+18086.689 (0) Table wp_postmeta: Total expected rows (approximate): 217023
+18086.691 (0) [Warning] Table wp_postmeta has very many rows (217023) - we hope your web hosting company gives you enough resources to dump out that table in the backup. If not, you will need to either remove data from this table, or contact your hosting company to request more resources.
+18087.919 (0) Table wp_postmeta: binary mysqldump finished (writes: 253308, bytes 20810514, return code 0) in 1.23 seconds
+18087.927 (0) The time we have been running (18087.9) is approaching the resumption interval (18117) - increasing resumption interval to 18118
+18087.929 (0) Table wp_postmeta: finishing file(s) (1, 3418.2 KB)
+18087.944 (0) Table wp_posts: Total expected rows (approximate): 1590
+18088.007 (0) Table wp_posts: Rows added in this batch (next record: 2212): 1602 (uncompressed bytes in this segment=597425) in 0.07 seconds
+18088.024 (0) The time we have been running (18088) is approaching the resumption interval (18118) - increasing resumption interval to 18119
+18088.036 (0) Table wp_posts: finishing file(s) (2, 66.7 KB)
+18088.042 (0) Table wp_term_relationships: Total expected rows (approximate): 44
+18088.045 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 44 (uncompressed bytes in this segment=1309) in 0.01 seconds
+18088.051 (0) Table wp_term_relationships: finishing file(s) (2, 0.5 KB)
+18088.060 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 8
+18088.061 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18088.065 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 10): 8 (uncompressed bytes in this segment=1078) in 0.01 seconds
+18088.074 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.5 KB)
+18088.093 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+18088.097 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=607) in 0.02 seconds
+18088.106 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+18088.112 (0) Table wp_terms: Total expected rows (via COUNT): 8
+18088.113 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18088.119 (0) Table wp_terms: Rows added in this batch (next record: 10): 8 (uncompressed bytes in this segment=921) in 0.01 seconds
+18088.131 (0) Table wp_terms: finishing file(s) (2, 0.5 KB)
+18088.152 (0) Table wp_frmt_form_entry: Total expected rows (via COUNT): 47
+18088.154 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18088.159 (0) Table wp_frmt_form_entry: Rows added in this batch (next record: 47): 47 (uncompressed bytes in this segment=3659) in 0.01 seconds
+18088.164 (0) Table wp_frmt_form_entry: finishing file(s) (2, 1 KB)
+18088.181 (0) Table wp_frmt_form_entry_meta: Total expected rows (via COUNT): 250
+18088.181 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18088.186 (0) Table wp_frmt_form_entry_meta: Rows added in this batch (next record: 250): 250 (uncompressed bytes in this segment=32181) in 0.01 seconds
+18088.202 (0) Table wp_frmt_form_entry_meta: finishing file(s) (2, 5.6 KB)
+18088.211 (0) Table wp_frmt_form_reports: Total expected rows (via COUNT): 1
+18088.212 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18088.215 (0) Table wp_frmt_form_reports: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1338) in 0.01 seconds
+18088.227 (0) Table wp_frmt_form_reports: finishing file(s) (2, 0.7 KB)
+18088.236 (0) Table wp_frmt_form_views: Total expected rows (approximate): 1851
+18088.257 (0) Table wp_frmt_form_views: Rows added in this batch (next record: 1853): 1851 (uncompressed bytes in this segment=136374) in 0.03 seconds
+18088.262 (0) Table wp_frmt_form_views: finishing file(s) (2, 25.2 KB)
+18088.272 (0) Table wp_simply_static_pages: Total expected rows (via COUNT): 520
+18088.284 (0) Table wp_simply_static_pages: Rows added in this batch (next record: 3538): 520 (uncompressed bytes in this segment=208814) in 0.02 seconds
+18088.289 (0) Table wp_simply_static_pages: finishing file(s) (2, 20 KB)
+18088.298 (0) Table wp_smush_dir_images: Total expected rows (via COUNT): 0
+18088.300 (0) Table wp_smush_dir_images: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=925) in 0.01 seconds
+18088.306 (0) Table wp_smush_dir_images: finishing file(s) (2, 0.5 KB)
+18088.312 (0) Table wp_wfauditevents: Total expected rows (via COUNT): 0
+18088.315 (0) Table wp_wfauditevents: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=739) in 0.01 seconds
+18088.319 (0) Table wp_wfauditevents: finishing file(s) (2, 0.4 KB)
+18088.324 (0) Table wp_wfblockediplog: Total expected rows (approximate): 0
+18088.326 (0) Table wp_wfblockediplog: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=657) in 0.00 seconds
+18088.332 (0) Table wp_wfblockediplog: finishing file(s) (2, 0.4 KB)
+18088.338 (0) Table wp_wfblocks7: Total expected rows (via COUNT): 0
+18088.342 (0) Table wp_wfblocks7: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=846) in 0.01 seconds
+18088.347 (0) Table wp_wfblocks7: finishing file(s) (2, 0.4 KB)
+18088.353 (0) Table wp_wfconfig: Total expected rows (approximate): 274
+18088.415 (0) Table wp_wfconfig: Rows added in this batch (next record: 1000): 277 (uncompressed bytes in this segment=895303) in 0.06 seconds
+18088.422 (0) Table wp_wfconfig: finishing file(s) (2, 449.3 KB)
+18088.429 (0) Table wp_wfcrawlers: Total expected rows (approximate): 0
+18088.430 (0) Table wp_wfcrawlers: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=582) in 0.00 seconds
+18088.437 (0) Table wp_wfcrawlers: finishing file(s) (2, 0.4 KB)
+18088.444 (0) Table wp_wffilechanges: Total expected rows (approximate): 0
+18088.446 (0) Table wp_wffilechanges: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=482) in 0.00 seconds
+18088.453 (0) Table wp_wffilechanges: finishing file(s) (2, 0.3 KB)
+18088.458 (0) Table wp_wffilemods: Total expected rows (approximate): 9568
+18088.613 (0) Table wp_wffilemods: binary mysqldump finished (writes: 10087, bytes 2951248, return code 0) in 0.15 seconds
+18088.616 (0) Table wp_wffilemods: finishing file(s) (1, 941.6 KB)
+18088.624 (0) Table wp_wfhits: Total expected rows (via COUNT): 2
+18088.625 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18088.631 (0) Table wp_wfhits: Rows added in this batch (next record: 222): 2 (uncompressed bytes in this segment=1716) in 0.01 seconds
+18088.637 (0) Table wp_wfhits: finishing file(s) (2, 0.7 KB)
+18088.652 (0) Table wp_wfhoover: Total expected rows (via COUNT): 0
+18088.658 (0) Table wp_wfhoover: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=545) in 0.01 seconds
+18088.665 (0) Table wp_wfhoover: finishing file(s) (2, 0.4 KB)
+18088.678 (0) Table wp_wfissues: Total expected rows (via COUNT): 9
+18088.680 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18088.685 (0) Table wp_wfissues: Rows added in this batch (next record: 964): 9 (uncompressed bytes in this segment=12095) in 0.01 seconds
+18088.695 (0) Table wp_wfissues: finishing file(s) (2, 3.4 KB)
+18088.701 (0) Table wp_wfknownfilelist: Total expected rows (approximate): 9671
+18088.781 (0) Table wp_wfknownfilelist: binary mysqldump finished (writes: 10080, bytes 1797516, return code 0) in 0.08 seconds
+18088.785 (0) Table wp_wfknownfilelist: finishing file(s) (1, 134.4 KB)
+18088.791 (0) Table wp_wflivetraffichuman: Total expected rows (approximate): 0
+18088.794 (0) Table wp_wflivetraffichuman: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=678) in 0.01 seconds
+18088.799 (0) Table wp_wflivetraffichuman: finishing file(s) (2, 0.4 KB)
+18088.806 (0) Table wp_wflocs: Total expected rows (approximate): 1
+18088.809 (0) Table wp_wflocs: Rows added in this batch (next record: 1000): 1 (uncompressed bytes in this segment=835) in 0.01 seconds
+18088.814 (0) Table wp_wflocs: finishing file(s) (2, 0.5 KB)
+18088.819 (0) Table wp_wflogins: Total expected rows (via COUNT): 126
+18088.820 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+18088.827 (0) Table wp_wflogins: Rows added in this batch (next record: 126): 126 (uncompressed bytes in this segment=28204) in 0.01 seconds
+18088.833 (0) Table wp_wflogins: finishing file(s) (2, 3.4 KB)
+18088.840 (0) Table wp_wfls_2fa_secrets: Total expected rows (via COUNT): 0
+18088.844 (0) Table wp_wfls_2fa_secrets: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=711) in 0.01 seconds
+18088.850 (0) Table wp_wfls_2fa_secrets: finishing file(s) (2, 0.4 KB)
+18088.855 (0) Table wp_wfls_role_counts: Total expected rows (approximate): 0
+18088.857 (0) Table wp_wfls_role_counts: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=576) in 0.00 seconds
+18088.862 (0) Table wp_wfls_role_counts: finishing file(s) (2, 0.4 KB)
+18088.867 (0) Table wp_wfls_settings: Total expected rows (approximate): 30
+18088.869 (0) Table wp_wfls_settings: Rows added in this batch (next record: 1000): 30 (uncompressed bytes in this segment=2098) in 0.00 seconds
+18088.876 (0) Table wp_wfls_settings: finishing file(s) (2, 1 KB)
+18088.881 (0) Table wp_wfnotifications: Total expected rows (approximate): 62
+18088.883 (0) Table wp_wfnotifications: Rows added in this batch (next record: 1000): 63 (uncompressed bytes in this segment=11941) in 0.00 seconds
+18088.890 (0) Table wp_wfnotifications: finishing file(s) (2, 1.7 KB)
+18088.896 (0) Table wp_wfpendingissues: Total expected rows (via COUNT): 0
+18088.897 (0) Table wp_wfpendingissues: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=902) in 0.00 seconds
+18088.904 (0) Table wp_wfpendingissues: finishing file(s) (2, 0.4 KB)
+18088.911 (0) Table wp_wfreversecache: Total expected rows (approximate): 1
+18088.914 (0) Table wp_wfreversecache: Rows added in this batch (next record: 1000): 1 (uncompressed bytes in this segment=645) in 0.01 seconds
+18088.919 (0) Table wp_wfreversecache: finishing file(s) (2, 0.4 KB)
+18088.930 (0) Table wp_wfsecurityevents: Total expected rows (via COUNT): 0
+18088.933 (0) Table wp_wfsecurityevents: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=712) in 0.01 seconds
+18088.941 (0) Table wp_wfsecurityevents: finishing file(s) (2, 0.4 KB)
+18088.954 (0) Table wp_wfsnipcache: Total expected rows (via COUNT): 0
+18088.957 (0) Table wp_wfsnipcache: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=746) in 0.01 seconds
+18088.964 (0) Table wp_wfsnipcache: finishing file(s) (2, 0.4 KB)
+18088.973 (0) Table wp_wfstatus: Total expected rows (approximate): 1190
+18088.987 (0) Table wp_wfstatus: Rows added in this batch (next record: 31814): 1190 (uncompressed bytes in this segment=116743) in 0.02 seconds
+18088.997 (0) Table wp_wfstatus: finishing file(s) (2, 17.7 KB)
+18089.003 (0) Table wp_wftrafficrates: Total expected rows (approximate): 0
+18089.005 (0) Table wp_wftrafficrates: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=596) in 0.00 seconds
+18089.012 (0) The time we have been running (18089) is approaching the resumption interval (18119) - increasing resumption interval to 18120
+18089.017 (0) Table wp_wftrafficrates: finishing file(s) (2, 0.4 KB)
+18089.026 (0) Table wp_wfwaffailures: Total expected rows (via COUNT): 0
+18089.028 (0) Table wp_wfwaffailures: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=559) in 0.01 seconds
+18089.032 (0) Table wp_wfwaffailures: finishing file(s) (2, 0.4 KB)
+18089.033 (0) PHP event: code E_WARNING: filemtime(): stat failed for /var/www/html/wp-content/updraft/backup_2025-03-18-0455_Guston_89fea7b866f0-db.gz (line 1925, wp-content/plugins/updraftplus/backup.php)
+18089.036 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_options.table.tmpr36530.gz (1/47/fopen): adding to final database dump
+18089.039 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_options.table.gz (2/47/fopen): adding to final database dump
+18089.040 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_users.table.tmpr4.gz (3/47/fopen): adding to final database dump
+18089.041 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_users.table.gz (4/47/fopen): adding to final database dump
+18089.043 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_usermeta.table.tmpr75.gz (5/47/fopen): adding to final database dump
+18089.044 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_usermeta.table.gz (6/47/fopen): adding to final database dump
+18089.046 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_actionscheduler_actions.table.tmpr46115.gz (7/47/fopen): adding to final database dump
+18089.047 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_actionscheduler_actions.table.gz (8/47/fopen): adding to final database dump
+18089.047 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_actionscheduler_claims.table.tmpr0.gz (9/47/fopen): adding to final database dump
+18089.048 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_actionscheduler_claims.table.gz (10/47/fopen): adding to final database dump
+18089.048 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_actionscheduler_groups.table.tmpr3.gz (11/47/fopen): adding to final database dump
+18089.049 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_actionscheduler_groups.table.gz (12/47/fopen): adding to final database dump
+18089.049 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_actionscheduler_logs.table.tmpr138313.gz (13/47/fopen): adding to final database dump
+18089.050 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_actionscheduler_logs.table.gz (14/47/fopen): adding to final database dump
+18089.050 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_commentmeta.table.tmpr0.gz (15/47/fopen): adding to final database dump
+18089.051 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_commentmeta.table.gz (16/47/fopen): adding to final database dump
+18089.051 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_comments.table.tmpr0.gz (17/47/fopen): adding to final database dump
+18089.052 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_comments.table.gz (18/47/fopen): adding to final database dump
+18089.052 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_links.table.tmpr0.gz (19/47/fopen): adding to final database dump
+18089.053 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_links.table.gz (20/47/fopen): adding to final database dump
+18089.053 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_postmeta.table.gz (21/47/fopen): adding to final database dump
+18089.088 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_posts.table.tmpr2213.gz (22/47/fopen): adding to final database dump
+18089.091 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_posts.table.gz (23/47/fopen): adding to final database dump
+18089.092 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_term_relationships.table.tmpr100001.gz (24/47/fopen): adding to final database dump
+18089.093 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_term_relationships.table.gz (25/47/fopen): adding to final database dump
+18089.094 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_term_taxonomy.table.tmpr11.gz (26/47/fopen): adding to final database dump
+18089.095 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_term_taxonomy.table.gz (27/47/fopen): adding to final database dump
+18089.096 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_termmeta.table.tmpr0.gz (28/47/fopen): adding to final database dump
+18089.096 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_termmeta.table.gz (29/47/fopen): adding to final database dump
+18089.097 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_terms.table.tmpr11.gz (30/47/fopen): adding to final database dump
+18089.098 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_terms.table.gz (31/47/fopen): adding to final database dump
+18089.099 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_frmt_form_entry.table.tmpr48.gz (32/47/fopen): adding to final database dump
+18089.099 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_frmt_form_entry.table.gz (33/47/fopen): adding to final database dump
+18089.100 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_frmt_form_entry_meta.table.tmpr251.gz (34/47/fopen): adding to final database dump
+18089.101 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_frmt_form_entry_meta.table.gz (35/47/fopen): adding to final database dump
+18089.101 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_frmt_form_reports.table.tmpr2.gz (36/47/fopen): adding to final database dump
+18089.102 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_frmt_form_reports.table.gz (37/47/fopen): adding to final database dump
+18089.103 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_frmt_form_views.table.tmpr1854.gz (38/47/fopen): adding to final database dump
+18089.105 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_frmt_form_views.table.gz (39/47/fopen): adding to final database dump
+18089.106 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_simply_static_pages.table.tmpr3539.gz (40/47/fopen): adding to final database dump
+18089.108 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_simply_static_pages.table.gz (41/47/fopen): adding to final database dump
+18089.109 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_smush_dir_images.table.tmpr0.gz (42/47/fopen): adding to final database dump
+18089.110 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_smush_dir_images.table.gz (43/47/fopen): adding to final database dump
+18089.111 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfauditevents.table.tmpr0.gz (44/47/fopen): adding to final database dump
+18089.112 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfauditevents.table.gz (45/47/fopen): adding to final database dump
+18089.112 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfblockediplog.table.tmpr1.gz (46/47/fopen): adding to final database dump
+18089.113 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfblockediplog.table.gz (47/47/fopen): adding to final database dump
+18089.113 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfblocks7.table.tmpr0.gz (48/47/fopen): adding to final database dump
+18089.114 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfblocks7.table.gz (49/47/fopen): adding to final database dump
+18089.114 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfconfig.table.tmpr1001.gz (50/47/fopen): adding to final database dump
+18089.119 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfconfig.table.gz (51/47/fopen): adding to final database dump
+18089.120 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfcrawlers.table.tmpr1.gz (52/47/fopen): adding to final database dump
+18089.121 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfcrawlers.table.gz (53/47/fopen): adding to final database dump
+18089.123 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wffilechanges.table.tmpr1.gz (54/47/fopen): adding to final database dump
+18089.123 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wffilechanges.table.gz (55/47/fopen): adding to final database dump
+18089.124 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wffilemods.table.gz (56/47/fopen): adding to final database dump
+18089.133 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfhits.table.tmpr223.gz (57/47/fopen): adding to final database dump
+18089.134 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfhits.table.gz (58/47/fopen): adding to final database dump
+18089.135 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfhoover.table.tmpr0.gz (59/47/fopen): adding to final database dump
+18089.136 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfhoover.table.gz (60/47/fopen): adding to final database dump
+18089.136 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfissues.table.tmpr965.gz (61/47/fopen): adding to final database dump
+18089.137 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfissues.table.gz (62/47/fopen): adding to final database dump
+18089.138 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfknownfilelist.table.gz (63/47/fopen): adding to final database dump
+18089.141 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wflivetraffichuman.table.tmpr1.gz (64/47/fopen): adding to final database dump
+18089.142 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wflivetraffichuman.table.gz (65/47/fopen): adding to final database dump
+18089.143 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wflocs.table.tmpr1001.gz (66/47/fopen): adding to final database dump
+18089.144 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wflocs.table.gz (67/47/fopen): adding to final database dump
+18089.144 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wflogins.table.tmpr127.gz (68/47/fopen): adding to final database dump
+18089.145 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wflogins.table.gz (69/47/fopen): adding to final database dump
+18089.146 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfls_2fa_secrets.table.tmpr0.gz (70/47/fopen): adding to final database dump
+18089.146 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfls_2fa_secrets.table.gz (71/47/fopen): adding to final database dump
+18089.146 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfls_role_counts.table.tmpr1.gz (72/47/fopen): adding to final database dump
+18089.147 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfls_role_counts.table.gz (73/47/fopen): adding to final database dump
+18089.147 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfls_settings.table.tmpr1001.gz (74/47/fopen): adding to final database dump
+18089.148 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfls_settings.table.gz (75/47/fopen): adding to final database dump
+18089.149 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfnotifications.table.tmpr1001.gz (76/47/fopen): adding to final database dump
+18089.150 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfnotifications.table.gz (77/47/fopen): adding to final database dump
+18089.151 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfpendingissues.table.tmpr0.gz (78/47/fopen): adding to final database dump
+18089.151 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfpendingissues.table.gz (79/47/fopen): adding to final database dump
+18089.151 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfreversecache.table.tmpr1001.gz (80/47/fopen): adding to final database dump
+18089.152 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfreversecache.table.gz (81/47/fopen): adding to final database dump
+18089.152 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfsecurityevents.table.tmpr0.gz (82/47/fopen): adding to final database dump
+18089.152 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfsecurityevents.table.gz (83/47/fopen): adding to final database dump
+18089.153 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfsnipcache.table.tmpr0.gz (84/47/fopen): adding to final database dump
+18089.153 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfsnipcache.table.gz (85/47/fopen): adding to final database dump
+18089.153 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfstatus.table.tmpr31815.gz (86/47/fopen): adding to final database dump
+18089.155 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfstatus.table.gz (87/47/fopen): adding to final database dump
+18089.156 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wftrafficrates.table.tmpr1.gz (88/47/fopen): adding to final database dump
+18089.156 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wftrafficrates.table.gz (89/47/fopen): adding to final database dump
+18089.157 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfwaffailures.table.tmpr0.gz (90/47/fopen): adding to final database dump
+18089.157 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db-table-wp_wfwaffailures.table.gz (91/47/fopen): adding to final database dump
+18089.177 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db.gz: finished writing out complete database file (5304.7 KB)
+18089.211 (0) Total database tables backed up: 47 (backup_2025-03-18-0455_Guston_89fea7b866f0-db.gz, size: 5432156, sha1: 88bbffa48b6c0162266c3ce99b39c9bee8a0a571, sha256: bd618ec81c9eb74bdc9d64842b6da7b415ed0627249a246e6ce89610c1226353)
+18089.219 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip: plugins: This file has already been successfully uploaded
+18089.220 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip: themes: This file has already been successfully uploaded
+18089.221 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+18089.224 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip: uploads: This file has already been successfully uploaded
+18089.227 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-others.zip: others: This file has already been successfully uploaded
+18089.229 (0) backup_2025-03-18-0455_Guston_89fea7b866f0-db.gz: db: This file has not yet been successfully uploaded: will queue
+18089.231 (0) Saving backup history. Total backup size: 536.2 MB
+18089.235 (0) Requesting upload of the files that have not yet been successfully uploaded (2)
+18089.243 (0) Cloud backup selection (1/1): s3generic with instance (1/1) (last)
+18089.245 (0) Beginning dispatch of backup to remote (s3generic) (instance identifier s-e61b5f08751bdf628b08010bdfeb7aa7)
+18089.246 (0) S3-Compatible (Generic): Set endpoint (UpdraftPlus_S3): sgp1.digitaloceanspaces.com
+18090.427 (0) S3-Compatible (Generic): upload: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip (chunks: 78) -> s3generic://hive-wp-backup/guston.store/backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip
+18090.428 (0) S3-Compatible (Generic): chunked upload: retrieved previously obtained multipart ID: 2~7PPFdFjkwiA5SgTy91Ft7HExXUzWv1X
+18090.429 (0) S3-Compatible (Generic): chunk 1: was already completed (etag: bce19fa03a29205927399a3b24c01501)
+18090.430 (0) S3-Compatible (Generic): chunk 2: was already completed (etag: 81241584ba58eabe0ab9f7d0e336ee26)
+18092.396 (0) The time we have been running (18092.4) is approaching the resumption interval (18120) - increasing resumption interval to 18123
+18092.399 (0) S3generic chunked upload: 3.8 % uploaded (3, c65138121db5ae8e37ac47d4e32f7625)
+18092.406 (0) S3-Compatible (Generic): chunk 4: was already completed (etag: 7694fbd314a0b31318f533d41ad29108)
+18092.408 (0) S3-Compatible (Generic): chunk 5: was already completed (etag: 69c43b7f16f4b23d442a6d437e517bc7)
+18092.408 (0) S3-Compatible (Generic): chunk 6: was already completed (etag: 1445f9b9c935368fcd73ef84de4c69d0)
+18092.409 (0) S3-Compatible (Generic): chunk 7: was already completed (etag: 203ecb07a8d4ca9540464e95780778ce)
+18092.410 (0) S3-Compatible (Generic): chunk 8: was already completed (etag: 49b9a42172643f0215f9bae10ba999ed)
+18092.411 (0) S3-Compatible (Generic): chunk 9: was already completed (etag: f8eb4d0823589991636417054f352063)
+18092.412 (0) S3-Compatible (Generic): chunk 10: was already completed (etag: 9227c70d3f60ca098a8d21508f5dc92a)
+18092.413 (0) S3-Compatible (Generic): chunk 11: was already completed (etag: d510980363cf33849ce75630d54b11a6)
+18092.413 (0) S3-Compatible (Generic): chunk 12: was already completed (etag: 38145567ef225eb7c09e54b9c1427f9e)
+18092.414 (0) S3-Compatible (Generic): chunk 13: was already completed (etag: 017bdd5c9ee7a072ef568b3bc23fe970)
+18092.415 (0) S3-Compatible (Generic): chunk 14: was already completed (etag: fef56e2d9d5138c8c4ef08af7c141aea)
+18092.416 (0) S3-Compatible (Generic): chunk 15: was already completed (etag: ec147609809317da6ccdd1b4a2af4dfb)
+18092.417 (0) S3-Compatible (Generic): chunk 16: was already completed (etag: 45d0cdc39387c248fce0e8cc4a5e8909)
+18092.421 (0) S3-Compatible (Generic): chunk 17: was already completed (etag: 85f330ea63b4bcdc07a112e891c7a188)
+18092.422 (0) S3-Compatible (Generic): chunk 18: was already completed (etag: 3041734e75bed04a5e6a2c825c1e6564)
+18092.423 (0) S3-Compatible (Generic): chunk 19: was already completed (etag: 5224f13b605b1ff7b4c24b2f7c11a13e)
+18092.423 (0) S3-Compatible (Generic): chunk 20: was already completed (etag: 87a8fe416fef62e4031cadfbf83e4e58)
+18092.424 (0) S3-Compatible (Generic): chunk 21: was already completed (etag: 6a5566df58e7b2efd60e2f5d6aac2577)
+18092.425 (0) S3-Compatible (Generic): chunk 22: was already completed (etag: 0765ea1050faf753c2770da64d65be97)
+18092.426 (0) S3-Compatible (Generic): chunk 23: was already completed (etag: b833d13fdf4be38ed35797f3e4c4cd59)
+18092.427 (0) S3-Compatible (Generic): chunk 24: was already completed (etag: a8c47ac18488a3abd80d1592eb59e08a)
+18092.428 (0) S3-Compatible (Generic): chunk 25: was already completed (etag: c79dce7e791b29f06e58b706ac745237)
+18092.428 (0) S3-Compatible (Generic): chunk 26: was already completed (etag: 3177df039ae246e924a3617469488dc2)
+18092.430 (0) S3-Compatible (Generic): chunk 27: was already completed (etag: 0d1bd7241f7e66162b82b1fd8ccfa93e)
+18092.431 (0) S3-Compatible (Generic): chunk 28: was already completed (etag: f9e89b4408690e24a142dc61b3ac52a7)
+18092.432 (0) S3-Compatible (Generic): chunk 29: was already completed (etag: cca630b414e28b6dc1d19d0a3a1b3f58)
+18092.433 (0) S3-Compatible (Generic): chunk 30: was already completed (etag: 87a3448a8593efcc338500c9fb28a8dc)
+18092.435 (0) S3-Compatible (Generic): chunk 31: was already completed (etag: c80f6316e4390ff0d4e6a1e4f94efe61)
+18092.437 (0) S3-Compatible (Generic): chunk 32: was already completed (etag: b98436928cb1268fb621e6a420735077)
+18092.438 (0) S3-Compatible (Generic): chunk 33: was already completed (etag: 31511c3ded3207206d98537db47af53d)
+18092.439 (0) S3-Compatible (Generic): chunk 34: was already completed (etag: f69cfb0256372aa2505243ea44142276)
+18092.439 (0) S3-Compatible (Generic): chunk 35: was already completed (etag: ef5c7ce34f9115a53905ac15dd7fdf73)
+18092.440 (0) S3-Compatible (Generic): chunk 36: was already completed (etag: fe7dbd5ab6b5c7ac2849b4569561e7f6)
+18092.440 (0) S3-Compatible (Generic): chunk 37: was already completed (etag: 0300013d9ac5631b1dcc721c016b45f4)
+18092.441 (0) S3-Compatible (Generic): chunk 38: was already completed (etag: e96af8c493f8ea1f3d76aa30494f3bad)
+18092.442 (0) S3-Compatible (Generic): chunk 39: was already completed (etag: cdd4f194cfca15869ef3d930896dfe82)
+18092.442 (0) S3-Compatible (Generic): chunk 40: was already completed (etag: 7047dcb8dc864ad6c57dc7b7f4433c2a)
+18092.443 (0) S3-Compatible (Generic): chunk 41: was already completed (etag: 66ef08cc6e69caf75fadcbac1d119009)
+18092.443 (0) S3-Compatible (Generic): chunk 42: was already completed (etag: f2450349eb085d50e81a9392c39c5afb)
+18092.444 (0) S3-Compatible (Generic): chunk 43: was already completed (etag: 706d4f58dbee50ee2e2cb081138bbb6e)
+18092.444 (0) S3-Compatible (Generic): chunk 44: was already completed (etag: f81682ef0e19daa597a44d832cc4e80e)
+18092.444 (0) S3-Compatible (Generic): chunk 45: was already completed (etag: d660378fe405484cd68be70d238b6934)
+18092.445 (0) S3-Compatible (Generic): chunk 46: was already completed (etag: 87d94fec715626ef060c6413ddfd695b)
+18092.445 (0) S3-Compatible (Generic): chunk 47: was already completed (etag: 83d7c32190c475090ce3fba57f0062e9)
+18092.446 (0) S3-Compatible (Generic): chunk 48: was already completed (etag: 4728869c31013c21c2fabd808841d439)
+18092.446 (0) S3-Compatible (Generic): chunk 49: was already completed (etag: ecfab50c93556ddf14a9b77d9354e560)
+18092.446 (0) S3-Compatible (Generic): chunk 50: was already completed (etag: 0808e1fe4aafe1719680c7be63d27c73)
+18092.447 (0) S3-Compatible (Generic): chunk 51: was already completed (etag: bd11648f6c164c37c2a1baee461d5f9e)
+18092.448 (0) S3-Compatible (Generic): chunk 52: was already completed (etag: cce3fdfef304b6adac834d32dd5ac70b)
+18092.449 (0) S3-Compatible (Generic): chunk 53: was already completed (etag: 7874b4acdeae4d0e14b09ffbf64e4517)
+18092.449 (0) S3-Compatible (Generic): chunk 54: was already completed (etag: 503c07db1fd8360ba1b8e9d51fd68654)
+18092.450 (0) S3-Compatible (Generic): chunk 55: was already completed (etag: b31af9d06f94ec33e03050c1ee507028)
+18092.450 (0) S3-Compatible (Generic): chunk 56: was already completed (etag: 3ca6999a6640cc37522f94a766e6706d)
+18092.452 (0) S3-Compatible (Generic): chunk 57: was already completed (etag: 9f9e55a4feb154257ce1e417986c9f6f)
+18092.453 (0) S3-Compatible (Generic): chunk 58: was already completed (etag: 3688fc12a804b26d5831d68525387c02)
+18092.454 (0) S3-Compatible (Generic): chunk 59: was already completed (etag: e12fcaab6434ef661ac4975226bd6c46)
+18092.455 (0) S3-Compatible (Generic): chunk 60: was already completed (etag: 603945b0736ac8961f4c18038f55f3c6)
+18092.456 (0) S3-Compatible (Generic): chunk 61: was already completed (etag: cda375b937ea1fabc5644db4465ba682)
+18092.456 (0) S3-Compatible (Generic): chunk 62: was already completed (etag: 862a21373f79c2d4e1cdef787294e86d)
+18092.457 (0) S3-Compatible (Generic): chunk 63: was already completed (etag: 5867f2479c04428eb3e2628bf7589ffa)
+18092.458 (0) S3-Compatible (Generic): chunk 64: was already completed (etag: 99aa1cdd39dc8add4bf6a0c149f54ded)
+18092.459 (0) S3-Compatible (Generic): chunk 65: was already completed (etag: eca73819a592b649351a3c8c0126d539)
+18092.460 (0) S3-Compatible (Generic): chunk 66: was already completed (etag: 0bb712cf8b6caf32e41a023a66031ea3)
+18092.461 (0) S3-Compatible (Generic): chunk 67: was already completed (etag: a8adfa18e9f436783e7164014862c349)
+18092.461 (0) S3-Compatible (Generic): chunk 68: was already completed (etag: 73842738116282afe6505bda6fe2fb46)
+18092.462 (0) S3-Compatible (Generic): chunk 69: was already completed (etag: 0cae946673a1078e38de4177cbfce78d)
+18092.463 (0) S3-Compatible (Generic): chunk 70: was already completed (etag: e83f7bd1a9c159322f4fd69cbaae62bf)
+18092.464 (0) S3-Compatible (Generic): chunk 71: was already completed (etag: 12319e1aad307a3b711e45960af16487)
+18092.465 (0) S3-Compatible (Generic): chunk 72: was already completed (etag: 2055269128e459770e308baf72824f4b)
+18092.466 (0) S3-Compatible (Generic): chunk 73: was already completed (etag: a8c0d83cb6fabf017bf0949a553c7557)
+18092.466 (0) S3-Compatible (Generic): chunk 74: was already completed (etag: 36a0563b916909b6177ab2dc211eec4f)
+18092.467 (0) S3-Compatible (Generic): chunk 75: was already completed (etag: 99316219adc78aae3926c6022e4dae88)
+18092.468 (0) S3-Compatible (Generic): chunk 76: was already completed (etag: 33963e1cfcd01c1cdd432ff6ff9fa043)
+18092.470 (0) S3-Compatible (Generic): chunk 77: was already completed (etag: 2053b7ee8559951345224e4eb130e59f)
+18092.471 (0) S3-Compatible (Generic): chunk 78: was already completed (etag: 14f436891eb238bf7e56fb46fecb69be)
+18092.472 (0) S3-Compatible (Generic): upload: all chunks uploaded; will now instruct S3 to re-assemble
+18092.675 (0) S3-Compatible (Generic): upload (uploads0): re-assembly succeeded
+18092.677 (0) Recording as successfully uploaded: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip
+18092.827 (0) Deleting local file: backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip: OK
+18092.828 (0) S3-Compatible (Generic): upload: backup_2025-03-18-0455_Guston_89fea7b866f0-db.gz (chunks: 2) -> s3generic://hive-wp-backup/guston.store/backup_2025-03-18-0455_Guston_89fea7b866f0-db.gz
+18092.995 (0) S3-Compatible (Generic): chunked upload: got multipart ID: 2~IhMpA0jQ3AH2gKSCU7ENoMWW8qA6U38
+18095.049 (0) The time we have been running (18095) is approaching the resumption interval (18123) - increasing resumption interval to 18126
+18095.052 (0) S3generic chunked upload: 50 % uploaded (1, d8552b054ec2ade1ea694bfce874b652)
+18095.426 (0) S3generic chunked upload: 100 % uploaded (2, 108ef4419fd43fda9fecbcf7d7f3517d)
+18095.430 (0) S3-Compatible (Generic): upload: all chunks uploaded; will now instruct S3 to re-assemble
+18095.625 (0) S3-Compatible (Generic): upload (db0): re-assembly succeeded
+18095.628 (0) Recording as successfully uploaded: backup_2025-03-18-0455_Guston_89fea7b866f0-db.gz
+18095.634 (0) Deleting local file: backup_2025-03-18-0455_Guston_89fea7b866f0-db.gz: OK
+18095.637 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=4
+18095.640 (0) Number of backup sets in history: 5; groups (db): 1
+18095.641 (0) Examining (for databases) backup set with group_id=0, nonce=89fea7b866f0, datestamp=1742253941 (Mar 17 2025 23:25:41)
+18095.641 (0) This backup set is the backup set just made, so will not be deleted.
+18095.641 (0) Examining (for databases) backup set with group_id=0, nonce=8fbceb170af5, datestamp=1741919903 (Mar 14 2025 02:38:23)
+18095.641 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+18095.642 (0) Examining (for databases) backup set with group_id=0, nonce=9374581bfee0, datestamp=1741056623 (Mar 04 2025 02:50:23)
+18095.642 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+18095.642 (0) Examining (for databases) backup set with group_id=0, nonce=455b460b6d00, datestamp=1740460325 (Feb 25 2025 05:12:05)
+18095.642 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+18095.643 (0) Examining (for databases) backup set with group_id=0, nonce=8d66f7a83a65, datestamp=1739845746 (Feb 18 2025 02:29:06)
+18095.643 (0) 1739845746: db: this set includes a database (backup_2025-02-18-0759_Guston_8d66f7a83a65-db.gz); db count is now 4
+18095.643 (0) 1739845746: db: over retain limit (4); will delete this database
+18095.644 (0) S3-Compatible (Generic): Delete remote: bucket=hive-wp-backup, URI=guston.store/backup_2025-02-18-0759_Guston_8d66f7a83a65-db.gz
+18095.814 (0) This backup set is now empty; will remove from history
+18095.815 (0) Deleting log file (log.8d66f7a83a65.txt)
+18095.818 (0) Number of backup sets in history: 4; groups (files): 1
+18095.819 (0) Examining (for files) backup set with nonce=89fea7b866f0, datestamp=1742253941 (Mar 17 2025 23:25:41)
+18095.819 (0) This backup set is the backup set just made, so will not be deleted.
+18095.820 (0) This backup set is the backup set just made, so will not be deleted.
+18095.820 (0) This backup set is the backup set just made, so will not be deleted.
+18095.820 (0) This backup set is the backup set just made, so will not be deleted.
+18095.820 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+18095.821 (0) Examining (for files) backup set with nonce=8fbceb170af5, datestamp=1741919903 (Mar 14 2025 02:38:23)
+18095.821 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+18095.821 (0) Examining (for files) backup set with nonce=9374581bfee0, datestamp=1741056623 (Mar 04 2025 02:50:23)
+18095.821 (0) plugins: over retain limit (2); will delete this file entity
+18095.821 (0) themes: over retain limit (2); will delete this file entity
+18095.821 (0) uploads: over retain limit (2); will delete this file entity
+18095.821 (0) others: over retain limit (2); will delete this file entity
+18095.821 (0) S3-Compatible (Generic): Delete remote: bucket=hive-wp-backup, URI=guston.store/backup_2025-03-04-0820_Guston_9374581bfee0-plugins.zip
+18096.003 (0) S3-Compatible (Generic): Delete remote: bucket=hive-wp-backup, URI=guston.store/backup_2025-03-04-0820_Guston_9374581bfee0-themes.zip
+18096.222 (0) S3-Compatible (Generic): Delete remote: bucket=hive-wp-backup, URI=guston.store/backup_2025-03-04-0820_Guston_9374581bfee0-uploads.zip
+18096.425 (0) S3-Compatible (Generic): Delete remote: bucket=hive-wp-backup, URI=guston.store/backup_2025-03-04-0820_Guston_9374581bfee0-uploads2.zip
+18096.619 (0) S3-Compatible (Generic): Delete remote: bucket=hive-wp-backup, URI=guston.store/backup_2025-03-04-0820_Guston_9374581bfee0-others.zip
+18096.829 (0) The time we have been running (18096.8) is approaching the resumption interval (18126) - increasing resumption interval to 18127
+18096.833 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+18096.834 (0) Examining (for files) backup set with nonce=455b460b6d00, datestamp=1740460325 (Feb 25 2025 05:12:05)
+18096.835 (0) This backup set remains non-empty (f=0/d=1); will retain in history
+18096.835 (0) Retain: saving new backup history (sets now: 4) and finishing retain operation
+18096.840 (0) Resume backup (89fea7b866f0, 0): finish run
+18096.842 (0) Decremented the semaphore (fd) by 1
+18096.844 (0) Semaphore (fd) unlocked
+18096.844 (0) There were errors in the uploads, so the 'resume' event is remaining scheduled
+18096.846 (0) No email will/can be sent - the user has not configured an email address.
+18096.847 (0) The backup has not finished; a resumption is scheduled
+18757.888 (5) Opened log file at time: Tue, 18 Mar 2025 04:38:19 +0000 on https://guston.ddev.site
+18757.890 (5) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.11 WP: 6.7.1 PHP: 8.4.1 (fpm-fcgi, Linux guston-web 5.15.49-linuxkit #1 SMP Tue Sep 13 07:51:46 UTC 2022 x86_64) MySQL: 10.11.10-MariaDB-ubu2204-log (max packet size=268435456) WPLANG: en_US Server: nginx/1.26.2 safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 17.2M | 20M) multisite: N openssl: OpenSSL 3.0.15 3 Sep 2024 mcrypt: N LANG: C.UTF-8 ZipArchive::addFile: Y
+18757.891 (5) Free space on disk containing Updraft's temporary directory: 39558 MB
+18757.893 (5) Requesting backup semaphore lock (89fea7b866f0)
+18757.896 (5) [Info] Lock (updraft_lock_89fea7b866f0, wp_options) acquired
+18757.899 (5) Backup run: resumption=5, nonce=89fea7b866f0, file_nonce=89fea7b866f0 begun at=1742253941 (18758s ago), job type=backup
+18757.902 (5) Scheduling a resumption (6) after 18127 seconds (1742290826) in case this run gets aborted
+18757.906 (5) Checking if we have a zip executable available
+18757.907 (5) Zip engine: found/will use a binary zip: /usr/bin/zip
+18757.908 (5) Creation of backups of directories: already finished
+18757.910 (5) Saving backup status to database (elements: 9)
+18757.915 (5) Database dump (WordPress DB): Creation was completed already
+18757.917 (5) SQL compatibility mode is: ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+18757.922 (5) backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip: plugins: This file has already been successfully uploaded
+18757.923 (5) backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip: themes: This file has already been successfully uploaded
+18757.925 (5) backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip: uploads: This file has already been successfully uploaded
+18757.928 (5) backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip: uploads: This file has already been successfully uploaded
+18757.929 (5) backup_2025-03-18-0455_Guston_89fea7b866f0-others.zip: others: This file has already been successfully uploaded
+18757.930 (5) backup_2025-03-18-0455_Guston_89fea7b866f0-db.gz: db: This file has already been successfully uploaded
+18757.930 (5) Saving backup history. Total backup size: Unknown
+18757.934 (5) Resume backup (89fea7b866f0, 5): finish run
+18757.937 (5) There were no more files that needed uploading
+18757.940 (5) [Info] Lock option (updraft_lock_89fea7b866f0, wp_options) released
+18757.942 (5) There were no errors in the uploads, so the 'resume' event (6) is being unscheduled
+18757.947 (5) Deleting zip manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-plugins.zip.list.tmp)
+18757.948 (5) Deleting zip manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-themes.zip.list.tmp)
+18757.949 (5) Deleting zip manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-uploads.zip.list.tmp)
+18757.950 (5) Deleting zip manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-uploads2.zip.list.tmp)
+18757.951 (5) Deleting zip manifest (backup_2025-03-18-0455_Guston_89fea7b866f0-others.zip.list.tmp)
+18757.952 (5) No email will be sent - this backup set was empty.
+18757.953 (5) The backup succeeded and is now complete

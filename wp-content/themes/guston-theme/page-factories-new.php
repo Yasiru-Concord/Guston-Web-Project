@@ -41,31 +41,45 @@
                     </div>
                 </div>
             </div>
-            <?php if ($gallery = get_sub_field('gallery')) : ?>
-                <div class="bottom">
-                    <div class="container">
-                        <div class="inner">
-                            <div class="swiper factory-gallery" data-factory="<?php echo $factoryID; ?>">
-                                <div class="swiper-wrapper">
-                                    <?php foreach ($gallery as $image) : ?>
-                                        <div class="swiper-slide">
-                                            <div class="item">
-                                                <?php getImage($image, 'full-image'); ?>
-                                                <a data-fancybox="factory<?php echo $factoryID; ?>" href="<?php echo wp_get_attachment_url($image); ?>" class="full-link"></a>
-                                                 <h1>factory name</h1>
-                                            </div>
-                                        </div>
-                                    <?php endforeach; ?>
+            <?php if ($gallery = get_sub_field('gallery')) :
+    $factory_names = get_sub_field('factory_list'); // Get factory names
+?>
+    <div class="bottom">
+        <div class="container">
+            <div class="inner">
+                <div class="swiper factory-gallery" data-factory="<?php echo esc_attr($factoryID); ?>">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($gallery as $index => $image) :  ?>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <?php getImage($image, 'full-image'); ?>
+                                    <a data-fancybox="factory<?php echo esc_attr($factoryID); ?>" href="<?php echo esc_url(wp_get_attachment_url($image)); ?>" class="full-link"></a>
                                 </div>
+
+                                <?php 
+                                if (!empty($factory_names) && is_array($factory_names)) : 
+                                    // Extract the correct factory name
+                                    $factory_name = isset($factory_names[$index]['item']) ? $factory_names[$index]['item'] : '';
+                                ?>
+                                    <h4 class="factory_name"><?php echo esc_html($factory_name); ?></h4>
+                                <?php endif; ?>
                             </div>
-                            <div class="swiper-nav">
-                                <div class="swiper-prev" id="nav-prev-<?php echo $factoryID; ?>"><i class="fa-solid fa-arrow-left"></i></div>
-                                <div class="swiper-next" id="nav-next-<?php echo $factoryID; ?>"><i class="fa-solid fa-arrow-right"></i></div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
-            <?php endif; ?>
+                <div class="swiper-nav">
+                    <div class="swiper-prev" id="nav-prev-<?php echo esc_attr($factoryID); ?>">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="swiper-next" id="nav-next-<?php echo esc_attr($factoryID); ?>">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+
         </section>
     <?php $factoryID++;
     endwhile; ?>
