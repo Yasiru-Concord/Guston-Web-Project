@@ -1223,7 +1223,7 @@
                     "aria-label": "",
                     "type": "file",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -1235,6 +1235,7 @@
                     "min_size": "",
                     "max_size": "",
                     "mime_types": "",
+                    "allow_in_bindings": 1,
                     "parent_repeater": "field_657673f02ca76"
                 }
             ]
@@ -1353,7 +1354,7 @@
                     "aria-label": "",
                     "type": "file",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -1365,6 +1366,7 @@
                     "min_size": "",
                     "max_size": "",
                     "mime_types": "",
+                    "allow_in_bindings": 1,
                     "parent_repeater": "field_66a318a66ee8f"
                 }
             ]
@@ -1453,5 +1455,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741327569
+    "modified": 1742489336
 }

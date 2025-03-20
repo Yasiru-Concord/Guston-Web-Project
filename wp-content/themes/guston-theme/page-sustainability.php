@@ -463,17 +463,19 @@
 
             <div class="row">
                 <?php while (have_rows('reports')) : the_row(); ?>
+                <?php if ($file = get_sub_field('file')) : ?>
                     <div class="col-sm-12 col-lg-6">
                         <div class="feature">
                             <div><?php getImage(get_sub_field('icon'), '', get_sub_field('title')); ?>
                                 <h4><?php the_sub_field('title'); ?></h4>
                             </div>
                             <div>
-                                <?php if ($file = get_sub_field('file')) : ?>
+                               
                                     <a href="<?php echo $file; ?>" download class="theme-btn">Download</a>
-                                <?php endif; ?>
+                              
                             </div>
                         </div>
+                        <?php endif; ?>
                     </div>
                 <?php endwhile; ?>
             </div>
@@ -494,6 +496,7 @@
 
             <div class="row">
                 <?php while (have_rows('stakeholder_reports')) : the_row(); ?>
+                <?php if ($file = get_sub_field('file')) : ?>
                     <div class="col-sm-12 col-lg-6">
                         <div class="feature">
                             <div>
@@ -501,12 +504,13 @@
                                 <h4><?php the_sub_field('title'); ?></h4>
                             </div>
                             <div>
-                                <?php if ($file = get_sub_field('file')) : ?>
+                               
                                     <a href="<?php echo $file; ?>" download class="theme-btn">Download</a>
-                                <?php endif; ?>
+                               
                             </div>
                         </div>
                     </div>
+                    <?php endif; ?>
                 <?php endwhile; ?>
             </div>
 
