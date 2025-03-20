@@ -158,6 +158,7 @@ section.products-collection {
                 align-items: center;
                 gap: 10px 20px;
                 text-align: center;
+                width: 240px;
 
                 @media @mobile {
                     flex-direction: row;
@@ -169,6 +170,7 @@ section.products-collection {
 
                 img {
                     width: 45px;
+                    height: 45px;
                     flex-shrink: 0;
                     // background: linear-gradient(180deg, rgba(247, 243, 243, 0) 10%, rgba(229, 226, 226, 0.5) 50%);
                     // padding: 10px;
@@ -260,11 +262,12 @@ section.products-collection {
         .inner {
             padding: 0 25px;
             position: relative;
-            .swiper-wrapper {
-                justify-content: center;
-            }
+            // .swiper-wrapper {
+            //     justify-content: center;
+            // }
 
             .swiper-slide {
+                width: auto;
                 height: auto;
                 padding-bottom: 1px;
             }
@@ -277,6 +280,7 @@ section.products-collection {
             border-radius: 10px;
             height: 100%;
             position: relative;
+            gap: 20px;
 
             .image {
                 position: relative;

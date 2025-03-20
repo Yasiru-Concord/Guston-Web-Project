@@ -52,7 +52,7 @@
                 <div class="bottom">
                     <div class="container">
                         <div class="inner">
-                            <div class="swiper collection-products-swiper" data-collection="<?php echo $collectionID; ?>">
+                            <div class="swiper collection-products-swiper" id="collection-products-swiper-<?php echo $collectionID; ?>" data-collection="<?php echo $collectionID; ?>">
                                 <div class="swiper-wrapper">
                                     <?php while (have_rows('collection_products')) : the_row(); ?>
                                         <div class="swiper-slide">

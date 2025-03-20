@@ -457,39 +457,103 @@ jQuery(document).ready(function ($) {
     }
 
     // Product Collections gallery
+    // if ($(".collection-products-swiper").length) {
+    //     $($(".collection-products-swiper")).each(function (index, element) {
+    //         let childCount = $(element).find(".swiper-slide").length;
+    //         let collectionID = $(element).data("collection");
+    //         console.log('collectio ** ', collectionID, " sllide count ", childCount)
+
+    //         // enable loop and touch move after checking device and child count
+    //         let enableSwiper =
+    //             (IS_MOBILE_DEVICE && childCount > 1) ||
+    //             (IS_TAB_DEVICE && childCount > 2) ||
+    //             (IS_DESKTOP_DEVICE && childCount > 4);
+
+    //         if (!enableSwiper) {
+    //             console.log(collectionID)
+    //             $("#nav-prev-" + collectionID).hide();
+    //             $("#nav-next-" + collectionID).hide();
+    //         }
+
+    //         new Swiper(element, {
+    //             loop: enableSwiper,
+    //             autoplay: enableSwiper
+    //                 ? {
+    //                     delay: 5000,
+    //                     disableOnInteraction: false,
+    //                 }
+    //                 : false,
+    //             allowTouchMove: enableSwiper,
+    //             speed: 500,
+    //             preventClicksPropagation: false,
+    //             spaceBetween: 20,
+    //             slidesPerGroup: 1,
+    //             initialSlide: 0,
+    //             reverseDirection: false,
+    //             // centeredSlides: true,
+    //             // loopAdditionalSlides: 3,
+    //             // Navigation arrows
+    //             navigation: {
+    //                 nextEl: "#nav-prev-" + collectionID,
+    //                 prevEl: "#nav-next-" + collectionID,
+    //             },
+    //             // loopAdditionalSlides: 4,
+    //             //  slidesPerView: 'auto',
+    //             breakpoints: {
+    //                 0: {
+    //                     slidesPerView: 1,
+    //                 },
+    //                 768: {
+    //                     slidesPerView: 2,
+    //                 },
+    //                 1025: {
+    //                     slidesPerView: 4,
+    //                 },
+    //             },
+    //         });
+    //     });
+    // }
+
     if ($(".collection-products-swiper").length) {
-        $($(".collection-products-swiper")).each(function (index, element) {
+        $(".collection-products-swiper").each(function (index, element) {
             let childCount = $(element).find(".swiper-slide").length;
-
             let collectionID = $(element).data("collection");
-
-            // enable loop and touch move after checking device and child count
+    
+            console.log("Collection:", collectionID, "Slide Count:", childCount);
+    
+            // Enable loop and touch move based on device type and child count
             let enableSwiper =
                 (IS_MOBILE_DEVICE && childCount > 1) ||
                 (IS_TAB_DEVICE && childCount > 2) ||
                 (IS_DESKTOP_DEVICE && childCount > 4);
-
+    
             if (!enableSwiper) {
                 $("#nav-prev-" + collectionID).hide();
                 $("#nav-next-" + collectionID).hide();
             }
-
+    
             new Swiper(element, {
                 loop: enableSwiper,
+                loopedSlides: enableSwiper ? Math.min(childCount, 4) : 0, // ✅ Matches slidesPerView for correct duplication
+                loopPreventsSliding: false, // ✅ Allows seamless looping
                 autoplay: enableSwiper
                     ? {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }
+                          delay: 5000,
+                          disableOnInteraction: false,
+                      }
                     : false,
                 allowTouchMove: enableSwiper,
                 speed: 500,
                 preventClicksPropagation: false,
-                spaceBetween: 10,
-                // Navigation arrows
+                spaceBetween: 20,
+                slidesPerGroup: 1,
+                initialSlide: 0,
+                centeredSlides: false,
+                observer: true, // ✅ Ensures Swiper recalculates positions when DOM updates
+                observeParents: true, // ✅ Fixes incorrect `translate3d` values
                 navigation: {
-                    nextEl: "#nav-prev-" + collectionID,
-                    prevEl: "#nav-next-" + collectionID,
+                    nextEl: "#nav-next-" + collectionID,
+                    prevEl: "#nav-prev-" + collectionID,
                 },
                 breakpoints: {
                     0: {
@@ -502,10 +566,19 @@ jQuery(document).ready(function ($) {
                         slidesPerView: 4,
                     },
                 },
+                on: {
+                    init: function (swiper) {
+                        swiper.update(); // ✅ Ensures everything is positioned correctly on initialization
+                    },
+                    slideChangeTransitionEnd: function (swiper) {
+                        swiper.update(); // ✅ Forces recalculation of positions after slide change
+                    },
+                },
             });
         });
     }
-
+    
+    
     if ($("#homeStatsNavSwiper").length) {
         const element = $("#homeStatsNavSwiper");
         let childCount = $(element).find(".swiper-slide").length;
