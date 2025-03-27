@@ -188,6 +188,7 @@ jQuery(document).ready(function ($) {
                 speed: 500,
                 preventClicksPropagation: false,
                 spaceBetween: 10,
+                centerInsufficientSlides: true,
                 // Navigation arrows
                 navigation: {
                     nextEl: "#nav-prev-" + factoryID,
